@@ -1,0 +1,13 @@
+# Local OS and Obsidian state
+.DS_Store
+.obsidian/
+.trash/
+
+# Local credentials
+.env
+.env.*
+!.env.example
+
+# Editor temporary files
+*.swp
+*.swo
