@@ -32,7 +32,7 @@ function updateControls(){
 previous.addEventListener('click',()=>Reveal.prev());
 next.addEventListener('click',()=>Reveal.next());
 Reveal.on('slidechanged',updateControls);
-Reveal.initialize({width:1600,height:900,margin:0.035,controls:false,progress:false,center:false,hash:true,hashOneBasedIndex:true,view:'slide',scrollActivationWidth:null,transition:matchMedia('(prefers-reduced-motion: reduce)').matches?'none':'fade',transitionSpeed:'fast',pdfMaxPagesPerSlide:1,pdfSeparateFragments:false}).then(()=>{
+Reveal.initialize({width:1600,height:900,margin:0,controls:false,progress:false,center:false,hash:true,hashOneBasedIndex:true,view:'slide',scrollActivationWidth:null,transition:matchMedia('(prefers-reduced-motion: reduce)').matches?'none':'fade',transitionSpeed:'fast',pdfMaxPagesPerSlide:1,pdfSeparateFragments:false}).then(()=>{
   if(!explicitSlide && Number.isInteger(rememberedSlide) && rememberedSlide>=0 && rememberedSlide<Reveal.getTotalSlides()) Reveal.slide(rememberedSlide);
   updateControls();
 });

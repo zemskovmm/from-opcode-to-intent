@@ -3,7 +3,7 @@
 This folder is the editable static website. PowerPoint is no longer required to change or present the talk.
 
 - `index.html`: the 19 audience slides; edit the text and HTML here.
-- `styles.css`: typography, image placement, diagram and control-bar styling.
+- `styles.css`: typography, a borderless full-height image panel on the right 40% of each illustrated slide, per-slide crop focal points, the diagram and control-bar styling. Text occupies the left side; image credits remain below it. Slide 18 keeps its full-width editable diagram.
 - `app.js`: Previous/Next, actual browser fullscreen, and remembered slide position.
 - `assets/`: optimized versions of the selected images; original artwork is preserved separately.
 - `vendor/`: locally bundled reveal.js 6.0.1 and font files, with their licenses.
