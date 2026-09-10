@@ -21,3 +21,12 @@ Open this repository folder as a vault, or clone it into an existing vault. Open
 The native Graph view is force-directed; Canvas preserves the intended spatial reading order. Obsidian-specific wikilinks and Canvas are best viewed in Obsidian rather than GitHub.
 
 Local Obsidian settings, workspace state, OS files, and environment credentials are excluded from version control. No automatic Git synchronization is configured.
+
+## Web presentations
+
+- [Original edition](https://zemskovmm.github.io/from-opcode-to-intent/) — the preserved 19-slide presentation.
+- [Practical edition](https://zemskovmm.github.io/from-opcode-to-intent/practical/) — a parallel, EPAM-branded 20-slide version by Michael Zemskov and Dima Dorogoi, with title/authors/agenda pages and a fixture-based intent-and-acceptance exercise.
+
+The editable website sources are `docs/` and `docs/practical/`. The practical edition reuses the original's artwork and vendored framework without changing the original audience deck. See [practical edition documentation](docs/practical/README.md) for scope, brand provenance, timing and verification.
+
+New research branches are attached to trunk beats 11 and 13 in Obsidian. They distinguish the IDD proposal, nearby specification workflows, empirical evidence and the narrow claims the demonstration can support.

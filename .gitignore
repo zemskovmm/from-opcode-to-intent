@@ -11,3 +11,10 @@
 # Editor temporary files
 *.swp
 *.swo
+
+# Local execution artifacts; maintained project metadata stays tracked
+/.AI/tmp/
+/.AI/reports/
+/.AI/logs/
+/.AI/plans/*
+!/.AI/plans/future/

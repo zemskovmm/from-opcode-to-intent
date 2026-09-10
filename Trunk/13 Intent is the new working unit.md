@@ -35,3 +35,4 @@ Stop here. Optional material is not extra scheduled time.
 - Optional deviation: [[Agent Hypothesis|Agent Hypothesis]] — Agents by end-to-end scenario rather than technical job title.
 - Optional deviation: [[Notes App Demo|Notes App Demo]] — Your notes-app example, preserved as an alternative worked scenario.
 - Supporting data: [[Branches/B13 Liva process and analyst role|B13 Liva process and analyst role]] — The co-host contribution: maintain intent and a checked path to implementation.
+- Supporting data: [[Branches/B13 Practical intent-driven development|B13 Practical intent-driven development]] — Durable intent, temporary execution material, and a fixture-only evidence exercise.

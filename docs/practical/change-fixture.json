@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "provenance": {
+    "gitVersion": "git version 2.50.1 (Apple Git-155)",
+    "collectionCommand": "git status --porcelain=v1 -z --ignored"
+  },
+  "statusText": "MM both-staged-and-unstaged.txt\u0000A  staged-only.txt\u0000 M unstaged-only.txt\u0000?? untracked name.txt\u0000!! ignored-only.log\u0000",
+  "expectedRows": [
+    {
+      "area": "staged",
+      "change": "modified",
+      "path": "both-staged-and-unstaged.txt"
+    },
+    {
+      "area": "unstaged",
+      "change": "modified",
+      "path": "both-staged-and-unstaged.txt"
+    },
+    {
+      "area": "staged",
+      "change": "added",
+      "path": "staged-only.txt"
+    },
+    {
+      "area": "unstaged",
+      "change": "modified",
+      "path": "unstaged-only.txt"
+    },
+    {
+      "area": "untracked",
+      "change": "untracked",
+      "path": "untracked name.txt"
+    },
+    {
+      "area": "ignored",
+      "change": "ignored",
+      "path": "ignored-only.log"
+    }
+  ]
+}

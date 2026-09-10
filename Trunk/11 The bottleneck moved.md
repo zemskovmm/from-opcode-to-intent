@@ -33,6 +33,7 @@ Your proposed process should therefore be judged by useful outcomes, missed requ
 ## Branches from this section
 
 - Supporting data: [[Branches/B11 METR evidence and limits|B11 METR evidence and limits]] — The 2025 result and February 2026 update must travel together.
+- Supporting data: [[Branches/B11 AI coding evidence update|B11 AI coding evidence update]] — Keep the METR caveat with positive field evidence without conflating their metrics.
 
 
 Sources:
