@@ -5,11 +5,11 @@ This is the parallel, EPAM-branded edition. Its editable source is `index.html`;
 - **Public URL:** https://zemskovmm.github.io/from-opcode-to-intent/practical/
 - **Original edition:** https://zemskovmm.github.io/from-opcode-to-intent/
 - **Authors:** Michael Zemskov and Dima Dorogoi.
-- **Format:** 20 slides on a fixed 1600×900 canvas, with a proposed twenty-minute delivery budget. The extra author slide distinguishes this edition from the original 19-slide deck.
+- **Format:** 22 slides on a fixed 1600×900 canvas: a proposed twenty-minute talk, followed by Q&A and a Thank you page. Both editions include title/authors/agenda pages.
 
 ## Editorial scope
 
-The original edition's files are unchanged. This version adds an author page, revises the title and agenda, combines the card/encoding and bottleneck/toolkit beats, and adds clarification, durable intent and an executable fixture-based acceptance exercise. The Brooks quotation and Red Queen ending remain intact.
+Both editions share EPAM styling and front matter but retain distinct narratives. This version combines the card/encoding and bottleneck/toolkit beats and adds clarification, durable intent and an executable fixture-based acceptance exercise. The Brooks quotation and Red Queen narrative conclusion remain intact. Q&A and Thank you follow the conclusion in both editions.
 
 The practical example is deliberately limited. Its full Git-viewer intent is a proposed contract. The interactive slide checks only classification of a recorded, synthetic Git-status fixture; it does not constitute a full Git client or prove repository safety and privacy. The regression toggle intentionally omits untracked files. It must never be described as a naturally occurring AI mistake.
 
@@ -18,7 +18,7 @@ The research findings live in the maintained Obsidian notes attached to trunk be
 ## Source files
 
 - `index.html`: the audience deck, including all slide text and editable diagrams.
-- `styles.css`: the new edition's branding and layouts; it layers on the original shared `../styles.css` without changing it.
+- `styles.css`: shared EPAM branding and closing-page layouts, plus practical-specific layouts; both editions load this file over the common base `../styles.css`.
 - `app.js`: navigation, native browser fullscreen and a separate remembered-position key, `opcode-to-intent:practical:last-slide`.
 - `check-demo.mjs`: the executable acceptance exercise, kept independent of Reveal.
 - `change-fixture.json`: captured Git output and separate expected classifications; this is the only fixture the exercise loads.
@@ -51,7 +51,9 @@ This is a light-slide application of that guide, not a claim of a formal corpora
 | 16–18 | Clarification, intent, acceptance exercise | 260 |
 | 19–20 | Contract iceberg and Red Queen | 140 |
 | Distributed | Pauses and handoffs | 60 |
-| **Total** | **Proposed, not a measured rehearsal** | **1200** |
+| **Talk total** | **Proposed, not a measured rehearsal** | **1200** |
+
+Slides 21–22 are Q&A and Thank you. Discussion time is additional and depends on the event; it is not hidden inside the twenty-minute talk estimate.
 
 ## Present and verify
 
@@ -59,7 +61,7 @@ From the repository root:
 
 ```sh
 python3 -m http.server 4173 --bind 127.0.0.1 --directory docs
-node --test tests/practical-demo.test.mjs
+node --test tests/*.test.mjs
 ```
 
 Open `http://127.0.0.1:4173/practical/`. Use Previous/Next, the arrow keys and Full screen. Explicit hashes such as `#/verify` take priority over remembered position. The original and practical editions must not overwrite one another's saved positions.

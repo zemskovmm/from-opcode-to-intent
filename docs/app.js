@@ -3,10 +3,16 @@ const previous=document.getElementById('previous');
 const next=document.getElementById('next');
 const count=document.getElementById('slide-count');
 const fullscreen=document.getElementById('fullscreen');
-const positionKey='opcode-to-intent:last-slide';
+const positionKey='opcode-to-intent:original:last-slide-id';
 const explicitSlide=Boolean(location.hash);
-let rememberedSlide=0;
-try{rememberedSlide=Number(localStorage.getItem(positionKey))||0;}catch{}
+let rememberedSlide='';
+try{
+  rememberedSlide=localStorage.getItem(positionKey)||'';
+  if(!rememberedSlide){
+    const legacy=localStorage.getItem('opcode-to-intent:last-slide');
+    if(/^(?:[0-9]|1[0-8])$/.test(legacy)) rememberedSlide=`slide-${String(Number(legacy)+1).padStart(2,'0')}`;
+  }
+}catch{}
 fullscreen.disabled=!document.fullscreenEnabled;
 fullscreen.addEventListener('click',async()=>{
   try {
@@ -27,12 +33,13 @@ function updateControls(){
   previous.disabled=index===0;
   next.disabled=index===total-1;
   count.textContent=`${String(index+1).padStart(2,'0')} / ${total}`;
-  try{localStorage.setItem(positionKey,String(index));}catch{}
+  try{localStorage.setItem(positionKey,Reveal.getCurrentSlide().id);}catch{}
 }
 previous.addEventListener('click',()=>Reveal.prev());
 next.addEventListener('click',()=>Reveal.next());
 Reveal.on('slidechanged',updateControls);
 Reveal.initialize({width:1600,height:900,margin:0,controls:false,progress:false,center:false,hash:true,hashOneBasedIndex:true,view:'slide',scrollActivationWidth:null,transition:matchMedia('(prefers-reduced-motion: reduce)').matches?'none':'fade',transitionSpeed:'fast',pdfMaxPagesPerSlide:1,pdfSeparateFragments:false}).then(()=>{
-  if(!explicitSlide && Number.isInteger(rememberedSlide) && rememberedSlide>=0 && rememberedSlide<Reveal.getTotalSlides()) Reveal.slide(rememberedSlide);
+  const rememberedIndex=Reveal.getSlides().findIndex(slide=>slide.id===rememberedSlide);
+  if(!explicitSlide && rememberedIndex>=0) Reveal.slide(rememberedIndex);
   updateControls();
 });

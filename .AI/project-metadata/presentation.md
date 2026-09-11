@@ -1,0 +1,9 @@
+# Web presentation contract
+
+- The original and practical editions each contain 22 slides. Both use the supplied EPAM guide, title/authors/agenda pages, and Q&A/Thank you after the Red Queen narrative conclusion. Authors: Michael Zemskov and Dima Dorogoi.
+- The original keeps its historical narrative and all existing `slide-01`–`slide-19` deep links. The practical edition retains its distinct intent/acceptance sequence and fixture scope; neither edition claims that a full Git viewer was built.
+- White 1600×900 slides, a black viewer/control bar and borderless right-hand 40% image panels remain the visual contract. The supplied PowerPoint and source artwork are not edited or published as part of this update.
+- Both decks share `docs/practical/styles.css` over the unchanged common base. Navigation keys are independent. The original migrates valid legacy indices to stable slide IDs so the inserted author page does not shift a saved subject.
+- Content-hash query keys on changed runtime assets are required. Warm-cache testing reproduced stale navigation without them and passed with them, without clearing the browser cache.
+- Local qualification: 9 native Node checks passed; both editions passed all 22 slides across desktop, tablet, portrait-phone and landscape-phone viewports, with no geometry violations, failed assets, script errors or external runtime requests. Buttons, keyboard, native fullscreen, saved positions/hash precedence, blocked storage and practical pass → deliberate fail → restored pass were exercised. The original's 17 narrative slide bodies and the practical edition's 19 non-agenda existing bodies were preserved.
+- Public handoff requires the same browser checks under the GitHub Pages repository prefix and byte verification against the published commit. Execution reports, screenshots, temporary browser profiles and conversion/review files stay out of Git.

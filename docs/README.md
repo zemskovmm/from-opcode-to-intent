@@ -1,34 +1,44 @@
 # From Opcode to Intent — web presentation
 
-This folder is the editable static website. PowerPoint is no longer required to change or present the talk.
+This folder is the editable static website. PowerPoint is not required to change or present either edition.
 
-- `index.html`: the 19 audience slides; edit the text and HTML here.
-- `styles.css`: typography, a borderless full-height image panel on the right 40% of each illustrated slide, per-slide crop focal points, the diagram and control-bar styling. Text occupies the left side; image credits remain below it. Slide 18 keeps its full-width editable diagram.
-- `app.js`: Previous/Next, actual browser fullscreen, and remembered slide position.
-- `assets/`: optimized versions of the selected images; original artwork is preserved separately.
-- `vendor/`: locally bundled reveal.js 6.0.1 and font files, with their licenses.
-- `credits.html`: artwork and quotation credits.
+- `index.html`: the 22-slide original edition, with EPAM title/authors/agenda pages, the original historical narrative, Q&A and Thank you.
+- `styles.css`: the common base, fixed canvas, right-hand 40% image panels, editable diagram and control bar. The viewer surround stays black; slides stay white.
+- `practical/styles.css`: shared EPAM branding, typography, footer and closing-page layouts, plus practical-specific styles. Both editions reference this same file to keep the visual treatment consistent.
+- `app.js`: Previous/Next, actual browser fullscreen and remembered position for the original edition.
+- `assets/`: optimized illustrations; original artwork remains separate.
+- `practical/assets/epam-logo.svg`: shared logo exported from the supplied PowerPoint's master artwork.
+- `vendor/`: locally bundled reveal.js 6.0.1 and font files, with licenses.
+- `credits.html`: artwork, quotation and branding credits.
+- `practical/`: the separate 22-slide practical edition, including the fixture-backed acceptance exercise.
 
 ## Present
 
-Use Previous / Next or the arrow keys. Use Full screen to enter or leave native browser fullscreen. Direct links to individual slides take priority over remembered position. The browser remembers only the slide number; no account, analytics or backend is used.
+Use Previous / Next or the arrow keys. Full screen enters or leaves native browser fullscreen. Explicit slide links take priority over remembered position. The original edition stores a slide ID locally and migrates valid saved positions from its former 19-slide layout, so inserting the author page does not move an existing reader to the wrong subject. The practical edition has a separate saved-position key. No account, analytics or backend is used.
 
-GitHub Pages serves the `main` branch's `/docs` folder. `.nojekyll` keeps the files static: no framework build, server process, CDN, package installation or secret is needed on the host. GitHub's own Pages deployment still runs when this folder is published.
+The original deep links `#/slide-01` through `#/slide-19` are retained. The author page is `#/authors`; the closing pages are `#/qa` and `#/thank-you`. The Red Queen remains the narrative conclusion before discussion and thanks. Both decks link to one another from the control bar.
 
-For a local preview from this repository's root:
+GitHub Pages serves `main:/docs`. `.nojekyll` keeps the files static: no application build, runtime server, CDN, package installation or secret is needed on the host. GitHub's Pages deployment still runs when the site is published.
+
+For a local preview and the native Node checks, from the repository root:
 
 ```sh
 python3 -m http.server 4173 --bind 127.0.0.1 --directory docs
+node --test tests/*.test.mjs
 ```
 
-Then open `http://127.0.0.1:4173/`. This local preview server is optional and is not part of the hosted site.
+Open `http://127.0.0.1:4173/` or `http://127.0.0.1:4173/practical/`.
+
+Changed `app.js` and shared-branding stylesheet URLs carry a `?v=` query containing the first 12 characters of the asset’s SHA-256 digest. Update the affected HTML references when either asset changes; the native tests reject stale cache keys. This prevents a returning browser from mixing the new slide order with cached navigation code or old closing-page styles.
 
 ## Publishing scope
 
-Only the 19 audience slides are included. Speaker notes, internal comments, the corporate template appendix, source PowerPoint/PDF files and the confidential footer are not part of this site. Original files are unchanged. Image credits are retained.
+Only audience content and its sources/credits are published. Speaker notes, internal comments, corporate template appendices, source PowerPoint/PDF files and confidential footers are excluded. The original source documents and artwork remain unchanged. EPAM branding comes from the supplied PowerPoint guide; see [branding provenance](practical/README.md#branding-provenance) for the palette, logo export and font fallback. Branding does not imply endorsement of the cited research.
 
 ## Verification
 
-Browser checks cover all 19 slides, all 18 images, both navigation directions and boundary buttons, keyboard navigation, real fullscreen entry/exit, remembered position and explicit slide links, desktop/tablet/mobile layouts, and absence of external runtime requests. The slide-18 iceberg is editable HTML/SVG, not a screenshot.
+Check every slide in both editions at desktop, tablet and phone sizes. Verify decoded images, right-hand 40% panels, text/footer clearance, navigation boundaries, keyboard controls, native fullscreen, saved-position migration and independence, hash precedence, blocked-storage behavior, local links and zero external runtime requests. Exercise practical pass → deliberate fail → restored pass. Repeat the browser journey against the deployed repository-prefix URLs.
 
-See the root repository for the wider talk materials; this folder is the source of truth for the web version.
+The original iceberg remains editable HTML/SVG at `#/slide-18` (now slide 19), rather than a screenshot. The practical contract iceberg is intentionally a different version.
+
+See the root repository for the wider talk materials; HTML remains the source of truth for the web presentations.

@@ -92,3 +92,21 @@ html,body,.reveal,.reveal h1{font-family:Calibri,'Talk Sans',Arial,sans-serif}
 @media(max-width:1000px){.source-link{display:none}}
 @media(max-width:700px){.edition-link{display:none}}
 @media print{.gradient-text{background:none;-webkit-text-fill-color:var(--accent);color:var(--accent)}.feedback-label{background:white}}
+
+/* Shared closing pages for both editions. */
+.closing-copy{flex:1;display:flex;flex-direction:column;justify-content:center}
+.reveal .qa-slide h1{font-size:170px;line-height:1;margin:0 0 24px;letter-spacing:-.04em}
+.reveal .qa-slide .subtitle{font-size:42px;color:var(--ink)}
+.qa-prompts{display:grid;grid-template-columns:repeat(3,1fr);gap:44px;margin-top:64px}
+.qa-prompts article{border-top:3px solid var(--accent);padding-top:20px}
+.reveal .qa-prompts h2{font-size:28px;font-weight:600;text-transform:none;color:var(--accent);margin:0 0 16px}
+.reveal .qa-prompts p{font-size:29px;line-height:1.3;margin:0}
+.reveal .thanks-slide h1{font-size:148px;line-height:1.05;margin:0 0 32px;letter-spacing:-.035em}
+.reveal .thanks-slide .subtitle{font-size:42px;line-height:1.3}
+.reveal .closing-authors{font-size:34px;margin:48px 0 0}
+.closing-authors span{color:var(--accent);padding:0 18px}
+.closing-links{display:flex;gap:42px;font-size:26px;line-height:1.3;margin-top:28px}
+.climax .request{border-color:var(--accent)}
+.climax .ice-tip{fill:#edf2ff;stroke:#bdcbf3}
+.climax .ice-under{fill:#e1e9ff;stroke:#9fb5ee}
+.climax .waterline{stroke:var(--epam-cyan)}
