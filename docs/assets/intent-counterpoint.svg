@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">Direction is not capability.</title><desc id="desc">A counterpoint to a fixed hierarchy. An illustrative matrix varies the recommended approach by clarity of the goal and cost of being wrong. High-stakes clear work calls for verification and constraints; high-stakes uncertain work calls for clarification and a contract. Reversible clear work can start simple; reversible uncertain work can prototype to learn. Application size alone does not determine these choices. Evidence for minimal systems and selective context is summarized separately.</desc>
+<defs><linearGradient id="gradient"><stop offset="0" stop-color="#0078c2"/><stop offset=".65" stop-color="#0047ff"/><stop offset="1" stop-color="#8453d2"/></linearGradient><marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="5" orient="auto"><path d="M0 1 L8 5 L0 9" fill="none" stroke="#0047ff" stroke-width="1.5"/></marker></defs>
+<style>text{font-family:Calibri,Arial,sans-serif;fill:#060606}.muted{fill:#626262}.blue{fill:#0047ff}.white{fill:#fff}.label{font-size:17px;letter-spacing:1.3px;font-weight:600}.body{font-size:23px}.small{font-size:19px}</style>
+<rect width="1600" height="900" fill="white"/>
+<text x="64" y="64" class="label blue">THE COUNTERPOINT / MINIMUM SUFFICIENT STRUCTURE</text>
+<text x="64" y="145" font-size="74" font-weight="700" letter-spacing="-1.8">Direction is not <tspan fill="url(#gradient)">capability.</tspan></text>
+<text x="64" y="199" font-size="30" class="muted">A clear goal can still fail. Add structure where it changes the outcome.</text>
+<text x="130" y="252" class="label muted">GOAL / SUCCESS CRITERIA</text>
+<text x="154" y="293" class="label muted">CLEAR ENOUGH</text>
+<text x="577" y="293" class="label muted">STILL UNCERTAIN</text>
+<path d="M65 642V310" fill="none" stroke="#0047ff" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="38" y="610" transform="rotate(-90 38 610)" font-size="19" class="blue">COST OF BEING WRONG</text>
+<text x="110" y="398" text-anchor="end" font-size="16" class="muted">HIGH</text>
+<text x="110" y="568" text-anchor="end" font-size="16" class="muted">LOW</text>
+<g data-case="verify"><rect x="130" y="315" width="409" height="156" rx="9" fill="#edf2ff"/>
+    <text x="154" y="349" class="label" style="fill:#0047ff">CLEAR + HIGH STAKES</text>
+    <text x="154" y="394" font-size="31" font-weight="700" style="fill:#0047ff">Verify &amp; constrain</text>
+    <text x="154" y="433" font-size="23" style="fill:#0047ff">Small payment calculation</text></g>
+<g data-case="contract"><rect x="553" y="315" width="409" height="156" rx="9" fill="#0047ff"/>
+    <text x="577" y="349" class="label" style="fill:#ffffff">UNCERTAIN + HIGH STAKES</text>
+    <text x="577" y="394" font-size="31" font-weight="700" style="fill:#ffffff">Clarify &amp; contract</text>
+    <text x="577" y="433" font-size="23" style="fill:#ffffff">Changing a billing policy</text></g>
+<g data-case="simple"><rect x="130" y="485" width="409" height="156" rx="9" fill="#f2f4f7"/>
+    <text x="154" y="519" class="label" style="fill:#060606">CLEAR + REVERSIBLE</text>
+    <text x="154" y="564" font-size="31" font-weight="700" style="fill:#060606">Start simple</text>
+    <text x="154" y="603" font-size="23" style="fill:#060606">Routine fix in a large repo</text></g>
+<g data-case="prototype"><rect x="553" y="485" width="409" height="156" rx="9" fill="#e9f5f5"/>
+    <text x="577" y="519" class="label" style="fill:#107e8d">UNCERTAIN + REVERSIBLE</text>
+    <text x="577" y="564" font-size="31" font-weight="700" style="fill:#107e8d">Prototype to learn</text>
+    <text x="577" y="603" font-size="23" style="fill:#107e8d">Disposable UI experiment</text></g>
+<text x="130" y="687" font-size="23" font-weight="600">Application size alone does not select a quadrant.</text>
+<text x="130" y="718" class="small muted">Illustrative tasks; judge the actual blast radius and reversibility.</text>
+<path d="M1015 262V720" stroke="#e4e4e4" stroke-width="2"/>
+<text x="1060" y="279" class="label blue">MORE IS NOT ALWAYS BETTER</text>
+<text x="1060" y="329" font-size="29" font-weight="700">Lean systems can work. <tspan font-size="18" class="blue">[1][2][3]</tspan></text>
+<text x="1060" y="364" class="body muted">Start with a simple model + tool loop;</text>
+<text x="1060" y="395" class="body muted">add complexity only when it helps.</text>
+<text x="1060" y="455" font-size="29" font-weight="700">Extra context is not free. <tspan font-size="18" class="blue">[4]</tspan></text>
+<text x="1060" y="490" class="body muted">AGENTS.md study: no general task-</text>
+<text x="1060" y="521" class="body muted">success gain; higher inference cost.</text>
+<rect x="1040" y="565" width="496" height="142" rx="9" fill="#f1edfa"/>
+<text x="1060" y="599" class="label" style="fill:#8453d2">CLEAR GOAL + INCAPABLE MODEL?</text>
+<text x="1060" y="640" font-size="29" font-weight="700">Fix capability—not the spec.</text>
+<text x="1060" y="678" font-size="21" class="muted">A missing tool can be the bottleneck, too.</text>
+<text x="64" y="780" font-size="34" font-weight="600">Keep the intent. <tspan class="blue">Earn the extra structure.</tspan></text>
+<text x="64" y="815" font-size="17" class="muted">Conceptual decision map, not a validated policy. Coding studies do not establish results for all applications or test IDD directly.</text>
+<image x="64" y="845" width="91" height="34" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgLTUgNzI1NCAyNjYzIiByb2xlPSJpbWciIGFyaWEtbGFiZWw9IkVQQU0iPjx0aXRsZT5FUEFNPC90aXRsZT48cGF0aCBmaWxsPSIjMDAwIiBkPSJNMTM2OSwxMTgzIEwxMzY5LDExODMgTDEzNzAsMTY3MSBDMTM3MCwxNzk1IDE0MzAsMTg1NiAxNTQ5LDE4NTYgTDE2MDEsMTg1NiBDMTcxOSwxODU2IDE3NzksMTc5NSAxNzc5LDE2NzEgTDE3NzksMTQzMSBMMjA1MywxNDMxIEwyMDUzLDE2NTkgQzIwNTMsMTk3MiAxOTAxLDIxMzIgMTU5OSwyMTMyIEwxNTM5LDIxMzIgQzEyMzgsMjEzMiAxMDg2LDE5NzQgMTA4NiwxNjk2IEwxMDg2LDUwMyBDMTA4NiwxNTIgMTIzOCwtNSAxNTM5LC01IEwxNTk5LC01IEMxOTAxLC01IDIwNTMsMTUyIDIwNTMsNDY2IEwyMDUxLDExODIgTDEzNjksMTE4MiBMMTM2OSwxMTgzIFogTTEzNjksODk5IEwxMzY5LDg5OSBMMTc3MCw4OTkgTDE3NzAsNDU1IEMxNzcwLDMzMSAxNzExLDI2OCAxNTkxLDI2OCBMMTU0NiwyNjggQzE0MjcsMjY4IDEzNjcsMzMxIDEzNjcsNDU1IEwxMzY3LDg5OSBMMTM2OSw4OTkgWiIvPjxwYXRoIGZpbGw9IiMwMDAiIGQ9Ik0yMjM1LDE4IEwyMjM1LDE4IEwyNTE4LDE4IEwyNTE4LDE1NCBDMjU4NSw4MCAyNjk5LC00IDI4NjMsLTQgQzMxMDUsLTQgMzIyMywxNjIgMzIyMyw0MTAgTDMyMjMsMTcxOSBDMzIyMywxOTY3IDMxMDUsMjEzNCAyODYzLDIxMzQgQzI2OTksMjEzNCAyNTg1LDIwNTIgMjUxOCwxOTgzIEwyNTE4LDI2NTggTDIyMzUsMjY1OCBMMjIzNSwxOCBaIE0yNTE4LDE3NDQgTDI1MTgsMTc0NCBDMjU5NSwxODE0IDI2ODUsMTg1MiAyNzc4LDE4NTIgQzI4ODIsMTg1MiAyOTQyLDE4MDIgMjk0MiwxNjgyIEwyOTQyLDQ0MiBDMjk0MiwzMjIgMjg4MiwyNzEgMjc3OCwyNzEgQzI2ODUsMjcxIDI1OTUsMzEwIDI1MTgsMzc5IEwyNTE4LDE3NDQgWiIvPjxwYXRoIGZpbGw9IiMwMDAiIGQ9Ik0zMzk0LDEzODAgTDMzOTQsMTM4MCBDMzM5NCwxMTIwIDM0NzUsMTAxNiAzNjkxLDkzOSBMNDA3MCw4MDMgTDQwNzAsNDU1IEM0MDcwLDMzMSA0MDEwLDI2NiAzODkxLDI2NiBMMzg0NiwyNjYgQzM3MjcsMjY2IDM2NjcsMzMxIDM2NjcsNDU1IEwzNjY3LDc1MSBMMzM5Myw3NTEgTDMzOTMsNDY3IEMzMzkzLDE1NCAzNTQ1LC00IDM4NDYsLTQgTDM4OTksLTQgQzQyMDEsLTQgNDM1MywxNTQgNDM1Myw0NjcgTDQzNTMsMjExMCBMNDA3MCwyMTEwIEw0MDcwLDE5NzggQzM5OTMsMjA1NSAzODg3LDIxMzIgMzcyNSwyMTMyIEMzNDk4LDIxMzIgMzM5NCwxOTk2IDMzOTQsMTc2NCBMMzM5NCwxMzgwIFogTTQwNzAsMTc1NiBMNDA3MCwxNzU2IEw0MDcwLDEwNjcgTDM4MTQsMTE2OCBDMzcxMCwxMjExIDM2NzcsMTI2NiAzNjc3LDEzODYgTDM2NzcsMTcwMyBDMzY3NywxODA0IDM3MjUsMTg1NCAzODE0LDE4NTQgQzM4OTksMTg1NCAzOTc4LDE4MjMgNDA3MCwxNzU2IFoiLz48cGF0aCBmaWxsPSIjMDAwIiBkPSJNNTQ5NCwyMTEwIEw1NDk0LDIxMTAgTDUyMTEsMjExMCBMNTIxMSw0MjQgQzUyMTEsMzIwIDUxNjMsMjc0IDUwNzgsMjc0IEM1MDAxLDI3NCA0OTE4LDMwNCA0ODE4LDM3OCBMNDgxOCwyMTEwIEw0NTM1LDIxMTAgTDQ1MzUsMTggTDQ4MTgsMTggTDQ4MTgsMTU0IEM0OTAxLDcyIDUwMDcsLTUgNTE2MywtNSBDNTMwOSwtNSA1NDA1LDU2IDU0NTcsMTY0IEM1NTU4LDc1IDU2NzcsLTUgNTgzOSwtNSBDNjA1OCwtNSA2MTcwLDEzNCA2MTcwLDM2MiBMNjE3MCwyMTA4IEw1ODg3LDIxMDggTDU4ODcsNDI0IEM1ODg3LDMyMCA1ODM5LDI3NCA1NzU0LDI3NCBDNTY3NywyNzQgNTU5NCwzMDQgNTQ5NCwzNzggTDU0OTQsMjExMCBMNTQ5NCwyMTEwIFoiLz48cGF0aCBmaWxsPSIjMDAwIiBkPSJNMCw5MzAgTDAsOTMwIEwwLDEyMTIgTDcyNSwxOTIzIEw3MjUsMTUzMCBMMjUwLDEwNjcgTDcyNSw1OTUgTDcyNSwyMTAgTDAsOTMwIFoiLz48cGF0aCBmaWxsPSIjMDAwIiBkPSJNNjUyOSw1OTUgTDY1MjksNTk1IEw3MDAzLDEwNjcgTDY1MjksMTUzMSBMNjUyOSwxOTIzIEw3MjU0LDEyMTIgTDcyNTQsOTMwIEw2NTI5LDIxMCBMNjUyOSw1OTUgWiIvPjwvc3ZnPgo="/>
+<text x="1536" y="864" text-anchor="end" font-size="16" class="muted">FROM OPCODE TO INTENT / COUNTERPOINT</text></svg>

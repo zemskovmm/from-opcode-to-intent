@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">Power is not direction: the intent-driven development hierarchy</title>
+<desc id="desc">Seven layers from model and inference through tools, skills, context, rules, acceptance and intent. Hardness is a qualitative application-side estimate, not an empirical score or a ranking of which component can be omitted.</desc>
+<defs><linearGradient id="brand" x1="0" x2="1"><stop offset="0" stop-color="#0078c2"/><stop offset=".6" stop-color="#0047ff"/><stop offset="1" stop-color="#8453d2"/></linearGradient><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="none" stroke="#8453d2" stroke-width="1.5"/></marker></defs>
+<style>text{font-family:Calibri,Arial,sans-serif;fill:#060606}.label{font-size:18px;font-weight:600;letter-spacing:1.5px;fill:#626262}.name{font-size:30px;font-weight:600}.detail{font-size:21px;fill:#626262}.difficulty{font-size:25px;font-weight:600}.role{font-size:25px}.num{font-size:19px;font-weight:600}</style>
+<rect width="1600" height="900" fill="white"/>
+<text x="64" y="72" class="label" style="fill:#0047ff">THE INTENT-DRIVEN STACK</text>
+<text x="64" y="155" font-size="76" font-weight="600" letter-spacing="-2">Power is not <tspan fill="url(#brand)">direction.</tspan></text>
+<text x="66" y="204" font-size="30" fill="#626262">Capability enables execution. Intent defines what counts as success.</text>
+<text x="150" y="253" class="label">WHAT WE ENGINEER</text>
+<text x="790" y="253" class="label">HARDNESS*</text>
+<text x="1088" y="253" class="label">WHY IT MATTERS</text>
+
+<g data-layer="07"><rect x="104" y="270" width="1370" height="59" rx="5" fill="#0047ff"/>
+ <text x="120" y="303" class="num" style="fill:#ffffff">07</text>
+ <text x="160" y="296" class="name" style="fill:#ffffff">Intent &amp; priorities</text>
+ <text x="160" y="319" class="detail" style="fill:#e6edff">Goal · value · scope · trade-offs</text>
+ <text x="790" y="306" class="difficulty" style="fill:#ffffff">Very high</text>
+ <text x="1088" y="306" class="role" style="fill:#ffffff">Chooses the right problem</text></g>
+<g data-layer="06"><rect x="104" y="335" width="1370" height="59" rx="5" fill="#e8efff"/>
+ <text x="120" y="368" class="num" style="fill:#0047ff">06</text>
+ <text x="160" y="361" class="name" style="fill:#0047ff">Acceptance &amp; evidence</text>
+ <text x="160" y="384" class="detail" style="fill:#626262">Checks · edge cases · observable outcomes</text>
+ <text x="790" y="371" class="difficulty" style="fill:#0047ff">High</text>
+ <text x="1088" y="371" class="role" style="fill:#27374d">Makes success testable</text></g>
+<g data-layer="05"><rect x="104" y="400" width="1370" height="59" rx="5" fill="#eef2ff"/>
+ <text x="120" y="433" class="num" style="fill:#0047ff">05</text>
+ <text x="160" y="426" class="name" style="fill:#0047ff">Rules &amp; constraints</text>
+ <text x="160" y="449" class="detail" style="fill:#626262">Safety · architecture · permission boundaries</text>
+ <text x="790" y="436" class="difficulty" style="fill:#0047ff">High</text>
+ <text x="1088" y="436" class="role" style="fill:#27374d">Protects what must hold</text></g>
+<g data-layer="04"><rect x="104" y="465" width="1370" height="59" rx="5" fill="#eaf5f5"/>
+ <text x="120" y="498" class="num" style="fill:#107e8d">04</text>
+ <text x="160" y="491" class="name" style="fill:#107e8d">Context &amp; knowledge</text>
+ <text x="160" y="514" class="detail" style="fill:#626262">Relevant facts · repo state · domain knowledge</text>
+ <text x="790" y="501" class="difficulty" style="fill:#107e8d">High</text>
+ <text x="1088" y="501" class="role" style="fill:#27374d">Grounds decisions</text></g>
+<g data-layer="03"><rect x="104" y="530" width="1370" height="59" rx="5" fill="#f1f4f9"/>
+ <text x="120" y="563" class="num" style="fill:#27374d">03</text>
+ <text x="160" y="556" class="name" style="fill:#27374d">Skills &amp; workflows</text>
+ <text x="160" y="579" class="detail" style="fill:#626262">Reusable procedures · planning · review loops</text>
+ <text x="790" y="566" class="difficulty" style="fill:#27374d">Medium</text>
+ <text x="1088" y="566" class="role" style="fill:#27374d">Makes practice repeatable</text></g>
+<g data-layer="02"><rect x="104" y="595" width="1370" height="59" rx="5" fill="#f4f5f8"/>
+ <text x="120" y="628" class="num" style="fill:#27374d">02</text>
+ <text x="160" y="621" class="name" style="fill:#27374d">Tools &amp; environment</text>
+ <text x="160" y="644" class="detail" style="fill:#626262">APIs · execution · tests · observability</text>
+ <text x="790" y="631" class="difficulty" style="fill:#27374d">Medium–high</text>
+ <text x="1088" y="631" class="role" style="fill:#27374d">Enables action &amp; feedback</text></g>
+<g data-layer="01"><rect x="104" y="660" width="1370" height="59" rx="5" fill="#f4f5f8"/>
+ <text x="120" y="693" class="num" style="fill:#27374d">01</text>
+ <text x="160" y="686" class="name" style="fill:#27374d">Model &amp; inference</text>
+ <text x="160" y="709" class="detail" style="fill:#626262">Size / architecture · task quality · latency / cost</text>
+ <text x="790" y="696" class="difficulty" style="fill:#27374d">Medium</text>
+ <text x="1088" y="696" class="role" style="fill:#27374d">Supplies reasoning capacity</text></g>
+<path d="M94 270 H83 V459 H94" fill="none" stroke="#0047ff" stroke-width="3"/>
+<text x="59" y="449" transform="rotate(-90 59 449)" class="label" style="fill:#0047ff;font-size:16px">INTENT CONTRACT</text>
+<path d="M1510 704 V283" fill="none" stroke="#8453d2" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="1544" y="683" transform="rotate(-90 1544 683)" class="label" style="fill:#8453d2">MORE UPSTREAM LEVERAGE</text>
+<text x="104" y="768" font-size="30" font-weight="600">A model upgrade is not a substitute for an agreed goal.</text>
+<text x="104" y="799" font-size="20" style="fill:#626262">Size is not a task score. Evaluate the whole system; every layer can become the bottleneck.</text>
+<text x="64" y="830" font-size="17" style="fill:#626262">*Application-side design effort with existing models/tools. Qualitative, task-dependent—not measured weights.</text>
+<image x="64" y="849" width="82" height="30" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgLTUgNzI1NCAyNjYzIiByb2xlPSJpbWciIGFyaWEtbGFiZWw9IkVQQU0iPjx0aXRsZT5FUEFNPC90aXRsZT48cGF0aCBmaWxsPSIjMDAwIiBkPSJNMTM2OSwxMTgzIEwxMzY5LDExODMgTDEzNzAsMTY3MSBDMTM3MCwxNzk1IDE0MzAsMTg1NiAxNTQ5LDE4NTYgTDE2MDEsMTg1NiBDMTcxOSwxODU2IDE3NzksMTc5NSAxNzc5LDE2NzEgTDE3NzksMTQzMSBMMjA1MywxNDMxIEwyMDUzLDE2NTkgQzIwNTMsMTk3MiAxOTAxLDIxMzIgMTU5OSwyMTMyIEwxNTM5LDIxMzIgQzEyMzgsMjEzMiAxMDg2LDE5NzQgMTA4NiwxNjk2IEwxMDg2LDUwMyBDMTA4NiwxNTIgMTIzOCwtNSAxNTM5LC01IEwxNTk5LC01IEMxOTAxLC01IDIwNTMsMTUyIDIwNTMsNDY2IEwyMDUxLDExODIgTDEzNjksMTE4MiBMMTM2OSwxMTgzIFogTTEzNjksODk5IEwxMzY5LDg5OSBMMTc3MCw4OTkgTDE3NzAsNDU1IEMxNzcwLDMzMSAxNzExLDI2OCAxNTkxLDI2OCBMMTU0NiwyNjggQzE0MjcsMjY4IDEzNjcsMzMxIDEzNjcsNDU1IEwxMzY3LDg5OSBMMTM2OSw4OTkgWiIvPjxwYXRoIGZpbGw9IiMwMDAiIGQ9Ik0yMjM1LDE4IEwyMjM1LDE4IEwyNTE4LDE4IEwyNTE4LDE1NCBDMjU4NSw4MCAyNjk5LC00IDI4NjMsLTQgQzMxMDUsLTQgMzIyMywxNjIgMzIyMyw0MTAgTDMyMjMsMTcxOSBDMzIyMywxOTY3IDMxMDUsMjEzNCAyODYzLDIxMzQgQzI2OTksMjEzNCAyNTg1LDIwNTIgMjUxOCwxOTgzIEwyNTE4LDI2NTggTDIyMzUsMjY1OCBMMjIzNSwxOCBaIE0yNTE4LDE3NDQgTDI1MTgsMTc0NCBDMjU5NSwxODE0IDI2ODUsMTg1MiAyNzc4LDE4NTIgQzI4ODIsMTg1MiAyOTQyLDE4MDIgMjk0MiwxNjgyIEwyOTQyLDQ0MiBDMjk0MiwzMjIgMjg4MiwyNzEgMjc3OCwyNzEgQzI2ODUsMjcxIDI1OTUsMzEwIDI1MTgsMzc5IEwyNTE4LDE3NDQgWiIvPjxwYXRoIGZpbGw9IiMwMDAiIGQ9Ik0zMzk0LDEzODAgTDMzOTQsMTM4MCBDMzM5NCwxMTIwIDM0NzUsMTAxNiAzNjkxLDkzOSBMNDA3MCw4MDMgTDQwNzAsNDU1IEM0MDcwLDMzMSA0MDEwLDI2NiAzODkxLDI2NiBMMzg0NiwyNjYgQzM3MjcsMjY2IDM2NjcsMzMxIDM2NjcsNDU1IEwzNjY3LDc1MSBMMzM5Myw3NTEgTDMzOTMsNDY3IEMzMzkzLDE1NCAzNTQ1LC00IDM4NDYsLTQgTDM4OTksLTQgQzQyMDEsLTQgNDM1MywxNTQgNDM1Myw0NjcgTDQzNTMsMjExMCBMNDA3MCwyMTEwIEw0MDcwLDE5NzggQzM5OTMsMjA1NSAzODg3LDIxMzIgMzcyNSwyMTMyIEMzNDk4LDIxMzIgMzM5NCwxOTk2IDMzOTQsMTc2NCBMMzM5NCwxMzgwIFogTTQwNzAsMTc1NiBMNDA3MCwxNzU2IEw0MDcwLDEwNjcgTDM4MTQsMTE2OCBDMzcxMCwxMjExIDM2NzcsMTI2NiAzNjc3LDEzODYgTDM2NzcsMTcwMyBDMzY3NywxODA0IDM3MjUsMTg1NCAzODE0LDE4NTQgQzM4OTksMTg1NCAzOTc4LDE4MjMgNDA3MCwxNzU2IFoiLz48cGF0aCBmaWxsPSIjMDAwIiBkPSJNNTQ5NCwyMTEwIEw1NDk0LDIxMTAgTDUyMTEsMjExMCBMNTIxMSw0MjQgQzUyMTEsMzIwIDUxNjMsMjc0IDUwNzgsMjc0IEM1MDAxLDI3NCA0OTE4LDMwNCA0ODE4LDM3OCBMNDgxOCwyMTEwIEw0NTM1LDIxMTAgTDQ1MzUsMTggTDQ4MTgsMTggTDQ4MTgsMTU0IEM0OTAxLDcyIDUwMDcsLTUgNTE2MywtNSBDNTMwOSwtNSA1NDA1LDU2IDU0NTcsMTY0IEM1NTU4LDc1IDU2NzcsLTUgNTgzOSwtNSBDNjA1OCwtNSA2MTcwLDEzNCA2MTcwLDM2MiBMNjE3MCwyMTA4IEw1ODg3LDIxMDggTDU4ODcsNDI0IEM1ODg3LDMyMCA1ODM5LDI3NCA1NzU0LDI3NCBDNTY3NywyNzQgNTU5NCwzMDQgNTQ5NCwzNzggTDU0OTQsMjExMCBMNTQ5NCwyMTEwIFoiLz48cGF0aCBmaWxsPSIjMDAwIiBkPSJNMCw5MzAgTDAsOTMwIEwwLDEyMTIgTDcyNSwxOTIzIEw3MjUsMTUzMCBMMjUwLDEwNjcgTDcyNSw1OTUgTDcyNSwyMTAgTDAsOTMwIFoiLz48cGF0aCBmaWxsPSIjMDAwIiBkPSJNNjUyOSw1OTUgTDY1MjksNTk1IEw3MDAzLDEwNjcgTDY1MjksMTUzMSBMNjUyOSwxOTIzIEw3MjU0LDEyMTIgTDcyNTQsOTMwIEw2NTI5LDIxMCBMNjUyOSw1OTUgWiIvPjwvc3ZnPgo="/>
+<text x="176" y="869" font-size="13" letter-spacing="1" style="fill:#737373">FROM OPCODE TO INTENT / CONCEPT SLIDE</text>
+<text x="1490" y="869" text-anchor="end" font-size="15" style="fill:#737373">Engineering synthesis · source context [1][2][3][4]</text>
+</svg>

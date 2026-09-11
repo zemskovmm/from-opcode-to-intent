@@ -24,8 +24,8 @@ Local Obsidian settings, workspace state, OS files, and environment credentials 
 
 ## Web presentations
 
-- [Original edition](https://zemskovmm.github.io/from-opcode-to-intent/) — 22 slides preserving the original historical narrative, now with EPAM styling and title/authors/agenda pages.
-- [Practical edition](https://zemskovmm.github.io/from-opcode-to-intent/practical/) — a parallel 22-slide version with a fixture-based intent-and-acceptance exercise.
+- [Original edition](https://zemskovmm.github.io/from-opcode-to-intent/) — 24 slides preserving the original historical narrative, now with EPAM styling and title/authors/agenda pages.
+- [Practical edition](https://zemskovmm.github.io/from-opcode-to-intent/practical/) — a parallel 24-slide version with a fixture-based intent-and-acceptance exercise.
 
 Both editions credit Michael Zemskov and Dima Dorogoi and end with Q&A and Thank you pages after the Red Queen narrative conclusion. They share EPAM styling, artwork and the vendored framework. The editable website sources are `docs/` and `docs/practical/`. See [practical edition documentation](docs/practical/README.md) for scope, brand provenance, timing and verification.
 

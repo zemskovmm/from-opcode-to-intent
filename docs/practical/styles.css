@@ -110,3 +110,9 @@ html,body,.reveal,.reveal h1{font-family:Calibri,'Talk Sans',Arial,sans-serif}
 .climax .ice-tip{fill:#edf2ff;stroke:#bdcbf3}
 .climax .ice-under{fill:#e1e9ff;stroke:#9fb5ee}
 .climax .waterline{stroke:var(--epam-cyan)}
+
+/* Approved, shared vector slides keep their original full-canvas layout. */
+.reveal .concept-frame{padding:0;display:block}
+.reveal .concept-frame>img{display:block;width:100%;height:100%;max-width:none;max-height:none;margin:0;object-fit:contain}
+.reveal .concept-frame>h1{position:absolute;width:1px;height:1px;padding:0;margin:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.reveal .concept-sources{position:absolute;left:50%;bottom:28px;transform:translateX(-50%);font-size:18px;line-height:24px;color:var(--accent)}

@@ -5,11 +5,11 @@ This is the parallel, EPAM-branded edition. Its editable source is `index.html`;
 - **Public URL:** https://zemskovmm.github.io/from-opcode-to-intent/practical/
 - **Original edition:** https://zemskovmm.github.io/from-opcode-to-intent/
 - **Authors:** Michael Zemskov and Dima Dorogoi.
-- **Format:** 22 slides on a fixed 1600×900 canvas: a proposed twenty-minute talk, followed by Q&A and a Thank you page. Both editions include title/authors/agenda pages.
+- **Format:** 24 slides on a fixed 1600×900 canvas: a proposed twenty-minute talk, followed by Q&A and a Thank you page. Both editions include title/authors/agenda pages.
 
 ## Editorial scope
 
-Both editions share EPAM styling and front matter but retain distinct narratives. This version combines the card/encoding and bottleneck/toolkit beats and adds clarification, durable intent and an executable fixture-based acceptance exercise. The Brooks quotation and Red Queen narrative conclusion remain intact. Q&A and Thank you follow the conclusion in both editions.
+Both editions share EPAM styling and front matter but retain distinct narratives. This version combines the card/encoding and bottleneck/toolkit beats and adds clarification, durable intent and an executable fixture-based acceptance exercise. The hierarchy (Power is not direction) and counterpoint (Direction is not capability) follow the bottleneck discussion as a consecutive pair. They are qualitative design lenses, not a universal ranking. The Brooks quotation and Red Queen narrative conclusion remain intact. Q&A and Thank you follow the conclusion in both editions.
 
 The practical example is deliberately limited. Its full Git-viewer intent is a proposed contract. The interactive slide checks only classification of a recorded, synthetic Git-status fixture; it does not constitute a full Git client or prove repository safety and privacy. The regression toggle intentionally omits untracked files. It must never be described as a naturally occurring AI mistake.
 
@@ -17,9 +17,9 @@ The research findings live in the maintained Obsidian notes attached to trunk be
 
 ## Source files
 
-- `index.html`: the audience deck, including all slide text and editable diagrams.
+- `index.html`: the audience deck markup. The paired diagrams retain editable text in the shared `../assets/intent-hierarchy.svg` and `../assets/intent-counterpoint.svg` sources; `../intent-sources.html` keeps their citation mappings separate.
 - `styles.css`: shared EPAM branding and closing-page layouts, plus practical-specific layouts; both editions load this file over the common base `../styles.css`.
-- `app.js`: navigation, native browser fullscreen and a separate remembered-position key, `opcode-to-intent:practical:last-slide`.
+- `app.js`: navigation, native browser fullscreen and a separate remembered-position key, `opcode-to-intent:practical:last-slide-id`, with migration from the former numeric position key.
 - `check-demo.mjs`: the executable acceptance exercise, kept independent of Reveal.
 - `change-fixture.json`: captured Git output and separate expected classifications; this is the only fixture the exercise loads.
 - `intent-example.md`: the illustrative full viewer contract, with its unimplemented scope stated explicitly.
@@ -43,17 +43,18 @@ This is a light-slide application of that guide, not a claim of a formal corpora
 
 | Slides | Section | Seconds |
 |---|---|---:|
-| 1–3 | Title, authors, agenda | 60 |
+| 1–3 | Title, authors, agenda | 40 |
 | 4–5 | Compression and abstraction | 90 |
-| 6–10 | Historical ladder through SQL | 250 |
+| 6–10 | Historical ladder through SQL | 210 |
 | 11–13 | Context, agents, hidden implementation | 170 |
 | 14–15 | The Git-client request and moving bottleneck | 170 |
-| 16–18 | Clarification, intent, acceptance exercise | 260 |
-| 19–20 | Contract iceberg and Red Queen | 140 |
+| 16–17 | Intent hierarchy and counterpoint | 90 |
+| 18–20 | Clarification, intent, acceptance exercise | 230 |
+| 21–22 | Contract iceberg and Red Queen | 140 |
 | Distributed | Pauses and handoffs | 60 |
 | **Talk total** | **Proposed, not a measured rehearsal** | **1200** |
 
-Slides 21–22 are Q&A and Thank you. Discussion time is additional and depends on the event; it is not hidden inside the twenty-minute talk estimate.
+Slides 23–24 are Q&A and Thank you. The added pair is budgeted at 90 seconds by trimming the opening, history and practical segment; this remains a proposal that needs rehearsal. Discussion time is additional and depends on the event; it is not hidden inside the twenty-minute talk estimate.
 
 ## Present and verify
 
