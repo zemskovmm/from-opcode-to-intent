@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="InstantCalc descriptive pilot: compare sixteen model/workflow runs using separate quality, observed interaction time and declared estimates, with editable process trees.">
+  <title>InstantCalc — compare the pilot | From Opcode to Intent</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#compare">Skip to comparison</a>
+<div class="page">
+  <header class="masthead">
+    <a href="../">From Opcode to Intent</a>
+    <img src="../practical/assets/epam-logo.svg" alt="EPAM" width="108" height="40">
+  </header>
+  <main>
+    <header class="intro">
+      <p class="eyebrow">Descriptive pilot / final frozen evidence / 13 September 2026</p>
+      <h1>InstantCalc: compare the runs</h1>
+      <p class="lead">Four models. Four workflows. Quality, observed interaction time and declared estimates, kept separate.</p>
+      <p>Michael Zemskov and Dima Dorogoi · Companion to From Opcode to Intent.</p>
+      <nav class="section-nav" aria-label="Companion sections">
+        <a href="apps/">Try all 16 apps</a><a href="#compare">Compare 16 runs</a><a href="#workflows">Workflows</a><a href="#trees">Process trees</a><a href="#methods">Methods &amp; limits</a><a href="#downloads">Data &amp; provenance</a>
+      </nav>
+    </header>
+
+    <section id="compare" aria-labelledby="compare-title">
+      <div class="section-heading"><p class="eyebrow">01 / comparison</p><h2 id="compare-title">What qualified, and what remains unknown</h2></div>
+      <p class="outcome-line"><strong>7 qualified</strong><span>3 app-failed</span><span>6 blocked</span><small>Whole-run dispositions · 16 runs</small></p>
+      <p class="scope-note"><strong>One run per cell. No causal IDD claim or model ranking.</strong> A blocked run lacks required evidence; it is not a failure or a zero-quality score. The web preview was evaluated, not a native application.</p>
+      <p class="table-guide">Read baseline and feature separately. <strong>8/8 baseline core can still fail F04</strong> (active-row persistence). Time is a sum of observed generation/interaction intervals, not wall clock or isolated speed. Estimates cover only priced receipts; actual billed charges are unknown in every cell.</p>
+      <div class="table-scroll" role="region" aria-label="Sixteen-run comparison; scroll horizontally on small screens" tabindex="0">
+        <table class="comparison">
+          <caption>Final dispositions, complete observed intervals and known API-equivalent estimates. B = baseline core; C = feature core. Estimates shown to four decimals; downloads retain exact precision.</caption>
+          <thead><tr><th scope="col">Model / workflow</th><th scope="col">Whole run</th><th scope="col">Baseline</th><th scope="col">Feature</th><th scope="col">Observed intervals</th><th scope="col">Known estimate (USD)</th><th scope="col">Model repairs</th></tr></thead>
+          <tbody>
+<!-- BEGIN COMPARISON -->
+<tr data-run="astra-APP1-r01">
+  <th scope="row"><span class="model">Astra</span> APP1</th>
+  <td><span class="status qualified">qualified</span></td>
+  <td><span class="status qualified">qualified</span><small>B 8/8 · F04 pass</small></td>
+  <td><span class="status qualified">qualified</span><small>C 8/8 · B regression 8/8</small></td>
+  <td class="numeric">21.9 min<small>4/4 complete intervals</small></td>
+  <td class="numeric">Unknown<small>0/4 known; 4 unknown</small></td>
+  <td>0 / 0<small>baseline / feature</small></td>
+</tr>
+<tr data-run="astra-APP2-r01">
+  <th scope="row"><span class="model">Astra</span> APP2</th>
+  <td><span class="status qualified">qualified</span></td>
+  <td><span class="status qualified">qualified</span><small>B 8/8 · F04 pass</small></td>
+  <td><span class="status qualified">qualified</span><small>C 8/8 · B regression 8/8</small></td>
+  <td class="numeric">23.4 min<small>6/6 complete intervals</small></td>
+  <td class="numeric">Unknown<small>0/6 known; 6 unknown</small></td>
+  <td>0 / 0<small>baseline / feature</small></td>
+</tr>
+<tr data-run="astra-APP3-r01">
+  <th scope="row"><span class="model">Astra</span> APP3</th>
+  <td><span class="status qualified">qualified</span></td>
+  <td><span class="status qualified">qualified</span><small>B 8/8 · F04 pass</small></td>
+  <td><span class="status qualified">qualified</span><small>C 8/8 · B regression 8/8</small></td>
+  <td class="numeric">13.1 min<small>10/11 complete intervals · partial</small></td>
+  <td class="numeric">Unknown<small>0/11 known; 11 unknown</small></td>
+  <td>0 / 0<small>baseline / feature</small></td>
+</tr>
+<tr data-run="astra-APP4-r01">
+  <th scope="row"><span class="model">Astra</span> APP4</th>
+  <td><span class="status failed">app failed</span></td>
+  <td><span class="status failed">app failed</span><small>B 8/8 · F04 fail</small></td>
+  <td><span class="status qualified">qualified</span><small>C 8/8 · B regression 8/8</small></td>
+  <td class="numeric">30.5 min<small>13/13 complete intervals</small></td>
+  <td class="numeric">Unknown<small>0/13 known; 13 unknown</small></td>
+  <td>0 / 1<small>baseline / feature</small></td>
+</tr>
+<tr data-run="sol-APP1-r01">
+  <th scope="row"><span class="model">Sol</span> APP1</th>
+  <td><span class="status blocked">blocked</span></td>
+  <td><span class="status qualified">qualified</span><small>B 8/8 · F04 pass</small></td>
+  <td><span class="status blocked">coverage blocked</span><small>C 7/8 · B regression 8/8</small></td>
+  <td class="numeric">15.4 min<small>4/5 complete intervals · partial</small></td>
+  <td class="numeric">$2.1604<small>5/5 known; 0 unknown</small></td>
+  <td>0 / 0<small>baseline / feature</small></td>
+</tr>
+<tr data-run="sol-APP2-r01">
+  <th scope="row"><span class="model">Sol</span> APP2</th>
+  <td><span class="status qualified">qualified</span></td>
+  <td><span class="status qualified">qualified</span><small>B 8/8 · F04 pass</small></td>
+  <td><span class="status qualified">qualified</span><small>C 8/8 · B regression 8/8</small></td>
+  <td class="numeric">21.8 min<small>7/7 complete intervals</small></td>
+  <td class="numeric">$3.4384<small>7/7 known; 0 unknown</small></td>
+  <td>1 / 0<small>baseline / feature</small></td>
+</tr>
+<tr data-run="sol-APP3-r01">
+  <th scope="row"><span class="model">Sol</span> APP3</th>
+  <td><span class="status qualified">qualified</span></td>
+  <td><span class="status qualified">qualified</span><small>B 8/8 · F04 pass</small></td>
+  <td><span class="status qualified">qualified</span><small>C 8/8 · B regression 8/8</small></td>
+  <td class="numeric">21.2 min<small>11/11 complete intervals</small></td>
+  <td class="numeric">$2.7742<small>11/11 known; 0 unknown</small></td>
+  <td>1 / 0<small>baseline / feature</small></td>
+</tr>
+<tr data-run="sol-APP4-r01">
+  <th scope="row"><span class="model">Sol</span> APP4</th>
+  <td><span class="status blocked">blocked</span></td>
+  <td><span class="status qualified">qualified</span><small>B 8/8 · F04 pass</small></td>
+  <td><span class="status blocked">coverage blocked</span><small>C 7/8 · B regression 8/8</small></td>
+  <td class="numeric">33.0 min<small>15/16 complete intervals · partial</small></td>
+  <td class="numeric">$5.0627<small>15/16 known; 1 unknown</small></td>
+  <td>0 / 0<small>baseline / feature</small></td>
+</tr>
+<tr data-run="terra-APP1-r01">
+  <th scope="row"><span class="model">Terra</span> APP1</th>
+  <td><span class="status qualified">qualified</span></td>
+  <td><span class="status qualified">qualified</span><small>B 8/8 · F04 pass</small></td>
+  <td><span class="status qualified">qualified</span><small>C 8/8 · B regression 8/8</small></td>
+  <td class="numeric">9.7 min<small>5/5 complete intervals</small></td>
+  <td class="numeric">$0.8452<small>5/5 known; 0 unknown</small></td>
+  <td>1 / 0<small>baseline / feature</small></td>
+</tr>
+<tr data-run="terra-APP2-r01">
+  <th scope="row"><span class="model">Terra</span> APP2</th>
+  <td><span class="status qualified">qualified</span></td>
+  <td><span class="status qualified">qualified</span><small>B 8/8 · F04 pass</small></td>
+  <td><span class="status qualified">qualified</span><small>C 8/8 · B regression 8/8</small></td>
+  <td class="numeric">10.8 min<small>7/7 complete intervals</small></td>
+  <td class="numeric">$0.8048<small>7/7 known; 0 unknown</small></td>
+  <td>1 / 0<small>baseline / feature</small></td>
+</tr>
+<tr data-run="terra-APP3-r01">
+  <th scope="row"><span class="model">Terra</span> APP3</th>
+  <td><span class="status failed">app failed</span></td>
+  <td><span class="status failed">app failed</span><small>B 8/8 · F04 fail</small></td>
+  <td><span class="status blocked">coverage blocked</span><small>C 8/8 · B regression 3/8</small></td>
+  <td class="numeric">14.6 min<small>11/11 complete intervals</small></td>
+  <td class="numeric">$1.1550<small>11/11 known; 0 unknown</small></td>
+  <td>1 / 0<small>baseline / feature</small></td>
+</tr>
+<tr data-run="terra-APP4-r01">
+  <th scope="row"><span class="model">Terra</span> APP4</th>
+  <td><span class="status blocked">blocked</span></td>
+  <td><span class="status blocked">coverage blocked</span><small>B 0/8 · F04 blocked</small></td>
+  <td><span class="status blocked">prerequisite blocked</span><small>Not submitted</small></td>
+  <td class="numeric">15.8 min<small>15/15 complete intervals</small></td>
+  <td class="numeric">$1.3572<small>15/15 known; 0 unknown</small></td>
+  <td>1 / 0<small>baseline / feature</small></td>
+</tr>
+<tr data-run="luna-APP1-r01">
+  <th scope="row"><span class="model">Luna</span> APP1</th>
+  <td><span class="status blocked">blocked</span></td>
+  <td><span class="status qualified">qualified</span><small>B 8/8 · F04 pass</small></td>
+  <td><span class="status blocked">coverage blocked</span><small>C 7/8 · B regression 8/8</small></td>
+  <td class="numeric">15.6 min<small>6/6 complete intervals</small></td>
+  <td class="numeric">$0.1575<small>6/6 known; 0 unknown</small></td>
+  <td>1 / 1<small>baseline / feature</small></td>
+</tr>
+<tr data-run="luna-APP2-r01">
+  <th scope="row"><span class="model">Luna</span> APP2</th>
+  <td><span class="status blocked">blocked</span></td>
+  <td><span class="status qualified">qualified</span><small>B 8/8 · F04 pass</small></td>
+  <td><span class="status blocked">coverage blocked</span><small>C 7/8 · B regression 8/8</small></td>
+  <td class="numeric">15.8 min<small>7/7 complete intervals</small></td>
+  <td class="numeric">$0.1284<small>7/7 known; 0 unknown</small></td>
+  <td>1 / 0<small>baseline / feature</small></td>
+</tr>
+<tr data-run="luna-APP3-r01">
+  <th scope="row"><span class="model">Luna</span> APP3</th>
+  <td><span class="status blocked">blocked</span></td>
+  <td><span class="status qualified">qualified</span><small>B 8/8 · F04 pass</small></td>
+  <td><span class="status blocked">coverage blocked</span><small>C 7/8 · B regression 8/8</small></td>
+  <td class="numeric">17.6 min<small>13/13 complete intervals</small></td>
+  <td class="numeric">$0.1531<small>13/13 known; 0 unknown</small></td>
+  <td>1 / 0<small>baseline / feature</small></td>
+</tr>
+<tr data-run="luna-APP4-r01">
+  <th scope="row"><span class="model">Luna</span> APP4</th>
+  <td><span class="status failed">app failed</span></td>
+  <td><span class="status failed">app failed</span><small>B 8/8 · F04 fail</small></td>
+  <td><span class="status qualified">qualified</span><small>C 8/8 · B regression 8/8</small></td>
+  <td class="numeric">27.6 min<small>17/17 complete intervals</small></td>
+  <td class="numeric">$0.2433<small>17/17 known; 0 unknown</small></td>
+  <td>0 / 1<small>baseline / feature</small></td>
+</tr>
+<!-- END COMPARISON -->
+          </tbody>
+        </table>
+      </div>
+      <p class="small scroll-hint">On narrow screens, scroll the table sideways. Every row uses the same columns; no weighted quality score is calculated.</p>
+      <div class="split-note">
+        <p><strong>Baseline:</strong> 16 submitted sources; 12 qualified, 3 failed F04, 1 coverage-blocked. Astra APP4 and Luna APP4 have qualified features while their whole runs remain app-failed.</p>
+        <p><strong>Feature:</strong> 15 submitted sources; 9 qualified, 6 coverage-blocked. The sixteenth cell, Terra APP4, is prerequisite-blocked: the required original fixture was unavailable under a permanent cap, so the feature was never submitted. This does not establish model inability.</p>
+      </div>
+      <p class="small">R robustness probes, disclosed F01–F04 conformance and the five UI rubric dimensions are shown separately below. Passing core cases does not imply complete robustness or conformance coverage.</p>
+    </section>
+
+    <section id="workflows" aria-labelledby="workflow-title">
+      <div class="section-heading"><p class="eyebrow">02 / workflow definitions</p><h2 id="workflow-title">The same product, four preparation paths</h2></div>
+      <p>Initial clarification and answers precede building. The deliberate refinement budget varies by workflow; question/answer interactions are counted as separate measured receipts, not extra refinement rounds.</p>
+      <dl class="workflow-list">
+        <div><dt>APP1 <span>Zero</span></dt><dd>No deliberate refinement rounds after initial clarification.</dd></div>
+        <div><dt>APP2 <span>One</span></dt><dd>One deliberate refinement round before implementation.</dd></div>
+        <div><dt>APP3 <span>Five</span></dt><dd>Five deliberate refinement rounds, R1 through R5.</dd></div>
+        <div><dt>APP4 <span>Five + IDD</span></dt><dd>Five rounds, then genuine IDD on the target after R5: intent work and an intent freeze before baseline building.</dd></div>
+      </dl>
+      <p><strong>44 deliberate refinement rounds</strong> across the sixteen cells. First builds, operator continuations, model repairs, evaluations and terminal dispositions remain separate in the process trees. A terminal node records closure, not necessarily success.</p>
+      <p class="scope-note">Historical control differences prevent a clean workflow ablation. <strong>125 malformed CLI plugin overrides</strong> establish a control defect; they prove neither actual plugin use/contamination nor effective isolation. The corrected repair03 epoch is different, and generic inventories in resumed sessions differ. Global-read isolation remained instruction-only residual exposure.</p>
+    </section>
+
+    <section id="quality" aria-labelledby="quality-title">
+      <div class="section-heading"><p class="eyebrow">03 / quality detail</p><h2 id="quality-title">Keep the dimensions and evidence gaps visible</h2></div>
+      <p><strong>B:</strong> eight baseline core cases. <strong>C:</strong> eight feature core cases. <strong>R:</strong> eight robustness probes. Feature B regression rechecks the original baseline behavior. F01–F04 are separate conformance statuses. A numerator counts observed passes; the remainder can be failed, blocked, not run or undisclosed.</p>
+      <p>The UI rubric reports five individual 0–2 observations in this order: readability, pointer/touch controls, keyboard/focus, layout/scroll reachability, consistency/discoverability. These operator-scored observations have imperfect blinding. They are not summed into a global score.</p>
+      <details>
+        <summary>Inspect all 32 baseline and feature quality records</summary>
+        <div class="table-scroll" role="region" aria-label="Separate quality dimensions for 32 phase records; scroll horizontally" tabindex="0">
+          <table class="quality-table">
+            <caption>Typed final quality dimensions. “Shared observation” means the retained rubric was not split into independent viewport scores. Unknown means no scored rubric is available in the frozen input. Exact per-case statuses are in the curated JSON.</caption>
+            <thead><tr><th scope="col">Run / phase</th><th scope="col">Core passes</th><th scope="col">R robustness</th><th scope="col">B regression</th><th scope="col">Conformance</th><th scope="col">Five UI rubric observations</th><th scope="col">Core blocked / not run</th></tr></thead>
+            <tbody>
+<!-- BEGIN QUALITY -->
+<tr><th scope="row">Astra APP1<small>baseline</small></th><td>8/8<small>B baseline</small></td><td>8/8</td><td>—</td><td>F01 undisclosed<br>F02 pass<br>F03 pass<br>F04 pass</td><td>390x844: 2, 2, 2, 2, 2<br>1440x900: 2, 2, 2, 2, 2</td><td>None in core</td></tr>
+<tr><th scope="row">Astra APP1<small>feature</small></th><td>8/8<small>C feature</small></td><td>8/8</td><td>8/8</td><td>F01 not-disclosed<br>F02 pass<br>F03 pass<br>F04 pass</td><td>390x844: 2, 2, 2, 1, 2<br>1440x900: 2, 2, 2, 1, 2</td><td>None in core</td></tr>
+<tr><th scope="row">Astra APP2<small>baseline</small></th><td>8/8<small>B baseline</small></td><td>8/8</td><td>—</td><td>F01 undisclosed<br>F02 pass<br>F03 pass<br>F04 pass</td><td>390x844: 2, 2, 2, 2, 2<br>1440x900: 2, 2, 2, 2, 2</td><td>None in core</td></tr>
+<tr><th scope="row">Astra APP2<small>feature</small></th><td>8/8<small>C feature</small></td><td>8/8</td><td>8/8</td><td>F01 not-disclosed<br>F02 pass<br>F03 pass<br>F04 pass</td><td>390x844: 2, 2, 2, 1, 2<br>1440x900: 2, 2, 2, 1, 2</td><td>None in core</td></tr>
+<tr><th scope="row">Astra APP3<small>baseline</small></th><td>8/8<small>B baseline</small></td><td>8/8</td><td>—</td><td>F01 undisclosed<br>F02 pass<br>F03 pass<br>F04 pass</td><td>390x844: 2, 2, 2, 2, 2<br>1440x900: 2, 2, 2, 2, 2</td><td>None in core</td></tr>
+<tr><th scope="row">Astra APP3<small>feature</small></th><td>8/8<small>C feature</small></td><td>8/8</td><td>8/8</td><td>F01 not-disclosed<br>F02 pass<br>F03 pass<br>F04 pass</td><td>390x844: 2, 2, 2, 2, 2<br>1440x900: 2, 2, 2, 2, 2</td><td>None in core</td></tr>
+<tr><th scope="row">Astra APP4<small>baseline</small></th><td>8/8<small>B baseline</small></td><td>8/8</td><td>—</td><td>F01 not-disclosed<br>F02 pass<br>F03 pass<br>F04 fail</td><td>390x844: 2, 2, 2, 2, 2<br>1440x900: 2, 2, 2, 2, 2</td><td>None in core</td></tr>
+<tr><th scope="row">Astra APP4<small>feature</small></th><td>8/8<small>C feature</small></td><td>8/8</td><td>8/8</td><td>F01 not-disclosed<br>F02 pass<br>F03 pass<br>F04 pass</td><td>shared-observation: 2, 2, 2, 1, 2</td><td>None in core</td></tr>
+<tr><th scope="row">Sol APP1<small>baseline</small></th><td>8/8<small>B baseline</small></td><td>8/8</td><td>—</td><td>F01 not-disclosed<br>F02 pass<br>F03 pass<br>F04 pass</td><td>shared-observation: 2, 2, 2, 2, 2</td><td>None in core</td></tr>
+<tr><th scope="row">Sol APP1<small>feature</small></th><td>7/8<small>C feature</small></td><td>8/8</td><td>8/8</td><td>F01 not-disclosed<br>F02 pass<br>F03 pass<br>F04 pass</td><td>390x844: 1, 1, 2, 1, 2<br>1440x900: 1, 1, 2, 1, 2</td><td>C08</td></tr>
+<tr><th scope="row">Sol APP2<small>baseline</small></th><td>8/8<small>B baseline</small></td><td>8/8</td><td>—</td><td>F01 not-disclosed<br>F02 pass<br>F03 pass<br>F04 pass</td><td>Unknown / unscored</td><td>None in core</td></tr>
+<tr><th scope="row">Sol APP2<small>feature</small></th><td>8/8<small>C feature</small></td><td>8/8</td><td>8/8</td><td>F01 not-disclosed<br>F02 pass<br>F03 pass<br>F04 pass</td><td>shared-observation: 2, 2, 2, 1, 2</td><td>None in core</td></tr>
+<tr><th scope="row">Sol APP3<small>baseline</small></th><td>8/8<small>B baseline</small></td><td>8/8</td><td>—</td><td>F01 not-disclosed<br>F02 pass<br>F03 pass<br>F04 pass</td><td>Unknown / unscored</td><td>None in core</td></tr>
+<tr><th scope="row">Sol APP3<small>feature</small></th><td>8/8<small>C feature</small></td><td>8/8</td><td>8/8</td><td>F01 not-disclosed<br>F02 pass<br>F03 pass<br>F04 pass</td><td>shared-observation: 2, 2, 2, 1, 1</td><td>None in core</td></tr>
+<tr><th scope="row">Sol APP4<small>baseline</small></th><td>8/8<small>B baseline</small></td><td>8/8</td><td>—</td><td>F01 not-disclosed<br>F02 pass<br>F03 pass<br>F04 pass</td><td>390x844: 1, 1, 2, 1, 2<br>1440x900: 1, 1, 2, 1, 2</td><td>None in core</td></tr>
+<tr><th scope="row">Sol APP4<small>feature</small></th><td>7/8<small>C feature</small></td><td>8/8</td><td>8/8</td><td>F01 not-disclosed<br>F02 pass<br>F03 pass<br>F04 pass</td><td>390x844: 2, 1, 2, 1, 2<br>1440x900: 2, 1, 2, 1, 2</td><td>C08</td></tr>
+<tr><th scope="row">Terra APP1<small>baseline</small></th><td>8/8<small>B baseline</small></td><td>8/8</td><td>—</td><td>F01 undisclosed<br>F02 pass<br>F03 pass<br>F04 pass</td><td>390x844: 2, 2, 1, 1, 2<br>1440x900: 2, 2, 1, 1, 2</td><td>None in core</td></tr>
+<tr><th scope="row">Terra APP1<small>feature</small></th><td>8/8<small>C feature</small></td><td>8/8</td><td>8/8</td><td>F01 not-disclosed<br>F02 pass<br>F03 pass<br>F04 pass</td><td>shared-observation: 2, 1, 2, 1, 1</td><td>None in core</td></tr>
+<tr><th scope="row">Terra APP2<small>baseline</small></th><td>8/8<small>B baseline</small></td><td>1/8</td><td>—</td><td>F01 not-disclosed<br>F02 not-run<br>F03 pass<br>F04 pass</td><td>shared-observation: 2, 2, 2, 1, 1</td><td>None in core</td></tr>
+<tr><th scope="row">Terra APP2<small>feature</small></th><td>8/8<small>C feature</small></td><td>8/8</td><td>8/8</td><td>F01 not-disclosed<br>F02 pass<br>F03 pass<br>F04 pass</td><td>390x844: 1, 1, 2, 1, 1<br>1440x900: 1, 1, 2, 1, 1</td><td>None in core</td></tr>
+<tr><th scope="row">Terra APP3<small>baseline</small></th><td>8/8<small>B baseline</small></td><td>8/8</td><td>—</td><td>F01 undisclosed<br>F02 pass<br>F03 pass<br>F04 fail</td><td>390x844: 2, 2, 1, 1, 2<br>1440x900: 2, 2, 1, 1, 2</td><td>None in core</td></tr>
+<tr><th scope="row">Terra APP3<small>feature</small></th><td>8/8<small>C feature</small></td><td>0/8</td><td>3/8</td><td>F01 not-disclosed<br>F02 not-run<br>F03 not-disclosed<br>F04 pass</td><td>Unknown / unscored</td><td>None in core</td></tr>
+<tr><th scope="row">Terra APP4<small>baseline</small></th><td>0/8<small>B baseline</small></td><td>0/8</td><td>—</td><td>F01 not-disclosed<br>F02 blocked<br>F03 blocked<br>F04 blocked</td><td>Unknown / unscored</td><td>B01; B02; B03; B04; B05; B06; B07; B08</td></tr>
+<tr><th scope="row">Terra APP4<small>feature</small></th><td>0/8<small>C feature</small></td><td>0/8</td><td>0/8</td><td>F01 not-run<br>F02 not-run<br>F03 not-run<br>F04 not-run</td><td>Unknown / unscored</td><td>C01; C02; C03; C04; C05; C06; C07; C08</td></tr>
+<tr><th scope="row">Luna APP1<small>baseline</small></th><td>8/8<small>B baseline</small></td><td>8/8</td><td>—</td><td>F01 not-disclosed<br>F02 pass<br>F03 not-disclosed<br>F04 pass</td><td>Unknown / unscored</td><td>None in core</td></tr>
+<tr><th scope="row">Luna APP1<small>feature</small></th><td>7/8<small>C feature</small></td><td>8/8</td><td>8/8</td><td>F01 not-disclosed<br>F02 pass<br>F03 not-disclosed<br>F04 pass</td><td>390x844: 1, 2, 2, 1, 2<br>1440x900: 1, 2, 2, 1, 2</td><td>C08</td></tr>
+<tr><th scope="row">Luna APP2<small>baseline</small></th><td>8/8<small>B baseline</small></td><td>1/8</td><td>—</td><td>F01 not-disclosed<br>F02 not-run<br>F03 pass<br>F04 pass</td><td>shared-observation: 1, 2, 2, 1, 2</td><td>None in core</td></tr>
+<tr><th scope="row">Luna APP2<small>feature</small></th><td>7/8<small>C feature</small></td><td>8/8</td><td>8/8</td><td>F01 not-disclosed<br>F02 pass<br>F03 pass<br>F04 pass</td><td>390x844: 2, 2, 2, 1, 1<br>1440x900: 2, 2, 2, 1, 1</td><td>C08</td></tr>
+<tr><th scope="row">Luna APP3<small>baseline</small></th><td>8/8<small>B baseline</small></td><td>1/8</td><td>—</td><td>F01 not-disclosed<br>F02 not-run<br>F03 pass<br>F04 pass</td><td>shared-observation: 2, 2, 2, 2, 2</td><td>None in core</td></tr>
+<tr><th scope="row">Luna APP3<small>feature</small></th><td>7/8<small>C feature</small></td><td>8/8</td><td>8/8</td><td>F01 not-disclosed<br>F02 pass<br>F03 pass<br>F04 pass</td><td>390x844: 1, 1, 2, 1, 1<br>1440x900: 1, 1, 2, 1, 1</td><td>C08</td></tr>
+<tr><th scope="row">Luna APP4<small>baseline</small></th><td>8/8<small>B baseline</small></td><td>8/8</td><td>—</td><td>F01 not-disclosed<br>F02 pass<br>F03 pass<br>F04 fail</td><td>390x844: 2, 2, 2, 1, 1<br>1440x900: 2, 2, 2, 1, 1</td><td>None in core</td></tr>
+<tr><th scope="row">Luna APP4<small>feature</small></th><td>8/8<small>C feature</small></td><td>8/8</td><td>8/8</td><td>F01 not-disclosed<br>F02 pass<br>F03 pass<br>F04 pass</td><td>shared-observation: 2, 2, 2, 1, 1</td><td>None in core</td></tr>
+<!-- END QUALITY -->
+            </tbody>
+          </table>
+        </div>
+      </details>
+      <div class="exception-list">
+        <article><h3>Original continuity stays missing</h3><p>Sol APP1/APP4 and Luna APP1/APP2/APP3 lack original C08 retained-profile continuity. Later reseeded passes do not recover it. Original C05 passes for Sol APP1, Luna APP2 and Luna APP3 are retained; Luna APP1 has independent C05 arithmetic evidence, not original continuity.</p></article>
+        <article><h3>Evaluation caps limit conclusions</h3><p>Terra APP3 feature UI retry exhaustion leaves coverage blocked; its baseline F04 failure remains visible. Terra APP4 exceeded its baseline allowance at <strong>13/5</strong>, reached a permanent no-retry cap, and lacked the migration fixture. Retrospective baseline checks used immutable baseline sources, with no model repair after feature disclosure.</p></article>
+      </div>
+    </section>
+
+    <section id="trees" aria-labelledby="tree-title">
+      <div class="section-heading"><p class="eyebrow">04 / process history</p><h2 id="tree-title">Follow each model through four workflows</h2></div>
+      <p>Four editable SVGs contain <strong>all 295 canonical projected events and 16 terminal nodes</strong>, each once. Arrows preserve parent links. Short excerpts below stay legible; the full trees open separately at their own dimensions for scrolling and zooming.</p>
+      <p class="small">Teal outlines identify completed/pass history, amber blocked/interrupted history, and rust failure. Text labels carry the status too. Roots, containers and evaluations are non-additive; unknown receipt estimates are explicitly unknown.</p>
+<!-- BEGIN TREES -->
+<article class="tree-entry"><div><h3>Astra</h3><p>73 events · 4 terminal nodes</p><div class="tree-links"><a href="trees/astra.svg" target="_blank" rel="noopener">Open Astra tree ↗</a><a href="trees/astra.svg" download>Download editable SVG ↓</a></div></div><div class="tree-excerpt"><p class="eyebrow">APP1 excerpt · first three events</p><ol><li><strong>Initial questions</strong><span>complete · estimate unknown</span></li><li><strong>Initial answers</strong><span>complete · estimate unknown</span></li><li><strong>First baseline build</strong><span>complete · estimate unknown</span></li></ol><p class="small">Preview only. Open the full four-lane tree to scroll or zoom through every event.</p></div></article>
+<article class="tree-entry"><div><h3>Sol</h3><p>76 events · 4 terminal nodes</p><div class="tree-links"><a href="trees/sol.svg" target="_blank" rel="noopener">Open Sol tree ↗</a><a href="trees/sol.svg" download>Download editable SVG ↓</a></div></div><div class="tree-excerpt"><p class="eyebrow">APP1 excerpt · first three events</p><ol><li><strong>Initial questions</strong><span>complete · $0.02625760</span></li><li><strong>Initial answers</strong><span>complete · $0.04153760</span></li><li><strong>First baseline build</strong><span>interrupted · $0.26426880</span></li></ol><p class="small">Preview only. Open the full four-lane tree to scroll or zoom through every event.</p></div></article>
+<article class="tree-entry"><div><h3>Terra</h3><p>74 events · 4 terminal nodes</p><div class="tree-links"><a href="trees/terra.svg" target="_blank" rel="noopener">Open Terra tree ↗</a><a href="trees/terra.svg" download>Download editable SVG ↓</a></div></div><div class="tree-excerpt"><p class="eyebrow">APP1 excerpt · first three events</p><ol><li><strong>Initial questions</strong><span>complete · $0.01223080</span></li><li><strong>Initial answers</strong><span>complete · $0.01702640</span></li><li><strong>First baseline build</strong><span>complete · $0.28383960</span></li></ol><p class="small">Preview only. Open the full four-lane tree to scroll or zoom through every event.</p></div></article>
+<article class="tree-entry"><div><h3>Luna</h3><p>72 events · 4 terminal nodes</p><div class="tree-links"><a href="trees/luna.svg" target="_blank" rel="noopener">Open Luna tree ↗</a><a href="trees/luna.svg" download>Download editable SVG ↓</a></div></div><div class="tree-excerpt"><p class="eyebrow">APP1 excerpt · first three events</p><ol><li><strong>Initial questions</strong><span>complete · $0.00140868</span></li><li><strong>Initial answers</strong><span>complete · $0.00228148</span></li><li><strong>First baseline build</strong><span>complete · $0.03994928</span></li></ol><p class="small">Preview only. Open the full four-lane tree to scroll or zoom through every event.</p></div></article>
+<!-- END TREES -->
+    </section>
+
+    <section id="methods" aria-labelledby="methods-title">
+      <div class="section-heading"><p class="eyebrow">05 / methods &amp; limits</p><h2 id="methods-title">What these measurements can support</h2></div>
+      <div class="methods-grid">
+        <article><h3>Time: observed intervals</h3><p>Per-cell totals sum elapsed seconds from unique <strong>complete phase receipts only</strong>, bound by event ID to the frozen phase/process CSV: 151 of 154 receipts. The three incomplete intervals remain in the downloadable history and are excluded from these sums. Each row shows its complete/total receipt coverage.</p><p>These are generation/interaction intervals, not pure model generation time. Parallel work shared one host. Intervals can overlap; their sums are neither elapsed project wall clock nor isolated speed. Operator, helper and evaluator overhead is unmeasured and excluded; its coverage is unknown.</p></article>
+        <article><h3>Estimates: a known subtotal</h3><p><strong>$18.28016324 across 119 known-estimate events.</strong> Across all 154 raw receipt pairs there are 992 unique emitted response IDs; 954 belong to the 152 complete-telemetry records. These response counts cover more than the 119 priced events. All actual billed charges are null/unknown. Declared API-equivalent rates are not invoices.</p><p><strong>35 receipts have no estimate:</strong> 33 with full telemetry but unsupported Astra pricing and 2 with partial telemetry excluded. A further interrupted Sol APP1 build has finalized priced telemetry: it belongs to the known estimate subtotal but not the complete-interval time sum. Accounting and timing intentionally have different eligibility rules.</p></article>
+        <article><h3>Quality: source-bound evidence</h3><p>Final typed run outcomes and the 32-row quality matrix are authoritative. Core, robustness, regressions, conformance and UI observations remain separate. First and repaired source commits, repair counts and selected case statuses are retained in the curated JSON. Source-suite success is not UI proof.</p><p>Framework disclosure and actual observation are different. The canonical event field for observed framework is unknown for these runs; this page does not infer a framework from undisclosed F01. Evaluation is of a web preview, not native platform qualification. Evaluator focus, selection and click interception errors are not app defects without attribution.</p></article>
+        <article><h3>Interpretation: a descriptive pilot</h3><p>One observed run per model/workflow cannot establish a universal winner, model ranking or causal IDD benefit. Model/operator histories, control epochs, imperfect blinding and exhausted evaluation budgets differ. Blocked evidence stays in the denominator.</p><p>The canonical derived projection contains the historical parent-link and paused-status corrections; the raw history remains unchanged. Missing Astra APP3 turn completion is trace coverage uncertainty, not automatic application failure. Historical sealing discrepancies were disclosed, not rewritten: segment18 matched 694/695; segment19 matched 784/785 after a qualified budget change.</p></article>
+      </div>
+    </section>
+
+    <section id="downloads" aria-labelledby="download-title">
+      <div class="section-heading"><p class="eyebrow">06 / public data &amp; provenance</p><h2 id="download-title">Take the comparison with you</h2></div>
+      <p>Public-curated downloads contain only run identities, workflow/stage/status, observed metrics, selected case counts/statuses, source commit provenance and event links. Unknown values remain JSON <code>null</code> or CSV <code>unknown</code>. The page requires no backend or build step.</p>
+      <div class="download-links"><a href="data/comparison.csv" download>Download 16-run CSV ↓</a><a href="data/benchmark.json" download>Download curated JSON ↓</a><a href="data/provenance.json" download>Download provenance JSON ↓</a></div>
+      <p class="small">Frozen package: benchmark-final-verified · sealed 13 September 2026 at 03:51 UTC. Source hashes below identify the authoritative inputs; the downloads are a curated projection. Declared rate reference recorded with the benchmark: <a href="https://developers.openai.com/api/docs/pricing" target="_blank" rel="noopener">OpenAI API pricing</a>. This page performs no live rate lookup.</p>
+      <details><summary>Inspect authoritative input SHA-256 hashes</summary>
+        <div class="table-scroll" role="region" aria-label="Input file provenance hashes" tabindex="0"><table class="provenance-table"><caption>SHA-256 of frozen authoritative inputs used by the generator</caption><thead><tr><th scope="col">Input</th><th scope="col">SHA-256</th></tr></thead><tbody>
+<!-- BEGIN PROVENANCE -->
+<tr><th scope="row">run-outcomes.json</th><td><code>ff4425ff7f418d7b78a531d3eb927955df5edd26b50aad32e062255298b17dbc</code></td></tr>
+<tr><th scope="row">quality-matrix.json</th><td><code>da81c828e66a9ed5a2bcaa38f388c45f2e74c011c0c6bd550f71e6a1ea19b26d</code></td></tr>
+<tr><th scope="row">events-derived-schema-v1.jsonl</th><td><code>f5a4e79304c204ec5fd8012b16b2579acf3f0e49e7c35a3da9facde35bea32ed</code></td></tr>
+<tr><th scope="row">usage-and-time-by-phase.json</th><td><code>54ce6897bfc2a7401bc55ecdd90ed3a3cdc1797424ee8d26f73ed6c81561e4ab</code></td></tr>
+<tr><th scope="row">phase-process-data.csv</th><td><code>9987e0f68e495c57e31f54d29753c0a3545a2810f998bd0be357beb273e2a5f8</code></td></tr>
+<tr><th scope="row">accounting.json</th><td><code>92c33e0f7d54e2bfdadf9b432133f9b1b7b9fe0d4bff93ee8d0d76e00064c631</code></td></tr>
+<tr><th scope="row">refinements.jsonl</th><td><code>eaed11e25bbb62c2d5c845dbcfde22fa382a6c2185db52684d70476dca8ff88b</code></td></tr>
+<tr><th scope="row">ui-rubrics.json</th><td><code>29cfe171fbd34e2f56077fa3830955ca239f7c930eafdaf42533b9be4fe329c9</code></td></tr>
+<!-- END PROVENANCE -->
+        </tbody></table></div>
+      </details>
+    </section>
+  </main>
+  <footer class="page-footer"><p>From Opcode to Intent · Michael Zemskov and Dima Dorogoi</p><nav aria-label="Presentation links"><a href="../#/bottleneck">Back to the bottleneck slide</a><a href="../practical/sources.html#evidence">Research &amp; limitations</a></nav></footer>
+</div>
+</body>
+</html>

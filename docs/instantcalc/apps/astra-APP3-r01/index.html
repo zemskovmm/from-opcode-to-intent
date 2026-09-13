@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f5f4f0">
+  <meta name="description" content="Ten lines for everyday math. An instant calculator that keeps your work together.">
+  <title>Linework — Everyday math, all in line.</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='11' fill='%23cc532d'/%3E%3Cpath d='M11 12h18M11 20h12M11 28h18' stroke='white' stroke-width='3'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <main class="app">
+    <header class="masthead">
+      <a class="brand" href="./" aria-label="Linework home">
+        <svg class="brand-mark" width="36" height="36" viewBox="0 0 36 36" aria-hidden="true"><rect width="36" height="36" rx="10" fill="currentColor"/><path d="M10 11h16M10 18h10M10 25h16" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        <span>linework<span class="brand-dot">.</span></span>
+      </a>
+      <div class="masthead-actions">
+        <span class="save-state" id="save-state" role="status"><span class="save-dot"></span><span id="save-text">Saved on this device</span></span>
+        <button class="icon-button help-button" id="help-open" aria-label="How to use Linework" title="How to use Linework">?</button>
+      </div>
+    </header>
+
+    <div class="intro">
+      <div><p class="eyebrow">YOUR EVERYDAY CALCULATOR</p><h1>Everyday math. <span>All in line.</span></h1></div>
+      <p class="intro-note">A little space to<br>work things out.</p>
+    </div>
+
+    <section class="workbench" aria-label="Calculator">
+      <div class="sheet-heading">
+        <div class="sheet-title"><svg width="17" height="17" viewBox="0 0 20 20" fill="none" aria-hidden="true"><rect x="3.5" y="2.5" width="13" height="15" rx="2" stroke="currentColor"/><path d="M7 7h6M7 10h6M7 13h3" stroke="currentColor" stroke-linecap="round"/></svg><h2>Worksheet</h2><span class="row-count">10 lines</span></div>
+        <div class="sheet-actions"><button class="text-button" id="variables-open">Variables <span id="variable-count">0</span></button><button class="text-button" id="clear-open" title="Clear all ten lines"><svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 5h14M8 2.5h4M5 5l1 12h8l1-12M8 8v6M12 8v6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>Clear all</button></div>
+      </div>
+      <div class="column-headings" aria-hidden="true"><span>LINE</span><span>EXPRESSION</span><span>RESULT</span></div>
+      <div class="worksheet" id="worksheet" aria-label="Ten calculation lines"></div>
+      <div class="total-row" aria-label="Calculation-line total">
+        <div><strong>Total</strong><button id="total-details" class="total-details" aria-haspopup="dialog">0 included · 10 excluded</button></div>
+        <output class="result" id="total-result" aria-label="Total of valid calculation lines">0</output>
+      </div>
+      <div class="line-context">
+        <span class="active-label"><span class="active-dot"></span>Editing line <strong id="active-line">1</strong></span>
+        <span class="line-hint" id="line-hint" aria-live="polite">Type an expression or use the keypad</span>
+      </div>
+
+      <section class="keypad" id="keypad" aria-label="Calculator keypad">
+        <div class="keypad-toolbar">
+          <button class="reference-button" id="reference-open"><span aria-hidden="true">↗</span> Reference <span class="reference-syntax" aria-hidden="true">$</span></button>
+          <div class="editing-tools">
+            <button class="tool-button" data-action="left" aria-label="Move cursor left" title="Move cursor left">←</button>
+            <button class="tool-button" data-action="right" aria-label="Move cursor right" title="Move cursor right">→</button>
+            <span class="tool-divider"></span>
+            <button class="tool-button" data-action="previous" aria-label="Previous line" title="Previous line">↑</button>
+            <button class="tool-button" data-action="next" aria-label="Next line" title="Next line">↓</button>
+          </div>
+        </div>
+        <div class="key-grid">
+          <button class="key function-key" data-insert="(" aria-label="Open parenthesis">(</button>
+          <button class="key function-key" data-insert=")" aria-label="Close parenthesis">)</button>
+          <button class="key function-key" data-insert="%" aria-label="Percent">%</button>
+          <button class="key function-key" data-insert="^" aria-label="Power">x<sup>y</sup></button>
+          <button class="key function-key" data-insert="sqrt(" aria-label="Square root">√</button>
+
+          <button class="key number-key" data-insert="7">7</button>
+          <button class="key number-key" data-insert="8">8</button>
+          <button class="key number-key" data-insert="9">9</button>
+          <button class="key operator-key" data-insert=" ÷ " aria-label="Divide">÷</button>
+          <button class="key utility-key" data-action="backspace" aria-label="Backspace" title="Backspace"><svg width="23" height="20" viewBox="0 0 24 20" fill="none" aria-hidden="true"><path d="M9 3h12v14H9L2 10l7-7Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="m12 7 6 6m0-6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+
+          <button class="key number-key" data-insert="4">4</button>
+          <button class="key number-key" data-insert="5">5</button>
+          <button class="key number-key" data-insert="6">6</button>
+          <button class="key operator-key" data-insert=" × " aria-label="Multiply">×</button>
+          <button class="key utility-key clear-key" data-action="clear" aria-label="Clear active line" title="Clear active line">C<span>line</span></button>
+
+          <button class="key number-key" data-insert="1">1</button>
+          <button class="key number-key" data-insert="2">2</button>
+          <button class="key number-key" data-insert="3">3</button>
+          <button class="key operator-key" data-insert=" − " aria-label="Subtract">−</button>
+          <button class="key next-key" data-action="next" aria-label="Move to next line"><span aria-hidden="true">↓</span><span>Next line</span></button>
+
+          <button class="key number-key zero-key" data-insert="0">0</button>
+          <button class="key number-key" data-insert="." aria-label="Decimal point">.</button>
+          <button class="key operator-key" data-insert=" + " aria-label="Add">+</button>
+        </div>
+      </section>
+    </section>
+    <footer><span>Think it. Type it. Done.</span><span class="footer-note">Instant results. No equals needed.<span class="footer-spark" aria-hidden="true">✳</span></span></footer>
+  </main>
+
+  <dialog id="reference-dialog" aria-labelledby="reference-title">
+    <div class="dialog-heading"><div><p class="eyebrow">BUILD ON YOUR WORK</p><h2 id="reference-title">Reference a line</h2></div><button class="icon-button" data-close aria-label="Close reference chooser">×</button></div>
+    <p class="dialog-description">Pick an earlier line. Its value stays connected as you edit.</p>
+    <div id="reference-list" class="reference-list"></div>
+  </dialog>
+
+  <dialog id="clear-dialog" aria-labelledby="clear-title">
+    <div class="dialog-heading"><h2 id="clear-title">A fresh worksheet?</h2><button class="icon-button" data-close aria-label="Cancel clearing">×</button></div>
+    <p class="dialog-description">This clears all ten lines, including your saved calculations. Your variables stay in their table. It cannot be undone.</p>
+    <div class="dialog-actions"><button class="secondary-button" data-close autofocus>Keep my work</button><button class="primary-button" id="clear-confirm">Clear all lines</button></div>
+  </dialog>
+
+  <dialog id="variables-dialog" aria-labelledby="variables-title">
+    <div class="dialog-heading"><h2 id="variables-title">Variables</h2><button class="icon-button" data-close aria-label="Close variable table">×</button></div>
+    <p class="dialog-description">Give a number a name, then use <code>@name</code> in any line. Names start with a lowercase letter and use a–z, 0–9, or _. Values are numbers, not expressions.</p>
+    <div class="variable-table-scroll">
+      <table class="variable-table"><caption class="visually-hidden">Editable named numeric variables</caption><thead><tr><th scope="col">Name</th><th scope="col">Value</th><th scope="col">Actions</th></tr></thead><tbody id="variable-table"></tbody></table>
+      <p id="variables-empty" class="dialog-description">No variables yet. Add one to reuse a number across your calculations.</p>
+    </div>
+    <div class="variable-toolbar"><button id="variable-add" class="secondary-button">+ Add variable</button><span id="variable-target">Select a field to edit</span></div>
+    <div id="variable-keys" class="variable-keys" aria-label="Variable editing keypad"></div>
+    <p class="help-note">Use inserts a variable into the active calculation line. Edits save automatically. Renaming or removing a variable leaves existing expressions unchanged.</p>
+  </dialog>
+
+  <dialog id="total-dialog" aria-labelledby="total-title">
+    <div class="dialog-heading"><h2 id="total-title">What's in the total?</h2><button class="icon-button" data-close aria-label="Close total details">×</button></div>
+    <p class="dialog-description">Every valid calculation line is added, including referenced and subtotal lines. Variable-table values are not added separately. Rounding happens after summing.</p>
+    <p id="total-summary" class="dialog-description"></p>
+    <ul id="total-exclusions" class="total-exclusions"></ul>
+  </dialog>
+
+  <dialog id="help-dialog" aria-labelledby="help-title">
+    <div class="dialog-heading"><div><p class="eyebrow">A QUICK INTRODUCTION</p><h2 id="help-title">Room for your everyday math.</h2></div><button class="icon-button" data-close aria-label="Close guide">×</button></div>
+    <div class="help-content">
+      <p>Choose any of the ten lines, then type or use the keypad. Your result appears as you go. An ellipsis means <em>keep typing</em>; select an indicator for an explanation below the worksheet.</p>
+      <h3>Connect your calculations</h3>
+      <p>Use <strong>Reference</strong> to insert an earlier line, or type <code>$1 + $2</code>. Changes flow through automatically. A reference waits if its source is empty or unfinished.</p>
+      <h3>Reuse named numbers</h3>
+      <p>Open <strong>Variables</strong> to add and edit numbers in a separate table. For example, name a value <code>rate</code>, then enter <code>@rate × 4</code> in a line. Use inserts it for you. Both names and values can be edited with the on-screen keys. Names must be unique; duplicate names and unfinished values pause calculations that use them.</p>
+      <h3>The total at the bottom</h3>
+      <p>All valid line results count, including subtotals: lines of <code>10</code>, <code>20</code>, and <code>$1 + $2</code> total <code>60</code>. Blank, unfinished, invalid, and waiting lines are excluded. Select the included/excluded count to see why. Variables are not additional calculation lines.</p>
+      <h3>A few useful expressions</h3>
+      <dl class="examples"><div><dt><code>(12.5 + 3) × 2</code></dt><dd>31</dd></div><div><dt><code>2^3</code> · power</dt><dd>8</dd></div><div><dt><code>sqrt(81)</code> · square root</dt><dd>9</dd></div><div><dt><code>200 × 10%</code></dt><dd>20</dd></div><div><dt><code>200 + 10%</code></dt><dd>200.10</dd></div></dl>
+      <p class="help-note">Percent always means divided by 100. Use parentheses for grouping; multiplication needs × or *. Powers come before a leading minus: −2^2 is −4.</p>
+      <h3>Made to pick up where you left off</h3>
+      <p>Your expressions save in this browser on this device, even halfway through a calculation. Opening the app may need internet. Clearing browser data removes saved work.</p>
+      <p class="help-note">Results show integers or two decimal places. Calculations use the unrounded values with standard floating-point precision. Tiny values can display as 0.00. Keyboard: Enter or ↓ for the next line, ↑ for the previous line.</p>
+    </div>
+  </dialog>
+  <noscript>Linework needs JavaScript enabled to calculate and save your worksheet.</noscript>
+</body>
+</html>

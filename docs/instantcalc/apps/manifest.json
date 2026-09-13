@@ -1,0 +1,2407 @@
+{
+  "schema_version": 1,
+  "description": "Frozen demonstration copies; hosting-only literal adaptations, no new measurement.",
+  "source_layout": "apps/<model>/<arm>/r01",
+  "adaptations": [
+    "Per-run storage-key namespace",
+    "Entry HTML root URLs made relative"
+  ],
+  "original_collisions": [
+    {
+      "key": "instant-calculator.active-row.v1",
+      "run_ids": [
+        "luna-APP1-r01",
+        "luna-APP3-r01"
+      ]
+    },
+    {
+      "key": "instant-calculator.rows.v1",
+      "run_ids": [
+        "luna-APP1-r01",
+        "luna-APP2-r01",
+        "luna-APP3-r01"
+      ]
+    },
+    {
+      "key": "instant-calculator.variables.v1",
+      "run_ids": [
+        "luna-APP1-r01",
+        "luna-APP3-r01"
+      ]
+    },
+    {
+      "key": "instantcalc.expressions.v1",
+      "run_ids": [
+        "terra-APP3-r01",
+        "terra-APP4-r01"
+      ]
+    }
+  ],
+  "apps": [
+    {
+      "run_id": "astra-APP1-r01",
+      "model": "astra",
+      "arm": "APP1",
+      "phase": "feature",
+      "classification": "qualified",
+      "phase_classification": "qualified",
+      "source_commit": "20924b5c811f9969745467541561427533538af0",
+      "storage_keys": [
+        {
+          "original": "instant-workpad.v1",
+          "served": "instantcalc-demo:astra-APP1-r01:instant-workpad.v1",
+          "locations": [
+            {
+              "path": "src/workspace.js",
+              "line": 1,
+              "column": 29
+            }
+          ]
+        }
+      ],
+      "storage_accesses": [
+        {
+          "path": "src/app.js",
+          "line": 6,
+          "column": 35,
+          "operation": "getItem",
+          "argument": "key",
+          "forwarding": true
+        },
+        {
+          "path": "src/app.js",
+          "line": 6,
+          "column": 87,
+          "operation": "setItem",
+          "argument": "key",
+          "forwarding": true
+        },
+        {
+          "path": "src/workspace.js",
+          "line": 6,
+          "column": 30,
+          "operation": "getItem",
+          "argument": "STORAGE_KEY",
+          "original_key": "instant-workpad.v1"
+        },
+        {
+          "path": "src/workspace.js",
+          "line": 21,
+          "column": 9,
+          "operation": "setItem",
+          "argument": "STORAGE_KEY",
+          "original_key": "instant-workpad.v1"
+        }
+      ],
+      "storage_surfaces": [
+        {
+          "path": "src/app.js",
+          "line": 5,
+          "source": "// Accessing localStorage itself can throw when browser storage is disabled."
+        },
+        {
+          "path": "src/app.js",
+          "line": 6,
+          "source": "const storage = { getItem: key => localStorage.getItem(key), setItem: (key, value) => localStorage.setItem(key, value) };"
+        },
+        {
+          "path": "src/workspace.js",
+          "line": 6,
+          "source": "const saved = JSON.parse(storage.getItem(STORAGE_KEY));"
+        },
+        {
+          "path": "src/workspace.js",
+          "line": 21,
+          "source": "try { storage.setItem(STORAGE_KEY, JSON.stringify(state)); return true; }"
+        }
+      ],
+      "files": [
+        {
+          "path": "index.html",
+          "source_sha256": "12f36fd613de83028105aaad1c7f0fd63edd344b19b711e7ea5606d9d2e97e53",
+          "served_sha256": "d121bdc78b224a5d89ede4c013bc074620f8de8b420b80e480c3b3d90dac0ab4",
+          "replacements": [
+            {
+              "kind": "relative-url",
+              "start": 660,
+              "before": "/style.css",
+              "after": "./style.css",
+              "line": 10,
+              "column": 32
+            },
+            {
+              "kind": "relative-url",
+              "start": 702,
+              "before": "/src/app.js",
+              "after": "./src/app.js",
+              "line": 11,
+              "column": 30
+            },
+            {
+              "kind": "relative-url",
+              "start": 827,
+              "before": "/",
+              "after": "./",
+              "line": 16,
+              "column": 30
+            }
+          ]
+        },
+        {
+          "path": "src/app.js",
+          "source_sha256": "8d661db7e6a7d372dd66e895df332794588c7c1a30f5a86d6b72793c4be0692e",
+          "served_sha256": "8d661db7e6a7d372dd66e895df332794588c7c1a30f5a86d6b72793c4be0692e",
+          "replacements": []
+        },
+        {
+          "path": "src/calculator.js",
+          "source_sha256": "676539e7947c12f0824929f45e0420ccfc1c66e22090d1c7b1596327ae1ce886",
+          "served_sha256": "676539e7947c12f0824929f45e0420ccfc1c66e22090d1c7b1596327ae1ce886",
+          "replacements": []
+        },
+        {
+          "path": "src/workspace.js",
+          "source_sha256": "6eea1d445d18cfcd8c0a575d710636f169f9384097e2c8a4adc662468bc6ce60",
+          "served_sha256": "060db1cffc6e29d93e587754bc702afa3664cadddd6303ce05e7d19aba7e6c45",
+          "replacements": [
+            {
+              "kind": "storage-key",
+              "start": 28,
+              "before": "instant-workpad.v1",
+              "after": "instantcalc-demo:astra-APP1-r01:instant-workpad.v1",
+              "line": 1,
+              "column": 29
+            }
+          ]
+        },
+        {
+          "path": "style.css",
+          "source_sha256": "140f74c71093e1a66da1821246cec8b9aaeff1970ce8e08c92d804aeb60e2989",
+          "served_sha256": "140f74c71093e1a66da1821246cec8b9aaeff1970ce8e08c92d804aeb60e2989",
+          "replacements": []
+        }
+      ]
+    },
+    {
+      "run_id": "astra-APP2-r01",
+      "model": "astra",
+      "arm": "APP2",
+      "phase": "feature",
+      "classification": "qualified",
+      "phase_classification": "qualified",
+      "source_commit": "ba370097b7b16ff450a586b632f5a651a1c9e4bf",
+      "storage_keys": [
+        {
+          "original": "instantcalc.worksheet.v1",
+          "served": "instantcalc-demo:astra-APP2-r01:instantcalc.worksheet.v1",
+          "locations": [
+            {
+              "path": "src/worksheet.js",
+              "line": 3,
+              "column": 22
+            }
+          ]
+        }
+      ],
+      "storage_accesses": [
+        {
+          "path": "src/worksheet.js",
+          "line": 13,
+          "column": 33,
+          "operation": "getItem",
+          "argument": "STORAGE_KEY",
+          "original_key": "instantcalc.worksheet.v1"
+        },
+        {
+          "path": "src/worksheet.js",
+          "line": 28,
+          "column": 7,
+          "operation": "setItem",
+          "argument": "STORAGE_KEY",
+          "original_key": "instantcalc.worksheet.v1"
+        }
+      ],
+      "storage_surfaces": [
+        {
+          "path": "src/app.js",
+          "line": 6,
+          "source": "try { storage = window.localStorage; } catch { /* Worksheet reports unavailable saving. */ }"
+        },
+        {
+          "path": "src/worksheet.js",
+          "line": 13,
+          "source": "const stored = JSON.parse(storage.getItem(STORAGE_KEY));"
+        },
+        {
+          "path": "src/worksheet.js",
+          "line": 28,
+          "source": "this.storage.setItem(STORAGE_KEY, JSON.stringify({ rows: this.rows, active: this.active, variables: this.variables }));"
+        }
+      ],
+      "files": [
+        {
+          "path": "favicon.svg",
+          "source_sha256": "d77c99b8d338b2216c33c16c3b6baa60ff629faf3084205e33fbcbba8ce3a4d3",
+          "served_sha256": "d77c99b8d338b2216c33c16c3b6baa60ff629faf3084205e33fbcbba8ce3a4d3",
+          "replacements": []
+        },
+        {
+          "path": "index.html",
+          "source_sha256": "e98a4e7261bdb3f6540db532b6f36b2e9058528ead1f482cd2b2b0d05a192da2",
+          "served_sha256": "e799235fabb1e0f34f4a8a528811be05a08813fbb5befd85d81d17e383506a42",
+          "replacements": [
+            {
+              "kind": "relative-url",
+              "start": 392,
+              "before": "/favicon.svg",
+              "after": "./favicon.svg",
+              "line": 9,
+              "column": 26
+            },
+            {
+              "kind": "relative-url",
+              "start": 459,
+              "before": "/src/styles.css",
+              "after": "./src/styles.css",
+              "line": 10,
+              "column": 32
+            },
+            {
+              "kind": "relative-url",
+              "start": 506,
+              "before": "/src/app.js",
+              "after": "./src/app.js",
+              "line": 11,
+              "column": 30
+            },
+            {
+              "kind": "relative-url",
+              "start": 1395,
+              "before": "/",
+              "after": "./",
+              "line": 23,
+              "column": 30
+            }
+          ]
+        },
+        {
+          "path": "src/app.js",
+          "source_sha256": "f2b184e7a9f86ae9ea4cd5888056477781c0de1bf671efb9218b5919f954dcba",
+          "served_sha256": "f2b184e7a9f86ae9ea4cd5888056477781c0de1bf671efb9218b5919f954dcba",
+          "replacements": []
+        },
+        {
+          "path": "src/calculator.js",
+          "source_sha256": "ee078954befaae4be8583d209164b4e8ab4b769cb8210a95fcaa2155daade646",
+          "served_sha256": "ee078954befaae4be8583d209164b4e8ab4b769cb8210a95fcaa2155daade646",
+          "replacements": []
+        },
+        {
+          "path": "src/styles.css",
+          "source_sha256": "a2ac5a6005bef26da4f7baaf741bf876a64808a2b114999d919dad798da2f50b",
+          "served_sha256": "a2ac5a6005bef26da4f7baaf741bf876a64808a2b114999d919dad798da2f50b",
+          "replacements": []
+        },
+        {
+          "path": "src/worksheet.js",
+          "source_sha256": "6fcf870809edbd91bdccdc44cac4e45c614d4290524be750aef79d4a097e9245",
+          "served_sha256": "cde17d1c4729d66751194af6cfb790eb067ef002885fd8a9acb0d1a9f68ca4f1",
+          "replacements": [
+            {
+              "kind": "storage-key",
+              "start": 75,
+              "before": "instantcalc.worksheet.v1",
+              "after": "instantcalc-demo:astra-APP2-r01:instantcalc.worksheet.v1",
+              "line": 3,
+              "column": 22
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "run_id": "astra-APP3-r01",
+      "model": "astra",
+      "arm": "APP3",
+      "phase": "feature",
+      "classification": "qualified",
+      "phase_classification": "qualified",
+      "source_commit": "9a124a381df388da922de5884a6dfa2895f20cf5",
+      "storage_keys": [
+        {
+          "original": "working-calculator.v1",
+          "served": "instantcalc-demo:astra-APP3-r01:working-calculator.v1",
+          "locations": [
+            {
+              "path": "worksheet.js",
+              "line": 2,
+              "column": 29
+            }
+          ]
+        }
+      ],
+      "storage_accesses": [
+        {
+          "path": "worksheet.js",
+          "line": 6,
+          "column": 28,
+          "operation": "getItem",
+          "argument": "STORAGE_KEY",
+          "original_key": "working-calculator.v1"
+        },
+        {
+          "path": "worksheet.js",
+          "line": 21,
+          "column": 5,
+          "operation": "setItem",
+          "argument": "STORAGE_KEY",
+          "original_key": "working-calculator.v1"
+        }
+      ],
+      "storage_surfaces": [
+        {
+          "path": "app.js",
+          "line": 6,
+          "source": "try { storage = window.localStorage; } catch { /* Calculation still works without storage. */ }"
+        },
+        {
+          "path": "worksheet.js",
+          "line": 6,
+          "source": "try { saved = JSON.parse(storage.getItem(STORAGE_KEY)); } catch { /* Start empty if storage is unavailable. */ }"
+        },
+        {
+          "path": "worksheet.js",
+          "line": 21,
+          "source": "storage.setItem(STORAGE_KEY, JSON.stringify(state));"
+        }
+      ],
+      "files": [
+        {
+          "path": "app.js",
+          "source_sha256": "50c7c513bd8f5ff1a947da6b8f79915abcbcbecf0f6a9c55a4e5596eadb3a031",
+          "served_sha256": "50c7c513bd8f5ff1a947da6b8f79915abcbcbecf0f6a9c55a4e5596eadb3a031",
+          "replacements": []
+        },
+        {
+          "path": "calculator.js",
+          "source_sha256": "88f62e6e8a22cfd3cd92306d44f54caa0c85105081260d080f0b0be6bdcf0539",
+          "served_sha256": "88f62e6e8a22cfd3cd92306d44f54caa0c85105081260d080f0b0be6bdcf0539",
+          "replacements": []
+        },
+        {
+          "path": "index.html",
+          "source_sha256": "d6960fc93b1a20241eccc91d124c529cf1186fd7cb565df2861cf6a9db932f73",
+          "served_sha256": "d6960fc93b1a20241eccc91d124c529cf1186fd7cb565df2861cf6a9db932f73",
+          "replacements": []
+        },
+        {
+          "path": "styles.css",
+          "source_sha256": "19e802e22c2ce678cdd1caf8cba1c6348c6382ba562909c0f6891e70e73650fa",
+          "served_sha256": "19e802e22c2ce678cdd1caf8cba1c6348c6382ba562909c0f6891e70e73650fa",
+          "replacements": []
+        },
+        {
+          "path": "worksheet.js",
+          "source_sha256": "88b6b3ab0ffb23ea50ae593a9fc9c976b8374c125751716d30d24ad8b83d757e",
+          "served_sha256": "b0e77dcf51966179bd3e2c9a1268b796b084475cad8bc945bf9ea5d3ac9a2532",
+          "replacements": [
+            {
+              "kind": "storage-key",
+              "start": 57,
+              "before": "working-calculator.v1",
+              "after": "instantcalc-demo:astra-APP3-r01:working-calculator.v1",
+              "line": 2,
+              "column": 29
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "run_id": "astra-APP4-r01",
+      "model": "astra",
+      "arm": "APP4",
+      "phase": "feature",
+      "classification": "app-failed",
+      "phase_classification": "qualified",
+      "source_commit": "54354151373d7f25d27a8a27b90051474112dcd5",
+      "storage_keys": [
+        {
+          "original": "instantcalc.activeRow.v1",
+          "served": "instantcalc-demo:astra-APP4-r01:instantcalc.activeRow.v1",
+          "locations": [
+            {
+              "path": "src/worksheet.js",
+              "line": 25,
+              "column": 47
+            },
+            {
+              "path": "src/worksheet.js",
+              "line": 34,
+              "column": 29
+            }
+          ]
+        },
+        {
+          "original": "instantcalc.rows.v1",
+          "served": "instantcalc-demo:astra-APP4-r01:instantcalc.rows.v1",
+          "locations": [
+            {
+              "path": "src/worksheet.js",
+              "line": 11,
+              "column": 48
+            },
+            {
+              "path": "src/worksheet.js",
+              "line": 32,
+              "column": 29
+            }
+          ]
+        },
+        {
+          "original": "instantcalc.variables.v1",
+          "served": "instantcalc-demo:astra-APP4-r01:instantcalc.variables.v1",
+          "locations": [
+            {
+              "path": "src/worksheet.js",
+              "line": 18,
+              "column": 53
+            },
+            {
+              "path": "src/worksheet.js",
+              "line": 33,
+              "column": 29
+            }
+          ]
+        }
+      ],
+      "storage_accesses": [
+        {
+          "path": "src/worksheet.js",
+          "line": 11,
+          "column": 31,
+          "operation": "getItem",
+          "argument": "'instantcalc.rows.v1'",
+          "original_key": "instantcalc.rows.v1"
+        },
+        {
+          "path": "src/worksheet.js",
+          "line": 18,
+          "column": 36,
+          "operation": "getItem",
+          "argument": "'instantcalc.variables.v1'",
+          "original_key": "instantcalc.variables.v1"
+        },
+        {
+          "path": "src/worksheet.js",
+          "line": 25,
+          "column": 30,
+          "operation": "getItem",
+          "argument": "'instantcalc.activeRow.v1'",
+          "original_key": "instantcalc.activeRow.v1"
+        },
+        {
+          "path": "src/worksheet.js",
+          "line": 32,
+          "column": 7,
+          "operation": "setItem",
+          "argument": "'instantcalc.rows.v1'",
+          "original_key": "instantcalc.rows.v1"
+        },
+        {
+          "path": "src/worksheet.js",
+          "line": 33,
+          "column": 7,
+          "operation": "setItem",
+          "argument": "'instantcalc.variables.v1'",
+          "original_key": "instantcalc.variables.v1"
+        },
+        {
+          "path": "src/worksheet.js",
+          "line": 34,
+          "column": 7,
+          "operation": "setItem",
+          "argument": "'instantcalc.activeRow.v1'",
+          "original_key": "instantcalc.activeRow.v1"
+        }
+      ],
+      "storage_surfaces": [
+        {
+          "path": "src/app.js",
+          "line": 6,
+          "source": "try { storage = window.localStorage; } catch { /* Editing remains available. */ }"
+        },
+        {
+          "path": "src/worksheet.js",
+          "line": 11,
+          "source": "const rows = JSON.parse(storage.getItem('instantcalc.rows.v1'));"
+        },
+        {
+          "path": "src/worksheet.js",
+          "line": 18,
+          "source": "const variables = JSON.parse(storage.getItem('instantcalc.variables.v1'));"
+        },
+        {
+          "path": "src/worksheet.js",
+          "line": 25,
+          "source": "const row = JSON.parse(storage.getItem('instantcalc.activeRow.v1'));"
+        },
+        {
+          "path": "src/worksheet.js",
+          "line": 32,
+          "source": "this.storage.setItem('instantcalc.rows.v1', JSON.stringify(this.rows));"
+        },
+        {
+          "path": "src/worksheet.js",
+          "line": 33,
+          "source": "this.storage.setItem('instantcalc.variables.v1', JSON.stringify(this.variables));"
+        },
+        {
+          "path": "src/worksheet.js",
+          "line": 34,
+          "source": "this.storage.setItem('instantcalc.activeRow.v1', JSON.stringify(this.active + 1));"
+        }
+      ],
+      "files": [
+        {
+          "path": "index.html",
+          "source_sha256": "713e3be61d1d264e153b7b40a9e24e4ce2bf5d914c75df9f3e603ce65513945c",
+          "served_sha256": "8961b3fa5ec95ba104fd21dca217213cd6e3a55e286767af75ddc7328599a2b6",
+          "replacements": [
+            {
+              "kind": "relative-url",
+              "start": 316,
+              "before": "/style.css",
+              "after": "./style.css",
+              "line": 8,
+              "column": 32
+            },
+            {
+              "kind": "relative-url",
+              "start": 358,
+              "before": "/src/app.js",
+              "after": "./src/app.js",
+              "line": 9,
+              "column": 30
+            }
+          ]
+        },
+        {
+          "path": "src/app.js",
+          "source_sha256": "5f12868a23c942a0e08eeb0fb18ad117d0e9ae33d413e5466f91b42cc23e2fac",
+          "served_sha256": "5f12868a23c942a0e08eeb0fb18ad117d0e9ae33d413e5466f91b42cc23e2fac",
+          "replacements": []
+        },
+        {
+          "path": "src/calculator.js",
+          "source_sha256": "19e856ef13821c149fc3e1293936289b8aecb4cb801ea64b8728943489c71960",
+          "served_sha256": "19e856ef13821c149fc3e1293936289b8aecb4cb801ea64b8728943489c71960",
+          "replacements": []
+        },
+        {
+          "path": "src/worksheet.js",
+          "source_sha256": "5ef7d7196432b40818bd902cd5c84dff0b2017285cda48ae6fc3162fed8b4054",
+          "served_sha256": "fd2a7b305582890bf961f2d6595bf94154e8317faa69c219341df26e3b792db2",
+          "replacements": [
+            {
+              "kind": "storage-key",
+              "start": 298,
+              "before": "instantcalc.rows.v1",
+              "after": "instantcalc-demo:astra-APP4-r01:instantcalc.rows.v1",
+              "line": 11,
+              "column": 48
+            },
+            {
+              "kind": "storage-key",
+              "start": 629,
+              "before": "instantcalc.variables.v1",
+              "after": "instantcalc-demo:astra-APP4-r01:instantcalc.variables.v1",
+              "line": 18,
+              "column": 53
+            },
+            {
+              "kind": "storage-key",
+              "start": 1000,
+              "before": "instantcalc.activeRow.v1",
+              "after": "instantcalc-demo:astra-APP4-r01:instantcalc.activeRow.v1",
+              "line": 25,
+              "column": 47
+            },
+            {
+              "kind": "storage-key",
+              "start": 1258,
+              "before": "instantcalc.rows.v1",
+              "after": "instantcalc-demo:astra-APP4-r01:instantcalc.rows.v1",
+              "line": 32,
+              "column": 29
+            },
+            {
+              "kind": "storage-key",
+              "start": 1336,
+              "before": "instantcalc.variables.v1",
+              "after": "instantcalc-demo:astra-APP4-r01:instantcalc.variables.v1",
+              "line": 33,
+              "column": 29
+            },
+            {
+              "kind": "storage-key",
+              "start": 1424,
+              "before": "instantcalc.activeRow.v1",
+              "after": "instantcalc-demo:astra-APP4-r01:instantcalc.activeRow.v1",
+              "line": 34,
+              "column": 29
+            }
+          ]
+        },
+        {
+          "path": "style.css",
+          "source_sha256": "0c1d5e2a244a8d0bfae4105b0ceaa745e9dc64d8c38774573606fa17c566424f",
+          "served_sha256": "0c1d5e2a244a8d0bfae4105b0ceaa745e9dc64d8c38774573606fa17c566424f",
+          "replacements": []
+        }
+      ]
+    },
+    {
+      "run_id": "sol-APP1-r01",
+      "model": "sol",
+      "arm": "APP1",
+      "phase": "feature",
+      "classification": "blocked",
+      "phase_classification": "coverage-blocked",
+      "source_commit": "6ac2b21f5a1280912d62827c0a23d61e6229fea2",
+      "storage_keys": [
+        {
+          "original": "tenfold.worksheet.v1",
+          "served": "instantcalc-demo:sol-APP1-r01:tenfold.worksheet.v1",
+          "locations": [
+            {
+              "path": "app.js",
+              "line": 8,
+              "column": 22
+            }
+          ]
+        }
+      ],
+      "storage_accesses": [
+        {
+          "path": "app.js",
+          "line": 440,
+          "column": 5,
+          "operation": "setItem",
+          "argument": "STORAGE_KEY",
+          "original_key": "tenfold.worksheet.v1"
+        },
+        {
+          "path": "app.js",
+          "line": 448,
+          "column": 30,
+          "operation": "getItem",
+          "argument": "STORAGE_KEY",
+          "original_key": "tenfold.worksheet.v1"
+        }
+      ],
+      "storage_surfaces": [
+        {
+          "path": "app.js",
+          "line": 440,
+          "source": "localStorage.setItem(STORAGE_KEY, JSON.stringify({ expressions, activeIndex, variables }));"
+        },
+        {
+          "path": "app.js",
+          "line": 448,
+          "source": "const saved = JSON.parse(localStorage.getItem(STORAGE_KEY));"
+        }
+      ],
+      "files": [
+        {
+          "path": "app.js",
+          "source_sha256": "73dea26b2b0cd4be46e8b3e7f0a39da5e8143036e992638a4988f4b9c7dd4951",
+          "served_sha256": "43ca54951115a2b6f1b1dd1425ed7d9cc21b25d4613d3b60ce588005729d8465",
+          "replacements": [
+            {
+              "kind": "storage-key",
+              "start": 133,
+              "before": "tenfold.worksheet.v1",
+              "after": "instantcalc-demo:sol-APP1-r01:tenfold.worksheet.v1",
+              "line": 8,
+              "column": 22
+            }
+          ]
+        },
+        {
+          "path": "calculator.js",
+          "source_sha256": "b3bb8fd1584668d05c1df60ca8023caff49a016c429cabb471a7b95ae2a5bab2",
+          "served_sha256": "b3bb8fd1584668d05c1df60ca8023caff49a016c429cabb471a7b95ae2a5bab2",
+          "replacements": []
+        },
+        {
+          "path": "index.html",
+          "source_sha256": "7ab5be00fa2a0f7a4301afff7e3d07e06f72692ad5f1dcf2e0a6fd3d43a182bb",
+          "served_sha256": "7ab5be00fa2a0f7a4301afff7e3d07e06f72692ad5f1dcf2e0a6fd3d43a182bb",
+          "replacements": []
+        },
+        {
+          "path": "styles.css",
+          "source_sha256": "36bf063e2c8cd823a8d3fe23f5ce69324bdbd76d9725f1ac83ff3df4d8594305",
+          "served_sha256": "36bf063e2c8cd823a8d3fe23f5ce69324bdbd76d9725f1ac83ff3df4d8594305",
+          "replacements": []
+        }
+      ]
+    },
+    {
+      "run_id": "sol-APP2-r01",
+      "model": "sol",
+      "arm": "APP2",
+      "phase": "feature",
+      "classification": "qualified",
+      "phase_classification": "qualified",
+      "source_commit": "ffafb1bbdc3bbd652e548dfcd13dfcb8794a6c6c",
+      "storage_keys": [
+        {
+          "original": "instantcalc.activeLine",
+          "served": "instantcalc-demo:sol-APP2-r01:instantcalc.activeLine",
+          "locations": [
+            {
+              "path": "src/sheet.js",
+              "line": 3,
+              "column": 33
+            }
+          ]
+        },
+        {
+          "original": "instantcalc.sheet",
+          "served": "instantcalc-demo:sol-APP2-r01:instantcalc.sheet",
+          "locations": [
+            {
+              "path": "src/sheet.js",
+              "line": 2,
+              "column": 29
+            }
+          ]
+        },
+        {
+          "original": "instantcalc.variables",
+          "served": "instantcalc-demo:sol-APP2-r01:instantcalc.variables",
+          "locations": [
+            {
+              "path": "src/sheet.js",
+              "line": 4,
+              "column": 38
+            }
+          ]
+        }
+      ],
+      "storage_accesses": [
+        {
+          "path": "src/sheet.js",
+          "line": 12,
+          "column": 31,
+          "operation": "getItem",
+          "argument": "STORAGE_KEY",
+          "original_key": "instantcalc.sheet"
+        },
+        {
+          "path": "src/sheet.js",
+          "line": 24,
+          "column": 5,
+          "operation": "setItem",
+          "argument": "STORAGE_KEY",
+          "original_key": "instantcalc.sheet"
+        },
+        {
+          "path": "src/sheet.js",
+          "line": 33,
+          "column": 26,
+          "operation": "getItem",
+          "argument": "ACTIVE_LINE_KEY",
+          "original_key": "instantcalc.activeLine"
+        },
+        {
+          "path": "src/sheet.js",
+          "line": 42,
+          "column": 5,
+          "operation": "setItem",
+          "argument": "ACTIVE_LINE_KEY",
+          "original_key": "instantcalc.activeLine"
+        },
+        {
+          "path": "src/sheet.js",
+          "line": 51,
+          "column": 31,
+          "operation": "getItem",
+          "argument": "VARIABLE_STORAGE_KEY",
+          "original_key": "instantcalc.variables"
+        },
+        {
+          "path": "src/sheet.js",
+          "line": 72,
+          "column": 5,
+          "operation": "setItem",
+          "argument": "VARIABLE_STORAGE_KEY",
+          "original_key": "instantcalc.variables"
+        }
+      ],
+      "storage_surfaces": [
+        {
+          "path": "src/app.js",
+          "line": 28,
+          "source": "storage = window.localStorage;"
+        },
+        {
+          "path": "src/sheet.js",
+          "line": 12,
+          "source": "const parsed = JSON.parse(storage.getItem(STORAGE_KEY));"
+        },
+        {
+          "path": "src/sheet.js",
+          "line": 24,
+          "source": "storage.setItem(STORAGE_KEY, JSON.stringify(expressions));"
+        },
+        {
+          "path": "src/sheet.js",
+          "line": 33,
+          "source": "const index = Number(storage.getItem(ACTIVE_LINE_KEY));"
+        },
+        {
+          "path": "src/sheet.js",
+          "line": 42,
+          "source": "storage.setItem(ACTIVE_LINE_KEY, String(index));"
+        },
+        {
+          "path": "src/sheet.js",
+          "line": 51,
+          "source": "const parsed = JSON.parse(storage.getItem(VARIABLE_STORAGE_KEY));"
+        },
+        {
+          "path": "src/sheet.js",
+          "line": 72,
+          "source": "storage.setItem(VARIABLE_STORAGE_KEY, JSON.stringify(variables));"
+        }
+      ],
+      "files": [
+        {
+          "path": "index.html",
+          "source_sha256": "2d1efface83c2e137325eef3ee90eb7232423b3702a33e6dd6a49d5dd875b656",
+          "served_sha256": "ef42f01cdb5e3ca08eae3e2c568a2babb954105538c6b9ba6d8756d435546d25",
+          "replacements": [
+            {
+              "kind": "relative-url",
+              "start": 349,
+              "before": "/styles.css",
+              "after": "./styles.css",
+              "line": 11,
+              "column": 34
+            },
+            {
+              "kind": "relative-url",
+              "start": 5292,
+              "before": "/src/app.js",
+              "after": "./src/app.js",
+              "line": 127,
+              "column": 32
+            }
+          ]
+        },
+        {
+          "path": "src/app.js",
+          "source_sha256": "9da77425f5650f905bb37f1a3793cf66f6a72a47ffa964794c296ef0a0f74ec6",
+          "served_sha256": "9da77425f5650f905bb37f1a3793cf66f6a72a47ffa964794c296ef0a0f74ec6",
+          "replacements": []
+        },
+        {
+          "path": "src/calculator.js",
+          "source_sha256": "d0505629d81c68549b8e35279182a24ff4e6d8563ec59ec864a45856196be857",
+          "served_sha256": "d0505629d81c68549b8e35279182a24ff4e6d8563ec59ec864a45856196be857",
+          "replacements": []
+        },
+        {
+          "path": "src/sheet.js",
+          "source_sha256": "ba88846ad487fdbe2dc04ffc922eb06a3e11c7fe14e794a0d6848bab4ae2bbef",
+          "served_sha256": "27e422bd993b081b9effcb91d38dfec1f1788e9e96032bef3a1c54d8a7bbb8ce",
+          "replacements": [
+            {
+              "kind": "storage-key",
+              "start": 58,
+              "before": "instantcalc.sheet",
+              "after": "instantcalc-demo:sol-APP2-r01:instantcalc.sheet",
+              "line": 2,
+              "column": 29
+            },
+            {
+              "kind": "storage-key",
+              "start": 110,
+              "before": "instantcalc.activeLine",
+              "after": "instantcalc-demo:sol-APP2-r01:instantcalc.activeLine",
+              "line": 3,
+              "column": 33
+            },
+            {
+              "kind": "storage-key",
+              "start": 172,
+              "before": "instantcalc.variables",
+              "after": "instantcalc-demo:sol-APP2-r01:instantcalc.variables",
+              "line": 4,
+              "column": 38
+            }
+          ]
+        },
+        {
+          "path": "styles.css",
+          "source_sha256": "7ac8dbb6663eae3c3b308267c6568e6a495295716e731178926d2b85f79a17fb",
+          "served_sha256": "7ac8dbb6663eae3c3b308267c6568e6a495295716e731178926d2b85f79a17fb",
+          "replacements": []
+        }
+      ]
+    },
+    {
+      "run_id": "sol-APP3-r01",
+      "model": "sol",
+      "arm": "APP3",
+      "phase": "feature",
+      "classification": "qualified",
+      "phase_classification": "qualified",
+      "source_commit": "1af417a95bb3909d033ce48f012307f7c9a7e4e9",
+      "storage_keys": [
+        {
+          "original": "tenfold-active-row",
+          "served": "instantcalc-demo:sol-APP3-r01:tenfold-active-row",
+          "locations": [
+            {
+              "path": "src/worksheet-state.js",
+              "line": 2,
+              "column": 25
+            }
+          ]
+        },
+        {
+          "original": "tenfold-expressions",
+          "served": "instantcalc-demo:sol-APP3-r01:tenfold-expressions",
+          "locations": [
+            {
+              "path": "src/worksheet-state.js",
+              "line": 1,
+              "column": 22
+            }
+          ]
+        },
+        {
+          "original": "tenfold-variables",
+          "served": "instantcalc-demo:sol-APP3-r01:tenfold-variables",
+          "locations": [
+            {
+              "path": "src/worksheet-state.js",
+              "line": 3,
+              "column": 24
+            }
+          ]
+        }
+      ],
+      "storage_accesses": [
+        {
+          "path": "src/worksheet-state.js",
+          "line": 22,
+          "column": 31,
+          "operation": "getItem",
+          "argument": "STORAGE_KEY",
+          "original_key": "tenfold-expressions"
+        },
+        {
+          "path": "src/worksheet-state.js",
+          "line": 33,
+          "column": 3,
+          "operation": "setItem",
+          "argument": "STORAGE_KEY",
+          "original_key": "tenfold-expressions"
+        },
+        {
+          "path": "src/worksheet-state.js",
+          "line": 38,
+          "column": 24,
+          "operation": "getItem",
+          "argument": "ACTIVE_ROW_KEY",
+          "original_key": "tenfold-active-row"
+        },
+        {
+          "path": "src/worksheet-state.js",
+          "line": 46,
+          "column": 3,
+          "operation": "setItem",
+          "argument": "ACTIVE_ROW_KEY",
+          "original_key": "tenfold-active-row"
+        },
+        {
+          "path": "src/worksheet-state.js",
+          "line": 51,
+          "column": 31,
+          "operation": "getItem",
+          "argument": "VARIABLES_KEY",
+          "original_key": "tenfold-variables"
+        },
+        {
+          "path": "src/worksheet-state.js",
+          "line": 63,
+          "column": 3,
+          "operation": "setItem",
+          "argument": "VARIABLES_KEY",
+          "original_key": "tenfold-variables"
+        }
+      ],
+      "storage_surfaces": [
+        {
+          "path": "src/app.js",
+          "line": 22,
+          "source": "const expressions = loadExpressions(localStorage);"
+        },
+        {
+          "path": "src/app.js",
+          "line": 23,
+          "source": "const variables = loadVariables(localStorage);"
+        },
+        {
+          "path": "src/app.js",
+          "line": 26,
+          "source": "let activeRow = loadActiveRow(localStorage);"
+        },
+        {
+          "path": "src/app.js",
+          "line": 95,
+          "source": "saveActiveRow(localStorage, index);"
+        },
+        {
+          "path": "src/app.js",
+          "line": 125,
+          "source": "saveExpressions(localStorage, expressions);"
+        },
+        {
+          "path": "src/app.js",
+          "line": 134,
+          "source": "saveVariables(localStorage, variables);"
+        },
+        {
+          "path": "src/worksheet-state.js",
+          "line": 22,
+          "source": "const parsed = JSON.parse(storage.getItem(STORAGE_KEY));"
+        },
+        {
+          "path": "src/worksheet-state.js",
+          "line": 33,
+          "source": "storage.setItem(STORAGE_KEY, JSON.stringify(expressions.slice(0, ROW_COUNT)));"
+        },
+        {
+          "path": "src/worksheet-state.js",
+          "line": 38,
+          "source": "const row = Number(storage.getItem(ACTIVE_ROW_KEY));"
+        },
+        {
+          "path": "src/worksheet-state.js",
+          "line": 46,
+          "source": "storage.setItem(ACTIVE_ROW_KEY, String(row));"
+        },
+        {
+          "path": "src/worksheet-state.js",
+          "line": 51,
+          "source": "const parsed = JSON.parse(storage.getItem(VARIABLES_KEY));"
+        },
+        {
+          "path": "src/worksheet-state.js",
+          "line": 63,
+          "source": "storage.setItem(VARIABLES_KEY, JSON.stringify(variables));"
+        }
+      ],
+      "files": [
+        {
+          "path": "index.html",
+          "source_sha256": "13b72d0a219073833cac334cb78f1a64c56a515c8ad9fde52201d167df44be7c",
+          "served_sha256": "f3145446d3db74a4c50297597f88017c5a678178f38d5f8c85289d01b3b23ff8",
+          "replacements": [
+            {
+              "kind": "relative-url",
+              "start": 273,
+              "before": "/styles.css",
+              "after": "./styles.css",
+              "line": 8,
+              "column": 34
+            },
+            {
+              "kind": "relative-url",
+              "start": 4511,
+              "before": "/src/app.js",
+              "after": "./src/app.js",
+              "line": 100,
+              "column": 32
+            }
+          ]
+        },
+        {
+          "path": "src/app.js",
+          "source_sha256": "9a4c9addcab7185b072aa9d385a4b8aeb819378587d8aa35edf9f17eb66d7d47",
+          "served_sha256": "9a4c9addcab7185b072aa9d385a4b8aeb819378587d8aa35edf9f17eb66d7d47",
+          "replacements": []
+        },
+        {
+          "path": "src/calculator.js",
+          "source_sha256": "37c0d8957ac144cfee17a6bcb1414b4f69ae12c16551f9bc1cdf4ef8e067fd11",
+          "served_sha256": "37c0d8957ac144cfee17a6bcb1414b4f69ae12c16551f9bc1cdf4ef8e067fd11",
+          "replacements": []
+        },
+        {
+          "path": "src/worksheet-state.js",
+          "source_sha256": "26027c1b037772b7a5ae4a20b175a0928cbe5b3ef1ee9a5c005ae1a35e1dc1ef",
+          "served_sha256": "06debed06dceec537f4f8d1968f4cd692e7815ae338e85731ace5bacbc01b943",
+          "replacements": [
+            {
+              "kind": "storage-key",
+              "start": 21,
+              "before": "tenfold-expressions",
+              "after": "instantcalc-demo:sol-APP3-r01:tenfold-expressions",
+              "line": 1,
+              "column": 22
+            },
+            {
+              "kind": "storage-key",
+              "start": 67,
+              "before": "tenfold-active-row",
+              "after": "instantcalc-demo:sol-APP3-r01:tenfold-active-row",
+              "line": 2,
+              "column": 25
+            },
+            {
+              "kind": "storage-key",
+              "start": 111,
+              "before": "tenfold-variables",
+              "after": "instantcalc-demo:sol-APP3-r01:tenfold-variables",
+              "line": 3,
+              "column": 24
+            }
+          ]
+        },
+        {
+          "path": "styles.css",
+          "source_sha256": "d63e209110b29ea9ba9584dad9471f70d296fbba331b9b628ccaf6504d6e2fab",
+          "served_sha256": "d63e209110b29ea9ba9584dad9471f70d296fbba331b9b628ccaf6504d6e2fab",
+          "replacements": []
+        }
+      ]
+    },
+    {
+      "run_id": "sol-APP4-r01",
+      "model": "sol",
+      "arm": "APP4",
+      "phase": "feature",
+      "classification": "blocked",
+      "phase_classification": "coverage-blocked",
+      "source_commit": "aa16ab404b1d9d9326a0bcfbff3167cdee4db542",
+      "storage_keys": [
+        {
+          "original": "instant-calc:worksheet:v1",
+          "served": "instantcalc-demo:sol-APP4-r01:instant-calc:worksheet:v1",
+          "locations": [
+            {
+              "path": "src/storage.js",
+              "line": 1,
+              "column": 29
+            }
+          ]
+        }
+      ],
+      "storage_accesses": [
+        {
+          "path": "src/storage.js",
+          "line": 25,
+          "column": 30,
+          "operation": "getItem",
+          "argument": "STORAGE_KEY",
+          "original_key": "instant-calc:worksheet:v1"
+        },
+        {
+          "path": "src/storage.js",
+          "line": 60,
+          "column": 3,
+          "operation": "setItem",
+          "argument": "STORAGE_KEY",
+          "original_key": "instant-calc:worksheet:v1"
+        },
+        {
+          "path": "src/storage.js",
+          "line": 64,
+          "column": 3,
+          "operation": "removeItem",
+          "argument": "STORAGE_KEY",
+          "original_key": "instant-calc:worksheet:v1"
+        }
+      ],
+      "storage_surfaces": [
+        {
+          "path": "src/app.js",
+          "line": 12,
+          "source": "const state = restoreWorksheet(localStorage);"
+        },
+        {
+          "path": "src/app.js",
+          "line": 29,
+          "source": "saveWorksheet(localStorage, state);"
+        },
+        {
+          "path": "src/app.js",
+          "line": 366,
+          "source": "removeWorksheet(localStorage);"
+        },
+        {
+          "path": "src/storage.js",
+          "line": 25,
+          "source": "const saved = JSON.parse(storage.getItem(STORAGE_KEY));"
+        },
+        {
+          "path": "src/storage.js",
+          "line": 60,
+          "source": "storage.setItem(STORAGE_KEY, JSON.stringify({ version: 2, ...worksheet }));"
+        },
+        {
+          "path": "src/storage.js",
+          "line": 64,
+          "source": "storage.removeItem(STORAGE_KEY);"
+        }
+      ],
+      "files": [
+        {
+          "path": "index.html",
+          "source_sha256": "1ca6643d24cda1352cb0b331a661acc0d7d3acc25eb0fa15a60374e923fc0a2c",
+          "served_sha256": "1ca6643d24cda1352cb0b331a661acc0d7d3acc25eb0fa15a60374e923fc0a2c",
+          "replacements": []
+        },
+        {
+          "path": "src/app.js",
+          "source_sha256": "e6fcc3a6e8d2e8f3d9644b9678a0242f2489a76a859b0f434a805e3fb83233c2",
+          "served_sha256": "e6fcc3a6e8d2e8f3d9644b9678a0242f2489a76a859b0f434a805e3fb83233c2",
+          "replacements": []
+        },
+        {
+          "path": "src/calculator.js",
+          "source_sha256": "4208b7bfd5ddfdb7a7451365e9f3912d94d0a0cd1fe9bd919ac2a5c2ef3d3d90",
+          "served_sha256": "4208b7bfd5ddfdb7a7451365e9f3912d94d0a0cd1fe9bd919ac2a5c2ef3d3d90",
+          "replacements": []
+        },
+        {
+          "path": "src/editor.js",
+          "source_sha256": "d7ded6a0cf396c6921309cafa6109ec54a89adf39ab623cef09932abdfd7081d",
+          "served_sha256": "d7ded6a0cf396c6921309cafa6109ec54a89adf39ab623cef09932abdfd7081d",
+          "replacements": []
+        },
+        {
+          "path": "src/storage.js",
+          "source_sha256": "4b8367a5ecbc2ce912bfda79a2999fb0996767f0f5549605f44ce18af9c90a98",
+          "served_sha256": "0871c3981d02e514a96a5e1d1b38de61dc9cdfe55be11524eb452c00f4832ddb",
+          "replacements": [
+            {
+              "kind": "storage-key",
+              "start": 28,
+              "before": "instant-calc:worksheet:v1",
+              "after": "instantcalc-demo:sol-APP4-r01:instant-calc:worksheet:v1",
+              "line": 1,
+              "column": 29
+            }
+          ]
+        },
+        {
+          "path": "src/styles.css",
+          "source_sha256": "d5e359d8e4b9d797e19ac478b805dfd36b1a6832bc30ae7576d0cbf110a5e323",
+          "served_sha256": "d5e359d8e4b9d797e19ac478b805dfd36b1a6832bc30ae7576d0cbf110a5e323",
+          "replacements": []
+        }
+      ]
+    },
+    {
+      "run_id": "terra-APP1-r01",
+      "model": "terra",
+      "arm": "APP1",
+      "phase": "feature",
+      "classification": "qualified",
+      "phase_classification": "qualified",
+      "source_commit": "c409463b6a49446e9f0bcac0c99811fdb771cfc1",
+      "storage_keys": [
+        {
+          "original": "instant-calculator-expressions-v1",
+          "served": "instantcalc-demo:terra-APP1-r01:instant-calculator-expressions-v1",
+          "locations": [
+            {
+              "path": "src/app.js",
+              "line": 5,
+              "column": 21
+            }
+          ]
+        }
+      ],
+      "storage_accesses": [
+        {
+          "path": "src/app.js",
+          "line": 15,
+          "column": 27,
+          "operation": "getItem",
+          "argument": "storageKey",
+          "original_key": "instant-calculator-expressions-v1"
+        },
+        {
+          "path": "src/app.js",
+          "line": 19,
+          "column": 3,
+          "operation": "setItem",
+          "argument": "storageKey",
+          "original_key": "instant-calculator-expressions-v1"
+        }
+      ],
+      "storage_surfaces": [
+        {
+          "path": "src/app.js",
+          "line": 15,
+          "source": "return deserializeState(localStorage.getItem(storageKey));"
+        },
+        {
+          "path": "src/app.js",
+          "line": 19,
+          "source": "localStorage.setItem(storageKey, serializeState(expressions, activeIndex, variables));"
+        }
+      ],
+      "files": [
+        {
+          "path": "index.html",
+          "source_sha256": "bbb4733e28eb831ea0c21d1b13d379baf19529bced678b159eec3f94100b785c",
+          "served_sha256": "bbb4733e28eb831ea0c21d1b13d379baf19529bced678b159eec3f94100b785c",
+          "replacements": []
+        },
+        {
+          "path": "src/app.js",
+          "source_sha256": "8be0481a3dca2d4187129d6c879e1335738ab6c7613ccec094bc938adf994054",
+          "served_sha256": "d10b931bff810ed1d332e9c9e56678112dc4222c772b4c6504346257d85c122e",
+          "replacements": [
+            {
+              "kind": "storage-key",
+              "start": 184,
+              "before": "instant-calculator-expressions-v1",
+              "after": "instantcalc-demo:terra-APP1-r01:instant-calculator-expressions-v1",
+              "line": 5,
+              "column": 21
+            }
+          ]
+        },
+        {
+          "path": "src/calculator.js",
+          "source_sha256": "0a1ee0b1ac55acb76f113c8116f53aa0e362a72bc90190f73ec23ae51a415f19",
+          "served_sha256": "0a1ee0b1ac55acb76f113c8116f53aa0e362a72bc90190f73ec23ae51a415f19",
+          "replacements": []
+        },
+        {
+          "path": "src/state.js",
+          "source_sha256": "699d3b8b5b4c6cb9133ec7763113a59aa0d79f6ef017696717662c052b4f54b4",
+          "served_sha256": "699d3b8b5b4c6cb9133ec7763113a59aa0d79f6ef017696717662c052b4f54b4",
+          "replacements": []
+        },
+        {
+          "path": "src/styles.css",
+          "source_sha256": "58685dc0b024af81e0aa7e8441f186b4b9188d4827b391c23d623afbdb9541ce",
+          "served_sha256": "58685dc0b024af81e0aa7e8441f186b4b9188d4827b391c23d623afbdb9541ce",
+          "replacements": []
+        }
+      ]
+    },
+    {
+      "run_id": "terra-APP2-r01",
+      "model": "terra",
+      "arm": "APP2",
+      "phase": "feature",
+      "classification": "qualified",
+      "phase_classification": "qualified",
+      "source_commit": "9dbc4402c0690799f1830a3c21b5f59406500e8b",
+      "storage_keys": [
+        {
+          "original": "instantcalc-v1",
+          "served": "instantcalc-demo:terra-APP2-r01:instantcalc-v1",
+          "locations": [
+            {
+              "path": "app.js",
+              "line": 4,
+              "column": 22
+            }
+          ]
+        }
+      ],
+      "storage_accesses": [
+        {
+          "path": "app.js",
+          "line": 22,
+          "column": 33,
+          "operation": "getItem",
+          "argument": "STORAGE_KEY",
+          "original_key": "instantcalc-v1"
+        },
+        {
+          "path": "app.js",
+          "line": 36,
+          "column": 9,
+          "operation": "setItem",
+          "argument": "STORAGE_KEY",
+          "original_key": "instantcalc-v1"
+        }
+      ],
+      "storage_surfaces": [
+        {
+          "path": "app.js",
+          "line": 22,
+          "source": "try { return restoreWorksheet(localStorage.getItem(STORAGE_KEY)); } catch { return restoreWorksheet(null); }"
+        },
+        {
+          "path": "app.js",
+          "line": 36,
+          "source": "try { localStorage.setItem(STORAGE_KEY, serializeWorksheet(expressions, activeIndex, variables)); } catch { /* The calculator still works for this session. */ }"
+        }
+      ],
+      "files": [
+        {
+          "path": "app.js",
+          "source_sha256": "e1a079bc6f35b2c6bb7b6359fc9098ff2a647b450b0898732e06b0b284bcadbe",
+          "served_sha256": "cf81c025fb9fe87d3355da01cf474dcad5728cf262cb82c510bfaf4239b4fced",
+          "replacements": [
+            {
+              "kind": "storage-key",
+              "start": 186,
+              "before": "instantcalc-v1",
+              "after": "instantcalc-demo:terra-APP2-r01:instantcalc-v1",
+              "line": 4,
+              "column": 22
+            }
+          ]
+        },
+        {
+          "path": "index.html",
+          "source_sha256": "4d2e7379d27e2427cc91b41e945da17a988c1c7ff36a352a68a4ec589633e0d5",
+          "served_sha256": "4d2e7379d27e2427cc91b41e945da17a988c1c7ff36a352a68a4ec589633e0d5",
+          "replacements": []
+        },
+        {
+          "path": "src/calculator.js",
+          "source_sha256": "d2c08c148a79b3cefcfde3ffe6a2e44b7e5889daaf586d8fb988789d32f02b08",
+          "served_sha256": "d2c08c148a79b3cefcfde3ffe6a2e44b7e5889daaf586d8fb988789d32f02b08",
+          "replacements": []
+        },
+        {
+          "path": "src/worksheet-state.js",
+          "source_sha256": "5ae80fc5803029a51b6034e3830e4ee5a7c30fc1603ea2fb220fe2088c78a145",
+          "served_sha256": "5ae80fc5803029a51b6034e3830e4ee5a7c30fc1603ea2fb220fe2088c78a145",
+          "replacements": []
+        },
+        {
+          "path": "styles.css",
+          "source_sha256": "3e98b8010054dbfba5002f694a0e464a8e00da101475b48ccc5da8cd620bed42",
+          "served_sha256": "3e98b8010054dbfba5002f694a0e464a8e00da101475b48ccc5da8cd620bed42",
+          "replacements": []
+        }
+      ]
+    },
+    {
+      "run_id": "terra-APP3-r01",
+      "model": "terra",
+      "arm": "APP3",
+      "phase": "feature",
+      "classification": "app-failed",
+      "phase_classification": "coverage-blocked",
+      "source_commit": "0625a24786f7f4aedadad303dab8fa73c7d68f34",
+      "storage_keys": [
+        {
+          "original": "instantcalc.expressions.v1",
+          "served": "instantcalc-demo:terra-APP3-r01:instantcalc.expressions.v1",
+          "locations": [
+            {
+              "path": "src/app.js",
+              "line": 5,
+              "column": 22
+            }
+          ]
+        }
+      ],
+      "storage_accesses": [
+        {
+          "path": "src/app.js",
+          "line": 20,
+          "column": 32,
+          "operation": "getItem",
+          "argument": "STORAGE_KEY",
+          "original_key": "instantcalc.expressions.v1"
+        },
+        {
+          "path": "src/app.js",
+          "line": 29,
+          "column": 5,
+          "operation": "setItem",
+          "argument": "STORAGE_KEY",
+          "original_key": "instantcalc.expressions.v1"
+        }
+      ],
+      "storage_surfaces": [
+        {
+          "path": "src/app.js",
+          "line": 20,
+          "source": "return parseWorksheetState(localStorage.getItem(STORAGE_KEY));"
+        },
+        {
+          "path": "src/app.js",
+          "line": 29,
+          "source": "localStorage.setItem(STORAGE_KEY, serializeWorksheetState(expressions, activeIndex, variables));"
+        }
+      ],
+      "files": [
+        {
+          "path": "index.html",
+          "source_sha256": "3967f062f374fb4c7aca384586fbd5c5077d1f94397455a725de0b214222a0b1",
+          "served_sha256": "3967f062f374fb4c7aca384586fbd5c5077d1f94397455a725de0b214222a0b1",
+          "replacements": []
+        },
+        {
+          "path": "src/app.js",
+          "source_sha256": "a986c7ba65e4b6385770faae840db994b32682bc31f9c1155ebaedd86ec8f88e",
+          "served_sha256": "250225b6520271eef271d0acd634bf143056d3434d734bc1f22795ec42182974",
+          "replacements": [
+            {
+              "kind": "storage-key",
+              "start": 242,
+              "before": "instantcalc.expressions.v1",
+              "after": "instantcalc-demo:terra-APP3-r01:instantcalc.expressions.v1",
+              "line": 5,
+              "column": 22
+            }
+          ]
+        },
+        {
+          "path": "src/calculator.js",
+          "source_sha256": "5fb1e158a64884bcd9f7527192471514aaca2464292681821c8fefed5e09eae4",
+          "served_sha256": "5fb1e158a64884bcd9f7527192471514aaca2464292681821c8fefed5e09eae4",
+          "replacements": []
+        },
+        {
+          "path": "src/persistence.js",
+          "source_sha256": "c4356e048b2777e7cc2a9a582d111686325776dc2e19dbfe86bd62ddfc03decc",
+          "served_sha256": "c4356e048b2777e7cc2a9a582d111686325776dc2e19dbfe86bd62ddfc03decc",
+          "replacements": []
+        },
+        {
+          "path": "src/worksheet.js",
+          "source_sha256": "b8142b1eaa3d8d72b079e9c55eda384af4dcfd4b4facefde4d0012a27b52ef35",
+          "served_sha256": "b8142b1eaa3d8d72b079e9c55eda384af4dcfd4b4facefde4d0012a27b52ef35",
+          "replacements": []
+        },
+        {
+          "path": "styles.css",
+          "source_sha256": "990828a7dddf525f432679b61a0fbc1d485b3676fde756f880e644597e868aad",
+          "served_sha256": "990828a7dddf525f432679b61a0fbc1d485b3676fde756f880e644597e868aad",
+          "replacements": []
+        }
+      ]
+    },
+    {
+      "run_id": "terra-APP4-r01",
+      "model": "terra",
+      "arm": "APP4",
+      "phase": "baseline",
+      "classification": "blocked",
+      "phase_classification": "coverage-blocked",
+      "source_commit": "dcf95bd078f541007cc05915405c664d31ec3521",
+      "storage_keys": [
+        {
+          "original": "instantcalc.active-row.v1",
+          "served": "instantcalc-demo:terra-APP4-r01:instantcalc.active-row.v1",
+          "locations": [
+            {
+              "path": "storage.js",
+              "line": 2,
+              "column": 25
+            }
+          ]
+        },
+        {
+          "original": "instantcalc.expressions.v1",
+          "served": "instantcalc-demo:terra-APP4-r01:instantcalc.expressions.v1",
+          "locations": [
+            {
+              "path": "storage.js",
+              "line": 1,
+              "column": 22
+            }
+          ]
+        }
+      ],
+      "storage_accesses": [
+        {
+          "path": "storage.js",
+          "line": 7,
+          "column": 30,
+          "operation": "getItem",
+          "argument": "STORAGE_KEY",
+          "original_key": "instantcalc.expressions.v1"
+        },
+        {
+          "path": "storage.js",
+          "line": 17,
+          "column": 5,
+          "operation": "setItem",
+          "argument": "STORAGE_KEY",
+          "original_key": "instantcalc.expressions.v1"
+        },
+        {
+          "path": "storage.js",
+          "line": 25,
+          "column": 24,
+          "operation": "getItem",
+          "argument": "ACTIVE_ROW_KEY",
+          "original_key": "instantcalc.active-row.v1"
+        },
+        {
+          "path": "storage.js",
+          "line": 34,
+          "column": 56,
+          "operation": "setItem",
+          "argument": "ACTIVE_ROW_KEY",
+          "original_key": "instantcalc.active-row.v1"
+        }
+      ],
+      "storage_surfaces": [
+        {
+          "path": "app.js",
+          "line": 6,
+          "source": "try { return globalThis.localStorage; } catch { return null; }"
+        },
+        {
+          "path": "storage.js",
+          "line": 7,
+          "source": "const saved = JSON.parse(storage?.getItem(STORAGE_KEY) ?? 'null');"
+        },
+        {
+          "path": "storage.js",
+          "line": 17,
+          "source": "storage?.setItem(STORAGE_KEY, JSON.stringify(expressions));"
+        },
+        {
+          "path": "storage.js",
+          "line": 25,
+          "source": "const row = Number(storage?.getItem(ACTIVE_ROW_KEY));"
+        },
+        {
+          "path": "storage.js",
+          "line": 34,
+          "source": "if (Number.isInteger(row) && row >= 0 && row < 10) storage?.setItem(ACTIVE_ROW_KEY, String(row));"
+        }
+      ],
+      "files": [
+        {
+          "path": "app.js",
+          "source_sha256": "771f0f8fbbd88f4b7b72ca83dc5a7632f5a9a86f0591032e63c45b0ed260f6b4",
+          "served_sha256": "771f0f8fbbd88f4b7b72ca83dc5a7632f5a9a86f0591032e63c45b0ed260f6b4",
+          "replacements": []
+        },
+        {
+          "path": "calculator.js",
+          "source_sha256": "ceb70f264f2a463c1e755d5b82407e83ca7204beccbb1b7b2533a29ac48b7a92",
+          "served_sha256": "ceb70f264f2a463c1e755d5b82407e83ca7204beccbb1b7b2533a29ac48b7a92",
+          "replacements": []
+        },
+        {
+          "path": "index.html",
+          "source_sha256": "2070e8918615872a5af8e02723da70b53a49322487a3675bee2f542807ac6484",
+          "served_sha256": "2070e8918615872a5af8e02723da70b53a49322487a3675bee2f542807ac6484",
+          "replacements": []
+        },
+        {
+          "path": "interaction.js",
+          "source_sha256": "070874849106cb43fc3d326079a91775f6ad84c614623070676dffd4dd978cb8",
+          "served_sha256": "070874849106cb43fc3d326079a91775f6ad84c614623070676dffd4dd978cb8",
+          "replacements": []
+        },
+        {
+          "path": "storage.js",
+          "source_sha256": "b04f11b06d3a4b7457688dbfa08927d4f282a54949269481f3ab9c08eda2a895",
+          "served_sha256": "4c94592fb6d230b099a726e597a10235074115245a8c25907791f7f5599a1da9",
+          "replacements": [
+            {
+              "kind": "storage-key",
+              "start": 21,
+              "before": "instantcalc.expressions.v1",
+              "after": "instantcalc-demo:terra-APP4-r01:instantcalc.expressions.v1",
+              "line": 1,
+              "column": 22
+            },
+            {
+              "kind": "storage-key",
+              "start": 74,
+              "before": "instantcalc.active-row.v1",
+              "after": "instantcalc-demo:terra-APP4-r01:instantcalc.active-row.v1",
+              "line": 2,
+              "column": 25
+            }
+          ]
+        },
+        {
+          "path": "styles.css",
+          "source_sha256": "7233d4c2835fcd70624cf4b82137a215c7625b5149b74ecec72c78c95ab14873",
+          "served_sha256": "7233d4c2835fcd70624cf4b82137a215c7625b5149b74ecec72c78c95ab14873",
+          "replacements": []
+        }
+      ]
+    },
+    {
+      "run_id": "luna-APP1-r01",
+      "model": "luna",
+      "arm": "APP1",
+      "phase": "feature",
+      "classification": "blocked",
+      "phase_classification": "coverage-blocked",
+      "source_commit": "b8b2c1f455fc3700c1b08124b28c4db27a5adef5",
+      "storage_keys": [
+        {
+          "original": "instant-calculator.active-row.v1",
+          "served": "instantcalc-demo:luna-APP1-r01:instant-calculator.active-row.v1",
+          "locations": [
+            {
+              "path": "src/persistence.js",
+              "line": 1,
+              "column": 25
+            }
+          ]
+        },
+        {
+          "original": "instant-calculator.rows.v1",
+          "served": "instantcalc-demo:luna-APP1-r01:instant-calculator.rows.v1",
+          "locations": [
+            {
+              "path": "src/app.js",
+              "line": 6,
+              "column": 22
+            }
+          ]
+        },
+        {
+          "original": "instant-calculator.variables.v1",
+          "served": "instantcalc-demo:luna-APP1-r01:instant-calculator.variables.v1",
+          "locations": [
+            {
+              "path": "src/persistence.js",
+              "line": 2,
+              "column": 24
+            }
+          ]
+        }
+      ],
+      "storage_accesses": [
+        {
+          "path": "src/app.js",
+          "line": 74,
+          "column": 30,
+          "operation": "getItem",
+          "argument": "STORAGE_KEY",
+          "original_key": "instant-calculator.rows.v1"
+        },
+        {
+          "path": "src/app.js",
+          "line": 84,
+          "column": 5,
+          "operation": "setItem",
+          "argument": "STORAGE_KEY",
+          "original_key": "instant-calculator.rows.v1"
+        },
+        {
+          "path": "src/persistence.js",
+          "line": 6,
+          "column": 26,
+          "operation": "getItem",
+          "argument": "ACTIVE_ROW_KEY",
+          "original_key": "instant-calculator.active-row.v1"
+        },
+        {
+          "path": "src/persistence.js",
+          "line": 17,
+          "column": 5,
+          "operation": "setItem",
+          "argument": "ACTIVE_ROW_KEY",
+          "original_key": "instant-calculator.active-row.v1"
+        },
+        {
+          "path": "src/persistence.js",
+          "line": 25,
+          "column": 30,
+          "operation": "getItem",
+          "argument": "VARIABLES_KEY",
+          "original_key": "instant-calculator.variables.v1"
+        },
+        {
+          "path": "src/persistence.js",
+          "line": 40,
+          "column": 5,
+          "operation": "setItem",
+          "argument": "VARIABLES_KEY",
+          "original_key": "instant-calculator.variables.v1"
+        }
+      ],
+      "storage_surfaces": [
+        {
+          "path": "src/app.js",
+          "line": 9,
+          "source": "const variableRows = loadVariables(localStorage);"
+        },
+        {
+          "path": "src/app.js",
+          "line": 11,
+          "source": "let activeRow = loadActiveRow(localStorage, rowCount);"
+        },
+        {
+          "path": "src/app.js",
+          "line": 57,
+          "source": "saveVariables(localStorage, variableRows);"
+        },
+        {
+          "path": "src/app.js",
+          "line": 74,
+          "source": "const saved = JSON.parse(localStorage.getItem(STORAGE_KEY));"
+        },
+        {
+          "path": "src/app.js",
+          "line": 84,
+          "source": "localStorage.setItem(STORAGE_KEY, JSON.stringify(expressions));"
+        },
+        {
+          "path": "src/app.js",
+          "line": 109,
+          "source": "saveVariables(localStorage, variableRows);"
+        },
+        {
+          "path": "src/app.js",
+          "line": 115,
+          "source": "saveVariables(localStorage, variableRows);"
+        },
+        {
+          "path": "src/app.js",
+          "line": 149,
+          "source": "saveActiveRow(localStorage, index, rowCount);"
+        },
+        {
+          "path": "src/persistence.js",
+          "line": 6,
+          "source": "const value = Number(storage.getItem(ACTIVE_ROW_KEY));"
+        },
+        {
+          "path": "src/persistence.js",
+          "line": 17,
+          "source": "storage.setItem(ACTIVE_ROW_KEY, String(index));"
+        },
+        {
+          "path": "src/persistence.js",
+          "line": 25,
+          "source": "const saved = JSON.parse(storage.getItem(VARIABLES_KEY));"
+        },
+        {
+          "path": "src/persistence.js",
+          "line": 40,
+          "source": "storage.setItem(VARIABLES_KEY, JSON.stringify(variables));"
+        }
+      ],
+      "files": [
+        {
+          "path": "index.html",
+          "source_sha256": "284e5cb6e7773c54b05511d5daac8da7085aaf9f21b44ebad16876204b81d0a0",
+          "served_sha256": "a2f88c2b5e959cc1b0af7d4a7bbcd5473a4a6e408084a7376258de24b3d4a96b",
+          "replacements": [
+            {
+              "kind": "relative-url",
+              "start": 269,
+              "before": "/styles.css",
+              "after": "./styles.css",
+              "line": 8,
+              "column": 34
+            },
+            {
+              "kind": "relative-url",
+              "start": 4796,
+              "before": "/src/app.js",
+              "after": "./src/app.js",
+              "line": 100,
+              "column": 32
+            }
+          ]
+        },
+        {
+          "path": "src/app.js",
+          "source_sha256": "cef3e8f283c1f847c53f577791f5778c99523778339171778b6ef974768eab0f",
+          "served_sha256": "f6adf3a519245d7d23cc414443bdfb5efa0de41d3ac91eca02b2807e89432d29",
+          "replacements": [
+            {
+              "kind": "storage-key",
+              "start": 291,
+              "before": "instant-calculator.rows.v1",
+              "after": "instantcalc-demo:luna-APP1-r01:instant-calculator.rows.v1",
+              "line": 6,
+              "column": 22
+            }
+          ]
+        },
+        {
+          "path": "src/evaluator.js",
+          "source_sha256": "310706eafc0cffa837439d33d18b2c8ca87909f62a72d3a11f51568ed567ede3",
+          "served_sha256": "310706eafc0cffa837439d33d18b2c8ca87909f62a72d3a11f51568ed567ede3",
+          "replacements": []
+        },
+        {
+          "path": "src/persistence.js",
+          "source_sha256": "0ee580a32ae427c00c4cabf6011b8deac2ead13f7073d071369b21d7532ffac4",
+          "served_sha256": "2b92aa8338cfdb806b67849673e1c372227ef253fb588217259238169836871b",
+          "replacements": [
+            {
+              "kind": "storage-key",
+              "start": 24,
+              "before": "instant-calculator.active-row.v1",
+              "after": "instantcalc-demo:luna-APP1-r01:instant-calculator.active-row.v1",
+              "line": 1,
+              "column": 25
+            },
+            {
+              "kind": "storage-key",
+              "start": 82,
+              "before": "instant-calculator.variables.v1",
+              "after": "instantcalc-demo:luna-APP1-r01:instant-calculator.variables.v1",
+              "line": 2,
+              "column": 24
+            }
+          ]
+        },
+        {
+          "path": "src/summary.js",
+          "source_sha256": "b42716fa6e04feac727cbafed815b169212cd517e4d329c6bb9a63049f96f1ba",
+          "served_sha256": "b42716fa6e04feac727cbafed815b169212cd517e4d329c6bb9a63049f96f1ba",
+          "replacements": []
+        },
+        {
+          "path": "src/variables.js",
+          "source_sha256": "13e29f7253600f5f9d37befb2f83e26c60e89eaecc8c5d270e5965fc1179eac5",
+          "served_sha256": "13e29f7253600f5f9d37befb2f83e26c60e89eaecc8c5d270e5965fc1179eac5",
+          "replacements": []
+        },
+        {
+          "path": "styles.css",
+          "source_sha256": "d10adf42b521a855b000f817199c4fce26e847496aa1607636b1c71ca13e0526",
+          "served_sha256": "d10adf42b521a855b000f817199c4fce26e847496aa1607636b1c71ca13e0526",
+          "replacements": []
+        }
+      ]
+    },
+    {
+      "run_id": "luna-APP2-r01",
+      "model": "luna",
+      "arm": "APP2",
+      "phase": "feature",
+      "classification": "blocked",
+      "phase_classification": "coverage-blocked",
+      "source_commit": "50d92ae842b03da0a5b8eb96bed8efbd690eec5c",
+      "storage_keys": [
+        {
+          "original": "instant-calculator.rows.v1",
+          "served": "instantcalc-demo:luna-APP2-r01:instant-calculator.rows.v1",
+          "locations": [
+            {
+              "path": "src/workspace.js",
+              "line": 2,
+              "column": 29
+            }
+          ]
+        }
+      ],
+      "storage_accesses": [
+        {
+          "path": "src/workspace.js",
+          "line": 23,
+          "column": 30,
+          "operation": "getItem",
+          "argument": "STORAGE_KEY",
+          "original_key": "instant-calculator.rows.v1"
+        },
+        {
+          "path": "src/workspace.js",
+          "line": 41,
+          "column": 3,
+          "operation": "setItem",
+          "argument": "STORAGE_KEY",
+          "original_key": "instant-calculator.rows.v1"
+        }
+      ],
+      "storage_surfaces": [
+        {
+          "path": "src/main.js",
+          "line": 11,
+          "source": "const workspaceState = loadWorkspace(localStorage);"
+        },
+        {
+          "path": "src/main.js",
+          "line": 19,
+          "source": "saveWorkspace(localStorage, rows, activeRow, variables);"
+        },
+        {
+          "path": "src/workspace.js",
+          "line": 23,
+          "source": "const saved = JSON.parse(storage.getItem(STORAGE_KEY));"
+        },
+        {
+          "path": "src/workspace.js",
+          "line": 41,
+          "source": "storage.setItem(STORAGE_KEY, JSON.stringify({"
+        }
+      ],
+      "files": [
+        {
+          "path": "index.html",
+          "source_sha256": "b227b212b3e4a3a3164dcab42ebd97988c6ae7e3fab831e2c48501a09ba3c094",
+          "served_sha256": "b227b212b3e4a3a3164dcab42ebd97988c6ae7e3fab831e2c48501a09ba3c094",
+          "replacements": []
+        },
+        {
+          "path": "src/calculator.js",
+          "source_sha256": "5e3ff9608c64867e63f459ef3ef26f2d7dd71be12ed926c1bb84fefbacaffdcb",
+          "served_sha256": "5e3ff9608c64867e63f459ef3ef26f2d7dd71be12ed926c1bb84fefbacaffdcb",
+          "replacements": []
+        },
+        {
+          "path": "src/main.js",
+          "source_sha256": "bedf083d1e28c445318732d4608f40c3bd5b0fd7201c188132d104b42c963f5b",
+          "served_sha256": "bedf083d1e28c445318732d4608f40c3bd5b0fd7201c188132d104b42c963f5b",
+          "replacements": []
+        },
+        {
+          "path": "src/workspace.js",
+          "source_sha256": "95de39e4e0b782a58d10bdf9216d5cc649ee809abc7c786001302e73a3507a03",
+          "served_sha256": "07c9787617104d30090895beadbd9046873068d8ae4c18eb52b1dbbca6e9be17",
+          "replacements": [
+            {
+              "kind": "storage-key",
+              "start": 105,
+              "before": "instant-calculator.rows.v1",
+              "after": "instantcalc-demo:luna-APP2-r01:instant-calculator.rows.v1",
+              "line": 2,
+              "column": 29
+            }
+          ]
+        },
+        {
+          "path": "styles.css",
+          "source_sha256": "2670dd2fc598ebf4a61683a3199dc8710d66e715648c3330d4b4c4d600d2daa0",
+          "served_sha256": "2670dd2fc598ebf4a61683a3199dc8710d66e715648c3330d4b4c4d600d2daa0",
+          "replacements": []
+        }
+      ]
+    },
+    {
+      "run_id": "luna-APP3-r01",
+      "model": "luna",
+      "arm": "APP3",
+      "phase": "feature",
+      "classification": "blocked",
+      "phase_classification": "coverage-blocked",
+      "source_commit": "0a745cdcb3c2e34a215f0c772c844495e98e29e2",
+      "storage_keys": [
+        {
+          "original": "instant-calculator.active-row.v1",
+          "served": "instantcalc-demo:luna-APP3-r01:instant-calculator.active-row.v1",
+          "locations": [
+            {
+              "path": "src/session.js",
+              "line": 3,
+              "column": 32
+            }
+          ]
+        },
+        {
+          "original": "instant-calculator.rows.v1",
+          "served": "instantcalc-demo:luna-APP3-r01:instant-calculator.rows.v1",
+          "locations": [
+            {
+              "path": "src/session.js",
+              "line": 2,
+              "column": 29
+            }
+          ]
+        },
+        {
+          "original": "instant-calculator.variables.v1",
+          "served": "instantcalc-demo:luna-APP3-r01:instant-calculator.variables.v1",
+          "locations": [
+            {
+              "path": "src/session.js",
+              "line": 4,
+              "column": 31
+            }
+          ]
+        }
+      ],
+      "storage_accesses": [
+        {
+          "path": "src/session.js",
+          "line": 13,
+          "column": 30,
+          "operation": "getItem",
+          "argument": "STORAGE_KEY",
+          "original_key": "instant-calculator.rows.v1"
+        },
+        {
+          "path": "src/session.js",
+          "line": 19,
+          "column": 38,
+          "operation": "getItem",
+          "argument": "ACTIVE_ROW_KEY",
+          "original_key": "instant-calculator.active-row.v1"
+        },
+        {
+          "path": "src/session.js",
+          "line": 22,
+          "column": 39,
+          "operation": "getItem",
+          "argument": "VARIABLES_KEY",
+          "original_key": "instant-calculator.variables.v1"
+        },
+        {
+          "path": "src/session.js",
+          "line": 37,
+          "column": 3,
+          "operation": "setItem",
+          "argument": "STORAGE_KEY",
+          "original_key": "instant-calculator.rows.v1"
+        },
+        {
+          "path": "src/session.js",
+          "line": 38,
+          "column": 3,
+          "operation": "setItem",
+          "argument": "ACTIVE_ROW_KEY",
+          "original_key": "instant-calculator.active-row.v1"
+        },
+        {
+          "path": "src/session.js",
+          "line": 39,
+          "column": 3,
+          "operation": "setItem",
+          "argument": "VARIABLES_KEY",
+          "original_key": "instant-calculator.variables.v1"
+        }
+      ],
+      "storage_surfaces": [
+        {
+          "path": "src/main.js",
+          "line": 19,
+          "source": "saveSession(localStorage, expressions, activeIndex, variables);"
+        },
+        {
+          "path": "src/main.js",
+          "line": 24,
+          "source": "const session = restoreSession(localStorage);"
+        },
+        {
+          "path": "src/session.js",
+          "line": 13,
+          "source": "const saved = JSON.parse(storage.getItem(STORAGE_KEY));"
+        },
+        {
+          "path": "src/session.js",
+          "line": 19,
+          "source": "const savedIndex = Number.parseInt(storage.getItem(ACTIVE_ROW_KEY), 10);"
+        },
+        {
+          "path": "src/session.js",
+          "line": 22,
+          "source": "const savedVariables = JSON.parse(storage.getItem(VARIABLES_KEY));"
+        },
+        {
+          "path": "src/session.js",
+          "line": 37,
+          "source": "storage.setItem(STORAGE_KEY, JSON.stringify(normalizedExpressions));"
+        },
+        {
+          "path": "src/session.js",
+          "line": 38,
+          "source": "storage.setItem(ACTIVE_ROW_KEY, String(validIndex(activeIndex) ? activeIndex : 0));"
+        },
+        {
+          "path": "src/session.js",
+          "line": 39,
+          "source": "storage.setItem(VARIABLES_KEY, JSON.stringify(variables.map((variable) => ({"
+        }
+      ],
+      "files": [
+        {
+          "path": "index.html",
+          "source_sha256": "db279e1a49cb65a04289f02b5e2a51410348db46b394a718b235a84efc822d3e",
+          "served_sha256": "db279e1a49cb65a04289f02b5e2a51410348db46b394a718b235a84efc822d3e",
+          "replacements": []
+        },
+        {
+          "path": "src/evaluator.js",
+          "source_sha256": "357d43b9ac848d0e340af385102ffd43b06efb6f96beda76902bf8d102af07b1",
+          "served_sha256": "357d43b9ac848d0e340af385102ffd43b06efb6f96beda76902bf8d102af07b1",
+          "replacements": []
+        },
+        {
+          "path": "src/main.js",
+          "source_sha256": "99d8fab349a44f4a102c102f8249585838e1e61b8146f2ae475e89c3a3eea303",
+          "served_sha256": "99d8fab349a44f4a102c102f8249585838e1e61b8146f2ae475e89c3a3eea303",
+          "replacements": []
+        },
+        {
+          "path": "src/session.js",
+          "source_sha256": "fde8d543f956d8bedc86291c51a9be97128caa6f39e2a2930d0ada46f3d50df0",
+          "served_sha256": "f4b9c0679db369adf27a65c72e0f6b9c71ff9625a71782d4f38cd06ecb4c5072",
+          "replacements": [
+            {
+              "kind": "storage-key",
+              "start": 57,
+              "before": "instant-calculator.rows.v1",
+              "after": "instantcalc-demo:luna-APP3-r01:instant-calculator.rows.v1",
+              "line": 2,
+              "column": 29
+            },
+            {
+              "kind": "storage-key",
+              "start": 117,
+              "before": "instant-calculator.active-row.v1",
+              "after": "instantcalc-demo:luna-APP3-r01:instant-calculator.active-row.v1",
+              "line": 3,
+              "column": 32
+            },
+            {
+              "kind": "storage-key",
+              "start": 182,
+              "before": "instant-calculator.variables.v1",
+              "after": "instantcalc-demo:luna-APP3-r01:instant-calculator.variables.v1",
+              "line": 4,
+              "column": 31
+            }
+          ]
+        },
+        {
+          "path": "styles.css",
+          "source_sha256": "fa48b19b90c8b508a8317497c66fd17aa67d1fbb5a4e3c3171fc13f37d1d52f5",
+          "served_sha256": "fa48b19b90c8b508a8317497c66fd17aa67d1fbb5a4e3c3171fc13f37d1d52f5",
+          "replacements": []
+        }
+      ]
+    },
+    {
+      "run_id": "luna-APP4-r01",
+      "model": "luna",
+      "arm": "APP4",
+      "phase": "feature",
+      "classification": "app-failed",
+      "phase_classification": "qualified",
+      "source_commit": "0dab21561f184accea5532a52c30b4d2191e9a9d",
+      "storage_keys": [
+        {
+          "original": "instant-calculator-workspace-v1",
+          "served": "instantcalc-demo:luna-APP4-r01:instant-calculator-workspace-v1",
+          "locations": [
+            {
+              "path": "src/persistence.js",
+              "line": 1,
+              "column": 29
+            }
+          ]
+        }
+      ],
+      "storage_accesses": [
+        {
+          "path": "src/persistence.js",
+          "line": 4,
+          "column": 3,
+          "operation": "setItem",
+          "argument": "STORAGE_KEY",
+          "original_key": "instant-calculator-workspace-v1"
+        },
+        {
+          "path": "src/persistence.js",
+          "line": 14,
+          "column": 17,
+          "operation": "getItem",
+          "argument": "STORAGE_KEY",
+          "original_key": "instant-calculator-workspace-v1"
+        }
+      ],
+      "storage_surfaces": [
+        {
+          "path": "src/app.js",
+          "line": 133,
+          "source": "saveWorkspace(localStorage, {"
+        },
+        {
+          "path": "src/app.js",
+          "line": 151,
+          "source": "const saved = readWorkspace(localStorage);"
+        },
+        {
+          "path": "src/persistence.js",
+          "line": 4,
+          "source": "storage.setItem(STORAGE_KEY, JSON.stringify({"
+        },
+        {
+          "path": "src/persistence.js",
+          "line": 14,
+          "source": "const saved = storage.getItem(STORAGE_KEY);"
+        }
+      ],
+      "files": [
+        {
+          "path": "index.html",
+          "source_sha256": "0b1255498bdf61ca468cea692150142177df0613fd7454ae82fe86a78c7c9728",
+          "served_sha256": "e5a7d1b1e4c4d9845efb2011d0a2a808c265c3e5ceb944c7cc54ab9b1e4cc76b",
+          "replacements": [
+            {
+              "kind": "relative-url",
+              "start": 274,
+              "before": "/styles.css",
+              "after": "./styles.css",
+              "line": 8,
+              "column": 34
+            },
+            {
+              "kind": "relative-url",
+              "start": 4504,
+              "before": "/src/app.js",
+              "after": "./src/app.js",
+              "line": 90,
+              "column": 32
+            }
+          ]
+        },
+        {
+          "path": "src/app.js",
+          "source_sha256": "abf9730ff70d8c576a017e42e41ffccfd3ef43fae88d5c62afa815c7c7e00959",
+          "served_sha256": "abf9730ff70d8c576a017e42e41ffccfd3ef43fae88d5c62afa815c7c7e00959",
+          "replacements": []
+        },
+        {
+          "path": "src/calculator.js",
+          "source_sha256": "d76191aaae5bb32164f0f5fe0e1589391413516686f76779550ee9a29765eac3",
+          "served_sha256": "d76191aaae5bb32164f0f5fe0e1589391413516686f76779550ee9a29765eac3",
+          "replacements": []
+        },
+        {
+          "path": "src/persistence.js",
+          "source_sha256": "96d5e873e17c7a0ce0e4c79634e01a04a3136574bea02e756fa7850e5a420186",
+          "served_sha256": "b31d3ae4b6456bbf3346c1060e9e6180a442e3d721a034ff7d7f87a19731c62d",
+          "replacements": [
+            {
+              "kind": "storage-key",
+              "start": 28,
+              "before": "instant-calculator-workspace-v1",
+              "after": "instantcalc-demo:luna-APP4-r01:instant-calculator-workspace-v1",
+              "line": 1,
+              "column": 29
+            }
+          ]
+        },
+        {
+          "path": "styles.css",
+          "source_sha256": "51a9ee296b0619c2f26b89038bb4bf9d15840d6d67fc0398986181b9e689ab11",
+          "served_sha256": "51a9ee296b0619c2f26b89038bb4bf9d15840d6d67fc0398986181b9e689ab11",
+          "replacements": []
+        }
+      ]
+    }
+  ]
+}

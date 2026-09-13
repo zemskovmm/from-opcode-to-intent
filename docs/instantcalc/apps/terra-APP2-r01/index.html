@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f7f5f0" />
+    <title>InstantCalc</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="calculator">
+      <header>
+        <p class="eyebrow">INSTANTCALC</p>
+        <h1>Calculate as you think.</h1>
+        <p class="intro">Type on any line. Results update immediately. Use <code>$1</code> for line 1 or <code>@name</code> for a variable.</p>
+      </header>
+
+      <section class="workpad" aria-label="Calculation lines">
+        <div id="rows" class="rows"></div>
+        <div class="total-row">
+          <span>Total</span>
+          <output id="total" aria-live="polite"></output>
+        </div>
+      </section>
+
+      <section class="variables-panel" aria-labelledby="variables-title">
+        <div class="variables-heading">
+          <div>
+            <p class="eyebrow">VARIABLES</p>
+            <h2 id="variables-title">Named values</h2>
+          </div>
+          <button id="add-variable" class="add-variable" type="button">Add variable</button>
+        </div>
+        <p class="variable-help">Use <code>@name</code> in a calculation. Values are numbers, not calculation lines.</p>
+        <div class="variable-table" role="table" aria-label="Named numeric variables">
+          <div class="variable-labels" role="row"><span role="columnheader">Name</span><span role="columnheader">Value</span><span></span></div>
+          <div id="variables" role="rowgroup"></div>
+        </div>
+      </section>
+
+      <section class="keypad-wrap" aria-label="Calculator keypad">
+        <div id="keypad" class="keypad"></div>
+      </section>
+    </main>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

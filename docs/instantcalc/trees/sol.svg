@@ -1,0 +1,826 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2080" height="5937" viewBox="0 0 2080 5937" role="img" aria-labelledby="tree-title tree-description">
+<title id="tree-title">Sol · InstantCalc editable process tree</title>
+<desc id="tree-description">All 76 canonical projected events and four final dispositions. Four workflow lanes. Arrows preserve canonical parent links. Root, containers and evaluations are non-additive. Receipt times exclude incomplete phases from totals; unknown estimates are not zero. Native text remains editable. Read each lane downward.</desc>
+<rect width="100%" height="100%" fill="#fff"/>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#107e8d"/></marker></defs>
+<style>text{font-family:Calibri,Arial,sans-serif;fill:#202738}path{vector-effect:non-scaling-stroke}</style>
+<text x="64" y="54" font-size="34" font-weight="700">Sol / four workflows / 76 events</text>
+<text x="64" y="86" font-size="20">History, not a causal comparison. Zoom or scroll to read. Cost labels are declared estimates, not invoices.</text>
+<g data-lane="APP1"><text x="64" y="316" font-size="24" font-weight="700">APP1</text><text x="64" y="342" font-size="17">0 deliberate refinements</text></g>
+<g data-lane="APP2"><text x="574" y="316" font-size="24" font-weight="700">APP2</text><text x="574" y="342" font-size="17">1 deliberate refinement</text></g>
+<g data-lane="APP3"><text x="1084" y="316" font-size="24" font-weight="700">APP3</text><text x="1084" y="342" font-size="17">5 deliberate refinements</text></g>
+<g data-lane="APP4"><text x="1594" y="316" font-size="24" font-weight="700">APP4</text><text x="1594" y="342" font-size="17">5 refinements + genuine IDD after R5</text></g>
+<path d="M 1039.0 256 V 286 H 283.0 V 352" fill="none" stroke="#107e8d" stroke-width="1.8" marker-end="url(#arrow)" data-parent="sol:source" data-child="sol-APP1-r01:baseline-initial-qa"/>
+<path d="M 64 435.5 H 46 V 638.5 H 60" fill="none" stroke="#107e8d" stroke-width="1.8" marker-end="url(#arrow)" data-parent="sol-APP1-r01:baseline-initial-qa" data-child="sol-APP1-r01:baseline-answers"/>
+<path d="M 64 638.5 H 46 V 841.5 H 60" fill="none" stroke="#107e8d" stroke-width="1.8" marker-end="url(#arrow)" data-parent="sol-APP1-r01:baseline-answers" data-child="sol-APP1-r01:baseline-build"/>
+<path d="M 64 841.5 H 46 V 1044.5 H 60" fill="none" stroke="#107e8d" stroke-width="1.8" marker-end="url(#arrow)" data-parent="sol-APP1-r01:baseline-build" data-child="sol-APP1-r01:baseline-infrastructure-resume"/>
+<path d="M 64 1044.5 H 46 V 1236.0 H 60" fill="none" stroke="#107e8d" stroke-width="1.8" marker-end="url(#arrow)" data-parent="sol-APP1-r01:baseline-infrastructure-resume" data-child="sol-APP1-r01:evaluation"/>
+<path d="M 64 1236.0 H 46 V 1416.0 H 60" fill="none" stroke="#107e8d" stroke-width="1.8" marker-end="url(#arrow)" data-parent="sol-APP1-r01:evaluation" data-child="sol-APP1-r01:baseline-freeze"/>
+<path d="M 1039.0 256 V 286 H 1813.0 V 352" fill="none" stroke="#107e8d" stroke-width="1.8" marker-end="url(#arrow)" data-parent="sol:source" data-child="sol-APP4-r01:baseline-blocked-plugin-gate"/>
+<path d="M 1039.0 256 V 286 H 793.0 V 352" fill="none" stroke="#107e8d" stroke-width="1.8" marker-end="url(#arrow)" data-parent="sol:source" data-child="sol-APP2-r01:baseline-initial-qa"/>
+<path d="M 574 435.5 H 556 V 638.5 H 570" fill="none" stroke="#107e8d" stroke-width="1.8" marker-end="url(#arrow)" data-parent="sol-APP2-r01:baseline-initial-qa" data-child="sol-APP2-r01:baseline-answers"/>
+<path d="M 574 638.5 H 556 V 841.5 H 570" fill="none" stroke="#107e8d" stroke-width="1.8" marker-end="url(#arrow)" data-parent="sol-APP2-r01:baseline-answers" data-child="sol-APP2-r01:refinement-R1"/>
+<path d="M 574 841.5 H 556 V 1044.5 H 570" fill="none" stroke="#107e8d" stroke-width="1.8" marker-end="url(#arrow)" data-parent="sol-APP2-r01:refinement-R1" data-child="sol-APP2-r01:refinement-R1-answers"/>
+<path d="M 574 1044.5 H 556 V 1247.5 H 570" fill="none" stroke="#107e8d" stroke-width="1.8" marker-end="url(#arrow)" data-parent="sol-APP2-r01:refinement-R1-answers" data-child="sol-APP2-r01:baseline-build"/>
+<path d="M 574 1247.5 H 556 V 1439.0 H 570" fill="none" stroke="#107e8d" stroke-width="1.8" marker-end="url(#arrow)" data-parent="sol-APP2-r01:baseline-build" data-child="sol-APP2-r01:baseline-freeze"/>
+<path d="M 1039.0 256 V 286 H 1303.0 V 352" fill="none" stroke="#107e8d" stroke-width="1.8" marker-end="url(#arrow)" data-parent="sol:source" data-child="sol-APP3-r01:baseline-initial-qa"/>
+<path d="M 1084 435.5 H 1066 V 638.5 H 1080" fill="none" stroke="#107e8d" stroke-width="1.8" marker-end="url(#arrow)" data-parent="sol-APP3-r01:baseline-initial-qa" data-child="sol-APP3-r01:baseline-answers"/>
+<path d="M 1084 638.5 H 1066 V 841.5 H 1080" fill="none" stroke="#107e8d" stroke-width="1.8" marker-end="url(#arrow)" data-parent="sol-APP3-r01:baseline-answers" data-child="sol-APP3-r01:refinement-R1"/>
+<path d="M 1084 841.5 H 1066 V 1044.5 H 1080" fill="none" stroke="#107e8d" stroke-width="1.8" marker-end="url(#arrow)" data-parent="sol-APP3-r01:refinement-R1" data-child="sol-APP3-r01:refinement-R1-answers"/>
+<path d="M 1084 1044.5 H 1066 V 1247.5 H 1080" fill="none" stroke="#107e8d" stroke-width="1.8" marker-end="url(#arrow)" data-parent="sol-APP3-r01:refinement-R1-answers" data-child="sol-APP3-r01:refinement-R2"/>
+<path d="M 1084 1247.5 H 1066 V 1450.5 H 1080" fill="none" stroke="#107e8d" stroke-width="1.8" marker-end="url(#arrow)" data-parent="sol-APP3-r01:refinement-R2" data-child="sol-APP3-r01:refinement-R3"/>
+<path d="M 1084 1450.5 H 1066 V 1653.5 H 1080" fill="none" stroke="#107e8d" stroke-width="1.8" marker-end="url(#arrow)" data-parent="sol-APP3-r01:refinement-R3" data-child="sol-APP3-r01:refinement-R4"/>
+<path d="M 1084 1653.5 H 1066 V 1856.5 H 1080" fill="none" stroke="#107e8d" stroke-width="1.8" marker-end="url(#arrow)" data-parent="sol-APP3-r01:refinement-R4" data-child="sol-APP3-r01:refinement-R5"/>
+<path d="M 1084 1856.5 H 1066 V 2059.5 H 1080" fill="none" stroke="#107e8d" stroke-width="1.8" marker-end="url(#arrow)" data-parent="sol-APP3-r01:refinement-R5" data-child="sol-APP3-r01:baseline-build"/>
+<path d="M 1084 2059.5 H 1066 V 2251.0 H 1080" fill="none" stroke="#107e8d" stroke-width="1.8" marker-end="url(#arrow)" data-parent="sol-APP3-r01:baseline-build" data-child="sol-APP3-r01:baseline-freeze"/>
+<path d="M 574 1439.0 H 556 V 1619.0 H 570" fill="none" stroke="#107e8d" stroke-width="1.8" marker-end="url(#arrow)" data-parent="sol-APP2-r01:baseline-freeze" data-child="sol-APP2-r01:first-pass-ui-replay-01"/>
+<path d="M 574 1619.0 H 556 V 1810.5 H 570" fill="none" stroke="#107e8d" stroke-width="1.8" marker-end="url(#arrow)" data-parent="sol-APP2-r01:first-pass-ui-replay-01" data-child="sol-APP2-r01:baseline-repair-01"/>
+<path d="M 574 1810.5 H 556 V 2002.0 H 570" fill="none" stroke="#107e8d" stroke-width="1.8" marker-end="url(#arrow)" data-parent="sol-APP2-r01:baseline-repair-01" data-child="sol-APP2-r01:repaired-ui-replay-01"/>
+<path d="M 574 2002.0 H 556 V 2182.0 H 570" fill="none" stroke="#107e8d" stroke-width="1.8" marker-end="url(#arrow)" data-parent="sol-APP2-r01:repaired-ui-replay-01" data-child="sol-APP2-r01:repaired-ui-replay-02"/>
+<path d="M 1084 2251.0 H 1066 V 2431.0 H 1080" fill="none" stroke="#107e8d" stroke-width="1.8" marker-end="url(#arrow)" data-parent="sol-APP3-r01:baseline-freeze" data-child="sol-APP3-r01:first-pass-ui-replay-01"/>
+<path d="M 1084 2431.0 H 1066 V 2622.5 H 1080" fill="none" stroke="#107e8d" stroke-width="1.8" marker-end="url(#arrow)" data-parent="sol-APP3-r01:first-pass-ui-replay-01" data-child="sol-APP3-r01:baseline-repair-01"/>
+<path d="M 1084 2622.5 H 1066 V 2814.0 H 1080" fill="none" stroke="#107e8d" stroke-width="1.8" marker-end="url(#arrow)" data-parent="sol-APP3-r01:baseline-repair-01" data-child="sol-APP3-r01:repaired-ui-replay-01"/>
+<path d="M 1594 424.0 H 1576 V 604.0 H 1590" fill="none" stroke="#107e8d" stroke-width="1.8" marker-end="url(#arrow)" data-parent="sol-APP4-r01:baseline-blocked-plugin-gate" data-child="sol-APP4-r01:owner-enabled-gate-reopened"/>
+<path d="M 1594 604.0 H 1576 V 795.5 H 1590" fill="none" stroke="#107e8d" stroke-width="1.8" marker-end="url(#arrow)" data-parent="sol-APP4-r01:owner-enabled-gate-reopened" data-child="sol-APP4-r01:baseline-initial-qa"/>
+<path d="M 1594 795.5 H 1576 V 998.5 H 1590" fill="none" stroke="#107e8d" stroke-width="1.8" marker-end="url(#arrow)" data-parent="sol-APP4-r01:baseline-initial-qa" data-child="sol-APP4-r01:baseline-answers"/>
+<path d="M 1594 998.5 H 1576 V 1201.5 H 1590" fill="none" stroke="#107e8d" stroke-width="1.8" marker-end="url(#arrow)" data-parent="sol-APP4-r01:baseline-answers" data-child="sol-APP4-r01:refinement-R1"/>
+<path d="M 1594 1201.5 H 1576 V 1404.5 H 1590" fill="none" stroke="#107e8d" stroke-width="1.8" marker-end="url(#arrow)" data-parent="sol-APP4-r01:refinement-R1" data-child="sol-APP4-r01:refinement-R1-answers"/>
+<path d="M 1594 1404.5 H 1576 V 1607.5 H 1590" fill="none" stroke="#107e8d" stroke-width="1.8" marker-end="url(#arrow)" data-parent="sol-APP4-r01:refinement-R1-answers" data-child="sol-APP4-r01:refinement-R2"/>
+<path d="M 1594 1607.5 H 1576 V 1810.5 H 1590" fill="none" stroke="#107e8d" stroke-width="1.8" marker-end="url(#arrow)" data-parent="sol-APP4-r01:refinement-R2" data-child="sol-APP4-r01:refinement-R2-answers"/>
+<path d="M 1594 1810.5 H 1576 V 2013.5 H 1590" fill="none" stroke="#107e8d" stroke-width="1.8" marker-end="url(#arrow)" data-parent="sol-APP4-r01:refinement-R2-answers" data-child="sol-APP4-r01:refinement-R3"/>
+<path d="M 1594 2013.5 H 1576 V 2216.5 H 1590" fill="none" stroke="#107e8d" stroke-width="1.8" marker-end="url(#arrow)" data-parent="sol-APP4-r01:refinement-R3" data-child="sol-APP4-r01:refinement-R3-answers"/>
+<path d="M 1594 2216.5 H 1576 V 2419.5 H 1590" fill="none" stroke="#107e8d" stroke-width="1.8" marker-end="url(#arrow)" data-parent="sol-APP4-r01:refinement-R3-answers" data-child="sol-APP4-r01:refinement-R4"/>
+<path d="M 1594 2419.5 H 1576 V 2622.5 H 1590" fill="none" stroke="#107e8d" stroke-width="1.8" marker-end="url(#arrow)" data-parent="sol-APP4-r01:refinement-R4" data-child="sol-APP4-r01:refinement-R4-answers"/>
+<path d="M 1594 2622.5 H 1576 V 2825.5 H 1590" fill="none" stroke="#107e8d" stroke-width="1.8" marker-end="url(#arrow)" data-parent="sol-APP4-r01:refinement-R4-answers" data-child="sol-APP4-r01:refinement-R5"/>
+<path d="M 1594 2825.5 H 1576 V 3028.5 H 1590" fill="none" stroke="#107e8d" stroke-width="1.8" marker-end="url(#arrow)" data-parent="sol-APP4-r01:refinement-R5" data-child="sol-APP4-r01:refinement-R5-answers"/>
+<path d="M 1594 3028.5 H 1576 V 3231.5 H 1590" fill="none" stroke="#107e8d" stroke-width="1.8" marker-end="url(#arrow)" data-parent="sol-APP4-r01:refinement-R5-answers" data-child="sol-APP4-r01:segment17-actual-target-IDD-gate"/>
+<path d="M 1594 3231.5 H 1576 V 3434.5 H 1590" fill="none" stroke="#107e8d" stroke-width="1.8" marker-end="url(#arrow)" data-parent="sol-APP4-r01:segment17-actual-target-IDD-gate" data-child="sol-APP4-r01:idd-intent-initial"/>
+<path d="M 1594 3434.5 H 1576 V 3626.0 H 1590" fill="none" stroke="#107e8d" stroke-width="1.8" marker-end="url(#arrow)" data-parent="sol-APP4-r01:idd-intent-initial" data-child="sol-APP4-r01:segment18-intent-freeze"/>
+<path d="M 1594 3626.0 H 1576 V 3817.5 H 1590" fill="none" stroke="#107e8d" stroke-width="1.8" marker-end="url(#arrow)" data-parent="sol-APP4-r01:segment18-intent-freeze" data-child="sol-APP4-r01:baseline-build"/>
+<path d="M 1594 3817.5 H 1576 V 4032.0 H 1590" fill="none" stroke="#107e8d" stroke-width="1.8" marker-end="url(#arrow)" data-parent="sol-APP4-r01:baseline-build" data-child="sol-APP4-r01:baseline-operator-continuation-01"/>
+<path d="M 1594 4032.0 H 1576 V 4235.0 H 1590" fill="none" stroke="#107e8d" stroke-width="1.8" marker-end="url(#arrow)" data-parent="sol-APP4-r01:baseline-operator-continuation-01" data-child="sol-APP4-r01:segment18-baseline-disposition"/>
+<path d="M 64 1416.0 H 46 V 1607.5 H 60" fill="none" stroke="#107e8d" stroke-width="1.8" marker-end="url(#arrow)" data-parent="sol-APP1-r01:baseline-freeze" data-child="sol-APP1-r01:feature-request"/>
+<path d="M 64 1607.5 H 46 V 1810.5 H 60" fill="none" stroke="#107e8d" stroke-width="1.8" marker-end="url(#arrow)" data-parent="sol-APP1-r01:feature-request" data-child="sol-APP1-r01:segment18-feature-freeze-partial-UI"/>
+<path d="M 574 2182.0 H 556 V 2373.5 H 570" fill="none" stroke="#107e8d" stroke-width="1.8" marker-end="url(#arrow)" data-parent="sol-APP2-r01:repaired-ui-replay-02" data-child="sol-APP2-r01:segment19-feature-admission-blocked"/>
+<path d="M 1084 2814.0 H 1066 V 3005.5 H 1080" fill="none" stroke="#107e8d" stroke-width="1.8" marker-end="url(#arrow)" data-parent="sol-APP3-r01:repaired-ui-replay-01" data-child="sol-APP3-r01:segment19-feature-admission-blocked"/>
+<path d="M 1594 4235.0 H 1576 V 4426.5 H 1590" fill="none" stroke="#107e8d" stroke-width="1.8" marker-end="url(#arrow)" data-parent="sol-APP4-r01:segment18-baseline-disposition" data-child="sol-APP4-r01:segment19-feature-admission-blocked"/>
+<path d="M 574 2373.5 H 556 V 2565.0 H 570" fill="none" stroke="#107e8d" stroke-width="1.8" marker-end="url(#arrow)" data-parent="sol-APP2-r01:segment19-feature-admission-blocked" data-child="sol-APP2-r01:segment21-pre-feature-fixture"/>
+<path d="M 574 2565.0 H 556 V 2756.5 H 570" fill="none" stroke="#107e8d" stroke-width="1.8" marker-end="url(#arrow)" data-parent="sol-APP2-r01:segment21-pre-feature-fixture" data-child="sol-APP2-r01:feature-request"/>
+<path d="M 574 2756.5 H 556 V 2959.5 H 570" fill="none" stroke="#107e8d" stroke-width="1.8" marker-end="url(#arrow)" data-parent="sol-APP2-r01:feature-request" data-child="sol-APP2-r01:safari-segment21-original-feature-migration"/>
+<path d="M 574 2959.5 H 556 V 3162.5 H 570" fill="none" stroke="#107e8d" stroke-width="1.8" marker-end="url(#arrow)" data-parent="sol-APP2-r01:safari-segment21-original-feature-migration" data-child="sol-APP2-r01:safari-segment21-feature-first-pass"/>
+<path d="M 1084 3005.5 H 1066 V 3197.0 H 1080" fill="none" stroke="#107e8d" stroke-width="1.8" marker-end="url(#arrow)" data-parent="sol-APP3-r01:segment19-feature-admission-blocked" data-child="sol-APP3-r01:segment21-pre-feature-fixture"/>
+<path d="M 1084 3197.0 H 1066 V 3388.5 H 1080" fill="none" stroke="#107e8d" stroke-width="1.8" marker-end="url(#arrow)" data-parent="sol-APP3-r01:segment21-pre-feature-fixture" data-child="sol-APP3-r01:feature-request"/>
+<path d="M 1084 3388.5 H 1066 V 3591.5 H 1080" fill="none" stroke="#107e8d" stroke-width="1.8" marker-end="url(#arrow)" data-parent="sol-APP3-r01:feature-request" data-child="sol-APP3-r01:safari-segment21-original-feature-migration"/>
+<path d="M 1084 3591.5 H 1066 V 3794.5 H 1080" fill="none" stroke="#107e8d" stroke-width="1.8" marker-end="url(#arrow)" data-parent="sol-APP3-r01:safari-segment21-original-feature-migration" data-child="sol-APP3-r01:segment21-evaluator-C04-adjudication"/>
+<path d="M 1084 3794.5 H 1066 V 3997.5 H 1080" fill="none" stroke="#107e8d" stroke-width="1.8" marker-end="url(#arrow)" data-parent="sol-APP3-r01:segment21-evaluator-C04-adjudication" data-child="sol-APP3-r01:safari-segment21-feature-evaluator-retry1"/>
+<path d="M 1594 4426.5 H 1576 V 4618.0 H 1590" fill="none" stroke="#107e8d" stroke-width="1.8" marker-end="url(#arrow)" data-parent="sol-APP4-r01:segment19-feature-admission-blocked" data-child="sol-APP4-r01:segment23-pre-feature-fixture"/>
+<path d="M 1594 4618.0 H 1576 V 4809.5 H 1590" fill="none" stroke="#107e8d" stroke-width="1.8" marker-end="url(#arrow)" data-parent="sol-APP4-r01:segment23-pre-feature-fixture" data-child="sol-APP4-r01:feature-request"/>
+<path d="M 1594 4809.5 H 1576 V 5012.5 H 1590" fill="none" stroke="#107e8d" stroke-width="1.8" marker-end="url(#arrow)" data-parent="sol-APP4-r01:feature-request" data-child="sol-APP4-r01:safari-segment23-original-migration-partial"/>
+<path d="M 1594 5012.5 H 1576 V 5215.5 H 1590" fill="none" stroke="#107e8d" stroke-width="1.8" marker-end="url(#arrow)" data-parent="sol-APP4-r01:safari-segment23-original-migration-partial" data-child="sol-APP4-r01:safari-segment23-feature-supplemental-retry1"/>
+<path d="M 64 1810.5 H 46 V 2002.0 H 60" fill="none" stroke="#107e8d" stroke-width="1.8" marker-end="url(#arrow)" data-parent="sol-APP1-r01:segment18-feature-freeze-partial-UI" data-child="sol-APP1-r01:segment24-independent-first"/>
+<path d="M 64 2002.0 H 46 V 2193.5 H 60" fill="none" stroke="#107e8d" stroke-width="1.8" marker-end="url(#arrow)" data-parent="sol-APP1-r01:segment24-independent-first" data-child="sol-APP1-r01:segment24-independent-retry1-complete"/>
+<path d="M 1594 5215.5 H 1576 V 5407.0 H 1590" fill="none" stroke="#107e8d" stroke-width="1.8" marker-end="url(#arrow)" data-parent="sol-APP4-r01:safari-segment23-feature-supplemental-retry1" data-child="sol-APP4-r01:segment24-retrospective-first"/>
+<path d="M 1594 5407.0 H 1576 V 5598.5 H 1590" fill="none" stroke="#107e8d" stroke-width="1.8" marker-end="url(#arrow)" data-parent="sol-APP4-r01:segment24-retrospective-first" data-child="sol-APP4-r01:segment24-retrospective-retry1-complete"/>
+<path d="M 64 2193.5 H 46 V 2385.0 H 60" fill="none" stroke="#107e8d" stroke-width="1.8" marker-end="url(#arrow)" data-parent="sol-APP1-r01:segment24-independent-retry1-complete" data-child="sol-APP1-r01:final-segment24"/>
+<path d="M 574 3162.5 H 556 V 3354.0 H 570" fill="none" stroke="#107e8d" stroke-width="1.8" marker-end="url(#arrow)" data-parent="sol-APP2-r01:safari-segment21-feature-first-pass" data-child="sol-APP2-r01:final-segment24"/>
+<path d="M 1084 3997.5 H 1066 V 4189.0 H 1080" fill="none" stroke="#107e8d" stroke-width="1.8" marker-end="url(#arrow)" data-parent="sol-APP3-r01:safari-segment21-feature-evaluator-retry1" data-child="sol-APP3-r01:final-segment24"/>
+<path d="M 1594 5598.5 H 1576 V 5790.0 H 1590" fill="none" stroke="#107e8d" stroke-width="1.8" marker-end="url(#arrow)" data-parent="sol-APP4-r01:segment24-retrospective-retry1-complete" data-child="sol-APP4-r01:final-segment24"/>
+<g id="sol:source" data-stage="source" data-status="complete">
+<title>Sol · canonical model root; complete; non-additive</title>
+<rect x="820" y="120" width="438" height="136" rx="3" fill="#fff" stroke="#107e8d" stroke-width="1.5"/>
+<rect x="820" y="120" width="5" height="136" fill="#107e8d"/>
+<text x="838" y="148" font-size="22" font-weight="700">Sol · canonical model root</text>
+<text x="838" y="177" font-size="16">sol:source</text>
+<text x="838" y="200" font-size="18" font-weight="700">Status: complete</text>
+<text x="838" y="225" font-size="16">Non-additive · no usage charged here</text>
+</g>
+<g id="sol-APP1-r01:baseline-initial-qa" data-stage="initial-qa" data-status="complete">
+<title>Initial questions; complete; measured-receipt</title>
+<rect x="64" y="356" width="438" height="159" rx="3" fill="#fff" stroke="#107e8d" stroke-width="1.5"/>
+<rect x="64" y="356" width="5" height="159" fill="#107e8d"/>
+<text x="82" y="384" font-size="22" font-weight="700">Initial questions</text>
+<text x="82" y="413" font-size="16">sol-APP1-r01:baseline-initial-qa</text>
+<text x="82" y="436" font-size="18" font-weight="700">Status: complete</text>
+<text x="82" y="461" font-size="16">Interval: 0.36 min · included</text>
+<text x="82" y="484" font-size="16">Estimate: $0.02625760</text>
+</g>
+<g id="sol-APP1-r01:baseline-answers" data-stage="initial-qa" data-status="complete">
+<title>Initial answers; complete; measured-receipt</title>
+<rect x="64" y="559" width="438" height="159" rx="3" fill="#fff" stroke="#107e8d" stroke-width="1.5"/>
+<rect x="64" y="559" width="5" height="159" fill="#107e8d"/>
+<text x="82" y="587" font-size="22" font-weight="700">Initial answers</text>
+<text x="82" y="616" font-size="16">sol-APP1-r01:baseline-answers</text>
+<text x="82" y="639" font-size="18" font-weight="700">Status: complete</text>
+<text x="82" y="664" font-size="16">Interval: 0.87 min · included</text>
+<text x="82" y="687" font-size="16">Estimate: $0.04153760</text>
+</g>
+<g id="sol-APP1-r01:baseline-build" data-stage="build" data-status="interrupted">
+<title>First baseline build; interrupted; measured-receipt</title>
+<rect x="64" y="762" width="438" height="159" rx="3" fill="#fff" stroke="#846316" stroke-width="1.5"/>
+<rect x="64" y="762" width="5" height="159" fill="#846316"/>
+<text x="82" y="790" font-size="22" font-weight="700">First baseline build</text>
+<text x="82" y="819" font-size="16">sol-APP1-r01:baseline-build</text>
+<text x="82" y="842" font-size="18" font-weight="700">Status: interrupted</text>
+<text x="82" y="867" font-size="16">Interval: 2.48 min · excluded</text>
+<text x="82" y="890" font-size="16">Estimate: $0.26426880</text>
+</g>
+<g id="sol-APP1-r01:baseline-infrastructure-resume" data-stage="build" data-status="complete">
+<title>Baseline build continuation; complete; measured-receipt</title>
+<rect x="64" y="965" width="438" height="159" rx="3" fill="#fff" stroke="#107e8d" stroke-width="1.5"/>
+<rect x="64" y="965" width="5" height="159" fill="#107e8d"/>
+<text x="82" y="993" font-size="22" font-weight="700">Baseline build continuation</text>
+<text x="82" y="1022" font-size="16">sol-APP1-r01:baseline-infrastructure-resume</text>
+<text x="82" y="1045" font-size="18" font-weight="700">Status: complete</text>
+<text x="82" y="1070" font-size="16">Interval: 5.42 min · included</text>
+<text x="82" y="1093" font-size="16">Estimate: $0.62414880</text>
+</g>
+<g id="sol-APP1-r01:evaluation" data-stage="evaluation" data-status="pass">
+<title>Baseline evaluation / admission; pass; non-additive</title>
+<rect x="64" y="1168" width="438" height="136" rx="3" fill="#fff" stroke="#107e8d" stroke-width="1.5"/>
+<rect x="64" y="1168" width="5" height="136" fill="#107e8d"/>
+<text x="82" y="1196" font-size="22" font-weight="700">Baseline evaluation / admission</text>
+<text x="82" y="1225" font-size="16">sol-APP1-r01:evaluation</text>
+<text x="82" y="1248" font-size="18" font-weight="700">Status: pass</text>
+<text x="82" y="1273" font-size="16">Non-additive · no usage charged here</text>
+</g>
+<g id="sol-APP1-r01:baseline-freeze" data-stage="baseline-freeze" data-status="pass">
+<title>Baseline disposition / freeze; pass; non-additive</title>
+<rect x="64" y="1348" width="438" height="136" rx="3" fill="#fff" stroke="#107e8d" stroke-width="1.5"/>
+<rect x="64" y="1348" width="5" height="136" fill="#107e8d"/>
+<text x="82" y="1376" font-size="22" font-weight="700">Baseline disposition / freeze</text>
+<text x="82" y="1405" font-size="16">sol-APP1-r01:baseline-freeze</text>
+<text x="82" y="1428" font-size="18" font-weight="700">Status: pass</text>
+<text x="82" y="1453" font-size="16">Non-additive · no usage charged here</text>
+</g>
+<g id="sol-APP4-r01:baseline-blocked-plugin-gate" data-stage="baseline-gate" data-status="blocked">
+<title>Initial gate blocked; blocked; non-additive</title>
+<rect x="1594" y="356" width="438" height="136" rx="3" fill="#fff" stroke="#846316" stroke-width="1.5"/>
+<rect x="1594" y="356" width="5" height="136" fill="#846316"/>
+<text x="1612" y="384" font-size="22" font-weight="700">Initial gate blocked</text>
+<text x="1612" y="413" font-size="16">sol-APP4-r01:baseline-blocked-plugin-gate</text>
+<text x="1612" y="436" font-size="18" font-weight="700">Status: blocked</text>
+<text x="1612" y="461" font-size="16">Non-additive · no usage charged here</text>
+</g>
+<g id="sol-APP2-r01:baseline-initial-qa" data-stage="initial-qa" data-status="complete">
+<title>Initial questions; complete; measured-receipt</title>
+<rect x="574" y="356" width="438" height="159" rx="3" fill="#fff" stroke="#107e8d" stroke-width="1.5"/>
+<rect x="574" y="356" width="5" height="159" fill="#107e8d"/>
+<text x="592" y="384" font-size="22" font-weight="700">Initial questions</text>
+<text x="592" y="413" font-size="16">sol-APP2-r01:baseline-initial-qa</text>
+<text x="592" y="436" font-size="18" font-weight="700">Status: complete</text>
+<text x="592" y="461" font-size="16">Interval: 0.31 min · included</text>
+<text x="592" y="484" font-size="16">Estimate: $0.02774160</text>
+</g>
+<g id="sol-APP2-r01:baseline-answers" data-stage="initial-qa" data-status="complete">
+<title>Initial answers; complete; measured-receipt</title>
+<rect x="574" y="559" width="438" height="159" rx="3" fill="#fff" stroke="#107e8d" stroke-width="1.5"/>
+<rect x="574" y="559" width="5" height="159" fill="#107e8d"/>
+<text x="592" y="587" font-size="22" font-weight="700">Initial answers</text>
+<text x="592" y="616" font-size="16">sol-APP2-r01:baseline-answers</text>
+<text x="592" y="639" font-size="18" font-weight="700">Status: complete</text>
+<text x="592" y="664" font-size="16">Interval: 0.50 min · included</text>
+<text x="592" y="687" font-size="16">Estimate: $0.03249760</text>
+</g>
+<g id="sol-APP2-r01:refinement-R1" data-stage="refinement" data-status="complete">
+<title>R1 deliberate refinement; complete; measured-receipt</title>
+<rect x="574" y="762" width="438" height="159" rx="3" fill="#fff" stroke="#107e8d" stroke-width="1.5"/>
+<rect x="574" y="762" width="5" height="159" fill="#107e8d"/>
+<text x="592" y="790" font-size="22" font-weight="700">R1 deliberate refinement</text>
+<text x="592" y="819" font-size="16">sol-APP2-r01:refinement-R1</text>
+<text x="592" y="842" font-size="18" font-weight="700">Status: complete</text>
+<text x="592" y="867" font-size="16">Interval: 0.79 min · included</text>
+<text x="592" y="890" font-size="16">Estimate: $0.05010800</text>
+</g>
+<g id="sol-APP2-r01:refinement-R1-answers" data-stage="refinement" data-status="complete">
+<title>R1 refinement answers; complete; measured-receipt</title>
+<rect x="574" y="965" width="438" height="159" rx="3" fill="#fff" stroke="#107e8d" stroke-width="1.5"/>
+<rect x="574" y="965" width="5" height="159" fill="#107e8d"/>
+<text x="592" y="993" font-size="22" font-weight="700">R1 refinement answers</text>
+<text x="592" y="1022" font-size="16">sol-APP2-r01:refinement-R1-answers</text>
+<text x="592" y="1045" font-size="18" font-weight="700">Status: complete</text>
+<text x="592" y="1070" font-size="16">Interval: 0.87 min · included</text>
+<text x="592" y="1093" font-size="16">Estimate: $0.05868000</text>
+</g>
+<g id="sol-APP2-r01:baseline-build" data-stage="build" data-status="complete">
+<title>First baseline build; complete; measured-receipt</title>
+<rect x="574" y="1168" width="438" height="159" rx="3" fill="#fff" stroke="#107e8d" stroke-width="1.5"/>
+<rect x="574" y="1168" width="5" height="159" fill="#107e8d"/>
+<text x="592" y="1196" font-size="22" font-weight="700">First baseline build</text>
+<text x="592" y="1225" font-size="16">sol-APP2-r01:baseline-build</text>
+<text x="592" y="1248" font-size="18" font-weight="700">Status: complete</text>
+<text x="592" y="1273" font-size="16">Interval: 9.03 min · included</text>
+<text x="592" y="1296" font-size="16">Estimate: $1.10267520</text>
+</g>
+<g id="sol-APP2-r01:baseline-freeze" data-stage="baseline-freeze" data-status="blocked">
+<title>Baseline disposition / freeze; blocked; non-additive</title>
+<rect x="574" y="1371" width="438" height="136" rx="3" fill="#fff" stroke="#846316" stroke-width="1.5"/>
+<rect x="574" y="1371" width="5" height="136" fill="#846316"/>
+<text x="592" y="1399" font-size="22" font-weight="700">Baseline disposition / freeze</text>
+<text x="592" y="1428" font-size="16">sol-APP2-r01:baseline-freeze</text>
+<text x="592" y="1451" font-size="18" font-weight="700">Status: blocked</text>
+<text x="592" y="1476" font-size="16">Non-additive · no usage charged here</text>
+</g>
+<g id="sol-APP3-r01:baseline-initial-qa" data-stage="initial-qa" data-status="complete">
+<title>Initial questions; complete; measured-receipt</title>
+<rect x="1084" y="356" width="438" height="159" rx="3" fill="#fff" stroke="#107e8d" stroke-width="1.5"/>
+<rect x="1084" y="356" width="5" height="159" fill="#107e8d"/>
+<text x="1102" y="384" font-size="22" font-weight="700">Initial questions</text>
+<text x="1102" y="413" font-size="16">sol-APP3-r01:baseline-initial-qa</text>
+<text x="1102" y="436" font-size="18" font-weight="700">Status: complete</text>
+<text x="1102" y="461" font-size="16">Interval: 0.30 min · included</text>
+<text x="1102" y="484" font-size="16">Estimate: $0.02532160</text>
+</g>
+<g id="sol-APP3-r01:baseline-answers" data-stage="initial-qa" data-status="complete">
+<title>Initial answers; complete; measured-receipt</title>
+<rect x="1084" y="559" width="438" height="159" rx="3" fill="#fff" stroke="#107e8d" stroke-width="1.5"/>
+<rect x="1084" y="559" width="5" height="159" fill="#107e8d"/>
+<text x="1102" y="587" font-size="22" font-weight="700">Initial answers</text>
+<text x="1102" y="616" font-size="16">sol-APP3-r01:baseline-answers</text>
+<text x="1102" y="639" font-size="18" font-weight="700">Status: complete</text>
+<text x="1102" y="664" font-size="16">Interval: 0.90 min · included</text>
+<text x="1102" y="687" font-size="16">Estimate: $0.04076960</text>
+</g>
+<g id="sol-APP3-r01:refinement-R1" data-stage="refinement" data-status="complete">
+<title>R1 deliberate refinement; complete; measured-receipt</title>
+<rect x="1084" y="762" width="438" height="159" rx="3" fill="#fff" stroke="#107e8d" stroke-width="1.5"/>
+<rect x="1084" y="762" width="5" height="159" fill="#107e8d"/>
+<text x="1102" y="790" font-size="22" font-weight="700">R1 deliberate refinement</text>
+<text x="1102" y="819" font-size="16">sol-APP3-r01:refinement-R1</text>
+<text x="1102" y="842" font-size="18" font-weight="700">Status: complete</text>
+<text x="1102" y="867" font-size="16">Interval: 0.74 min · included</text>
+<text x="1102" y="890" font-size="16">Estimate: $0.03964080</text>
+</g>
+<g id="sol-APP3-r01:refinement-R1-answers" data-stage="refinement" data-status="complete">
+<title>R1 refinement answers; complete; measured-receipt</title>
+<rect x="1084" y="965" width="438" height="159" rx="3" fill="#fff" stroke="#107e8d" stroke-width="1.5"/>
+<rect x="1084" y="965" width="5" height="159" fill="#107e8d"/>
+<text x="1102" y="993" font-size="22" font-weight="700">R1 refinement answers</text>
+<text x="1102" y="1022" font-size="16">sol-APP3-r01:refinement-R1-answers</text>
+<text x="1102" y="1045" font-size="18" font-weight="700">Status: complete</text>
+<text x="1102" y="1070" font-size="16">Interval: 1.15 min · included</text>
+<text x="1102" y="1093" font-size="16">Estimate: $0.05965360</text>
+</g>
+<g id="sol-APP3-r01:refinement-R2" data-stage="refinement" data-status="complete">
+<title>R2 deliberate refinement; complete; measured-receipt</title>
+<rect x="1084" y="1168" width="438" height="159" rx="3" fill="#fff" stroke="#107e8d" stroke-width="1.5"/>
+<rect x="1084" y="1168" width="5" height="159" fill="#107e8d"/>
+<text x="1102" y="1196" font-size="22" font-weight="700">R2 deliberate refinement</text>
+<text x="1102" y="1225" font-size="16">sol-APP3-r01:refinement-R2</text>
+<text x="1102" y="1248" font-size="18" font-weight="700">Status: complete</text>
+<text x="1102" y="1273" font-size="16">Interval: 1.06 min · included</text>
+<text x="1102" y="1296" font-size="16">Estimate: $0.05620480</text>
+</g>
+<g id="sol-APP3-r01:refinement-R3" data-stage="refinement" data-status="complete">
+<title>R3 deliberate refinement; complete; measured-receipt</title>
+<rect x="1084" y="1371" width="438" height="159" rx="3" fill="#fff" stroke="#107e8d" stroke-width="1.5"/>
+<rect x="1084" y="1371" width="5" height="159" fill="#107e8d"/>
+<text x="1102" y="1399" font-size="22" font-weight="700">R3 deliberate refinement</text>
+<text x="1102" y="1428" font-size="16">sol-APP3-r01:refinement-R3</text>
+<text x="1102" y="1451" font-size="18" font-weight="700">Status: complete</text>
+<text x="1102" y="1476" font-size="16">Interval: 0.41 min · included</text>
+<text x="1102" y="1499" font-size="16">Estimate: $0.02867280</text>
+</g>
+<g id="sol-APP3-r01:refinement-R4" data-stage="refinement" data-status="complete">
+<title>R4 deliberate refinement; complete; measured-receipt</title>
+<rect x="1084" y="1574" width="438" height="159" rx="3" fill="#fff" stroke="#107e8d" stroke-width="1.5"/>
+<rect x="1084" y="1574" width="5" height="159" fill="#107e8d"/>
+<text x="1102" y="1602" font-size="22" font-weight="700">R4 deliberate refinement</text>
+<text x="1102" y="1631" font-size="16">sol-APP3-r01:refinement-R4</text>
+<text x="1102" y="1654" font-size="18" font-weight="700">Status: complete</text>
+<text x="1102" y="1679" font-size="16">Interval: 0.28 min · included</text>
+<text x="1102" y="1702" font-size="16">Estimate: $0.02115600</text>
+</g>
+<g id="sol-APP3-r01:refinement-R5" data-stage="refinement" data-status="complete">
+<title>R5 deliberate refinement; complete; measured-receipt</title>
+<rect x="1084" y="1777" width="438" height="159" rx="3" fill="#fff" stroke="#107e8d" stroke-width="1.5"/>
+<rect x="1084" y="1777" width="5" height="159" fill="#107e8d"/>
+<text x="1102" y="1805" font-size="22" font-weight="700">R5 deliberate refinement</text>
+<text x="1102" y="1834" font-size="16">sol-APP3-r01:refinement-R5</text>
+<text x="1102" y="1857" font-size="18" font-weight="700">Status: complete</text>
+<text x="1102" y="1882" font-size="16">Interval: 0.18 min · included</text>
+<text x="1102" y="1905" font-size="16">Estimate: $0.01821920</text>
+</g>
+<g id="sol-APP3-r01:baseline-build" data-stage="build" data-status="complete">
+<title>First baseline build; complete; measured-receipt</title>
+<rect x="1084" y="1980" width="438" height="159" rx="3" fill="#fff" stroke="#107e8d" stroke-width="1.5"/>
+<rect x="1084" y="1980" width="5" height="159" fill="#107e8d"/>
+<text x="1102" y="2008" font-size="22" font-weight="700">First baseline build</text>
+<text x="1102" y="2037" font-size="16">sol-APP3-r01:baseline-build</text>
+<text x="1102" y="2060" font-size="18" font-weight="700">Status: complete</text>
+<text x="1102" y="2085" font-size="16">Interval: 8.50 min · included</text>
+<text x="1102" y="2108" font-size="16">Estimate: $0.88601920</text>
+</g>
+<g id="sol-APP3-r01:baseline-freeze" data-stage="baseline-freeze" data-status="blocked">
+<title>Baseline disposition / freeze; blocked; non-additive</title>
+<rect x="1084" y="2183" width="438" height="136" rx="3" fill="#fff" stroke="#846316" stroke-width="1.5"/>
+<rect x="1084" y="2183" width="5" height="136" fill="#846316"/>
+<text x="1102" y="2211" font-size="22" font-weight="700">Baseline disposition / freeze</text>
+<text x="1102" y="2240" font-size="16">sol-APP3-r01:baseline-freeze</text>
+<text x="1102" y="2263" font-size="18" font-weight="700">Status: blocked</text>
+<text x="1102" y="2288" font-size="16">Non-additive · no usage charged here</text>
+</g>
+<g id="sol-APP2-r01:first-pass-ui-replay-01" data-stage="evaluation" data-status="fail">
+<title>Baseline evaluation / admission; fail; non-additive</title>
+<rect x="574" y="1551" width="438" height="136" rx="3" fill="#fff" stroke="#a84432" stroke-width="1.5"/>
+<rect x="574" y="1551" width="5" height="136" fill="#a84432"/>
+<text x="592" y="1579" font-size="22" font-weight="700">Baseline evaluation / admission</text>
+<text x="592" y="1608" font-size="16">sol-APP2-r01:first-pass-ui-replay-01</text>
+<text x="592" y="1631" font-size="18" font-weight="700">Status: fail</text>
+<text x="592" y="1656" font-size="16">Non-additive · no usage charged here</text>
+</g>
+<g id="sol-APP2-r01:baseline-repair-01" data-stage="repair" data-status="complete">
+<title>Baseline model repair; complete; measured-receipt</title>
+<rect x="574" y="1731" width="438" height="159" rx="3" fill="#fff" stroke="#107e8d" stroke-width="1.5"/>
+<rect x="574" y="1731" width="5" height="159" fill="#107e8d"/>
+<text x="592" y="1759" font-size="22" font-weight="700">Baseline model repair</text>
+<text x="592" y="1788" font-size="16">sol-APP2-r01:baseline-repair-01</text>
+<text x="592" y="1811" font-size="18" font-weight="700">Status: complete</text>
+<text x="592" y="1836" font-size="16">Interval: 2.05 min · included</text>
+<text x="592" y="1859" font-size="16">Estimate: $0.51919440</text>
+</g>
+<g id="sol-APP2-r01:repaired-ui-replay-01" data-stage="evaluation" data-status="blocked">
+<title>Baseline evaluation / admission; blocked; non-additive</title>
+<rect x="574" y="1934" width="438" height="136" rx="3" fill="#fff" stroke="#846316" stroke-width="1.5"/>
+<rect x="574" y="1934" width="5" height="136" fill="#846316"/>
+<text x="592" y="1962" font-size="22" font-weight="700">Baseline evaluation / admission</text>
+<text x="592" y="1991" font-size="16">sol-APP2-r01:repaired-ui-replay-01</text>
+<text x="592" y="2014" font-size="18" font-weight="700">Status: blocked</text>
+<text x="592" y="2039" font-size="16">Non-additive · no usage charged here</text>
+</g>
+<g id="sol-APP2-r01:repaired-ui-replay-02" data-stage="evaluation" data-status="pass">
+<title>Baseline evaluation / admission; pass; non-additive</title>
+<rect x="574" y="2114" width="438" height="136" rx="3" fill="#fff" stroke="#107e8d" stroke-width="1.5"/>
+<rect x="574" y="2114" width="5" height="136" fill="#107e8d"/>
+<text x="592" y="2142" font-size="22" font-weight="700">Baseline evaluation / admission</text>
+<text x="592" y="2171" font-size="16">sol-APP2-r01:repaired-ui-replay-02</text>
+<text x="592" y="2194" font-size="18" font-weight="700">Status: pass</text>
+<text x="592" y="2219" font-size="16">Non-additive · no usage charged here</text>
+</g>
+<g id="sol-APP3-r01:first-pass-ui-replay-01" data-stage="evaluation" data-status="fail">
+<title>Baseline evaluation / admission; fail; non-additive</title>
+<rect x="1084" y="2363" width="438" height="136" rx="3" fill="#fff" stroke="#a84432" stroke-width="1.5"/>
+<rect x="1084" y="2363" width="5" height="136" fill="#a84432"/>
+<text x="1102" y="2391" font-size="22" font-weight="700">Baseline evaluation / admission</text>
+<text x="1102" y="2420" font-size="16">sol-APP3-r01:first-pass-ui-replay-01</text>
+<text x="1102" y="2443" font-size="18" font-weight="700">Status: fail</text>
+<text x="1102" y="2468" font-size="16">Non-additive · no usage charged here</text>
+</g>
+<g id="sol-APP3-r01:baseline-repair-01" data-stage="repair" data-status="complete">
+<title>Baseline model repair; complete; measured-receipt</title>
+<rect x="1084" y="2543" width="438" height="159" rx="3" fill="#fff" stroke="#107e8d" stroke-width="1.5"/>
+<rect x="1084" y="2543" width="5" height="159" fill="#107e8d"/>
+<text x="1102" y="2571" font-size="22" font-weight="700">Baseline model repair</text>
+<text x="1102" y="2600" font-size="16">sol-APP3-r01:baseline-repair-01</text>
+<text x="1102" y="2623" font-size="18" font-weight="700">Status: complete</text>
+<text x="1102" y="2648" font-size="16">Interval: 1.59 min · included</text>
+<text x="1102" y="2671" font-size="16">Estimate: $0.46322800</text>
+</g>
+<g id="sol-APP3-r01:repaired-ui-replay-01" data-stage="evaluation" data-status="pass">
+<title>Baseline evaluation / admission; pass; non-additive</title>
+<rect x="1084" y="2746" width="438" height="136" rx="3" fill="#fff" stroke="#107e8d" stroke-width="1.5"/>
+<rect x="1084" y="2746" width="5" height="136" fill="#107e8d"/>
+<text x="1102" y="2774" font-size="22" font-weight="700">Baseline evaluation / admission</text>
+<text x="1102" y="2803" font-size="16">sol-APP3-r01:repaired-ui-replay-01</text>
+<text x="1102" y="2826" font-size="18" font-weight="700">Status: pass</text>
+<text x="1102" y="2851" font-size="16">Non-additive · no usage charged here</text>
+</g>
+<g id="sol-APP4-r01:owner-enabled-gate-reopened" data-stage="gate-reopened" data-status="complete">
+<title>Gate reopened; complete; non-additive</title>
+<rect x="1594" y="536" width="438" height="136" rx="3" fill="#fff" stroke="#107e8d" stroke-width="1.5"/>
+<rect x="1594" y="536" width="5" height="136" fill="#107e8d"/>
+<text x="1612" y="564" font-size="22" font-weight="700">Gate reopened</text>
+<text x="1612" y="593" font-size="16">sol-APP4-r01:owner-enabled-gate-reopened</text>
+<text x="1612" y="616" font-size="18" font-weight="700">Status: complete</text>
+<text x="1612" y="641" font-size="16">Non-additive · no usage charged here</text>
+</g>
+<g id="sol-APP4-r01:baseline-initial-qa" data-stage="initial-qa" data-status="complete">
+<title>Initial questions; complete; measured-receipt</title>
+<rect x="1594" y="716" width="438" height="159" rx="3" fill="#fff" stroke="#107e8d" stroke-width="1.5"/>
+<rect x="1594" y="716" width="5" height="159" fill="#107e8d"/>
+<text x="1612" y="744" font-size="22" font-weight="700">Initial questions</text>
+<text x="1612" y="773" font-size="16">sol-APP4-r01:baseline-initial-qa</text>
+<text x="1612" y="796" font-size="18" font-weight="700">Status: complete</text>
+<text x="1612" y="821" font-size="16">Interval: 0.30 min · included</text>
+<text x="1612" y="844" font-size="16">Estimate: $0.04574800</text>
+</g>
+<g id="sol-APP4-r01:baseline-answers" data-stage="initial-qa" data-status="complete">
+<title>Initial answers; complete; measured-receipt</title>
+<rect x="1594" y="919" width="438" height="159" rx="3" fill="#fff" stroke="#107e8d" stroke-width="1.5"/>
+<rect x="1594" y="919" width="5" height="159" fill="#107e8d"/>
+<text x="1612" y="947" font-size="22" font-weight="700">Initial answers</text>
+<text x="1612" y="976" font-size="16">sol-APP4-r01:baseline-answers</text>
+<text x="1612" y="999" font-size="18" font-weight="700">Status: complete</text>
+<text x="1612" y="1024" font-size="16">Interval: 0.61 min · included</text>
+<text x="1612" y="1047" font-size="16">Estimate: $0.03455360</text>
+</g>
+<g id="sol-APP4-r01:refinement-R1" data-stage="refinement" data-status="complete">
+<title>R1 deliberate refinement; complete; measured-receipt</title>
+<rect x="1594" y="1122" width="438" height="159" rx="3" fill="#fff" stroke="#107e8d" stroke-width="1.5"/>
+<rect x="1594" y="1122" width="5" height="159" fill="#107e8d"/>
+<text x="1612" y="1150" font-size="22" font-weight="700">R1 deliberate refinement</text>
+<text x="1612" y="1179" font-size="16">sol-APP4-r01:refinement-R1</text>
+<text x="1612" y="1202" font-size="18" font-weight="700">Status: complete</text>
+<text x="1612" y="1227" font-size="16">Interval: 0.52 min · included</text>
+<text x="1612" y="1250" font-size="16">Estimate: $0.08045200</text>
+</g>
+<g id="sol-APP4-r01:refinement-R1-answers" data-stage="refinement" data-status="complete">
+<title>R1 refinement answers; complete; measured-receipt</title>
+<rect x="1594" y="1325" width="438" height="159" rx="3" fill="#fff" stroke="#107e8d" stroke-width="1.5"/>
+<rect x="1594" y="1325" width="5" height="159" fill="#107e8d"/>
+<text x="1612" y="1353" font-size="22" font-weight="700">R1 refinement answers</text>
+<text x="1612" y="1382" font-size="16">sol-APP4-r01:refinement-R1-answers</text>
+<text x="1612" y="1405" font-size="18" font-weight="700">Status: complete</text>
+<text x="1612" y="1430" font-size="16">Interval: 1.60 min · included</text>
+<text x="1612" y="1453" font-size="16">Estimate: $0.07216000</text>
+</g>
+<g id="sol-APP4-r01:refinement-R2" data-stage="refinement" data-status="complete">
+<title>R2 deliberate refinement; complete; measured-receipt</title>
+<rect x="1594" y="1528" width="438" height="159" rx="3" fill="#fff" stroke="#107e8d" stroke-width="1.5"/>
+<rect x="1594" y="1528" width="5" height="159" fill="#107e8d"/>
+<text x="1612" y="1556" font-size="22" font-weight="700">R2 deliberate refinement</text>
+<text x="1612" y="1585" font-size="16">sol-APP4-r01:refinement-R2</text>
+<text x="1612" y="1608" font-size="18" font-weight="700">Status: complete</text>
+<text x="1612" y="1633" font-size="16">Interval: 0.70 min · included</text>
+<text x="1612" y="1656" font-size="16">Estimate: $0.05254080</text>
+</g>
+<g id="sol-APP4-r01:refinement-R2-answers" data-stage="refinement" data-status="complete">
+<title>R2 refinement answers; complete; measured-receipt</title>
+<rect x="1594" y="1731" width="438" height="159" rx="3" fill="#fff" stroke="#107e8d" stroke-width="1.5"/>
+<rect x="1594" y="1731" width="5" height="159" fill="#107e8d"/>
+<text x="1612" y="1759" font-size="22" font-weight="700">R2 refinement answers</text>
+<text x="1612" y="1788" font-size="16">sol-APP4-r01:refinement-R2-answers</text>
+<text x="1612" y="1811" font-size="18" font-weight="700">Status: complete</text>
+<text x="1612" y="1836" font-size="16">Interval: 1.68 min · included</text>
+<text x="1612" y="1859" font-size="16">Estimate: $0.08416240</text>
+</g>
+<g id="sol-APP4-r01:refinement-R3" data-stage="refinement" data-status="complete">
+<title>R3 deliberate refinement; complete; measured-receipt</title>
+<rect x="1594" y="1934" width="438" height="159" rx="3" fill="#fff" stroke="#107e8d" stroke-width="1.5"/>
+<rect x="1594" y="1934" width="5" height="159" fill="#107e8d"/>
+<text x="1612" y="1962" font-size="22" font-weight="700">R3 deliberate refinement</text>
+<text x="1612" y="1991" font-size="16">sol-APP4-r01:refinement-R3</text>
+<text x="1612" y="2014" font-size="18" font-weight="700">Status: complete</text>
+<text x="1612" y="2039" font-size="16">Interval: 2.09 min · included</text>
+<text x="1612" y="2062" font-size="16">Estimate: $0.12852000</text>
+</g>
+<g id="sol-APP4-r01:refinement-R3-answers" data-stage="refinement" data-status="complete">
+<title>R3 refinement answers; complete; measured-receipt</title>
+<rect x="1594" y="2137" width="438" height="159" rx="3" fill="#fff" stroke="#107e8d" stroke-width="1.5"/>
+<rect x="1594" y="2137" width="5" height="159" fill="#107e8d"/>
+<text x="1612" y="2165" font-size="22" font-weight="700">R3 refinement answers</text>
+<text x="1612" y="2194" font-size="16">sol-APP4-r01:refinement-R3-answers</text>
+<text x="1612" y="2217" font-size="18" font-weight="700">Status: complete</text>
+<text x="1612" y="2242" font-size="16">Interval: 1.56 min · included</text>
+<text x="1612" y="2265" font-size="16">Estimate: $0.09906560</text>
+</g>
+<g id="sol-APP4-r01:refinement-R4" data-stage="refinement" data-status="complete">
+<title>R4 deliberate refinement; complete; measured-receipt</title>
+<rect x="1594" y="2340" width="438" height="159" rx="3" fill="#fff" stroke="#107e8d" stroke-width="1.5"/>
+<rect x="1594" y="2340" width="5" height="159" fill="#107e8d"/>
+<text x="1612" y="2368" font-size="22" font-weight="700">R4 deliberate refinement</text>
+<text x="1612" y="2397" font-size="16">sol-APP4-r01:refinement-R4</text>
+<text x="1612" y="2420" font-size="18" font-weight="700">Status: complete</text>
+<text x="1612" y="2445" font-size="16">Interval: 1.87 min · included</text>
+<text x="1612" y="2468" font-size="16">Estimate: $0.12071600</text>
+</g>
+<g id="sol-APP4-r01:refinement-R4-answers" data-stage="refinement" data-status="complete">
+<title>R4 refinement answers; complete; measured-receipt</title>
+<rect x="1594" y="2543" width="438" height="159" rx="3" fill="#fff" stroke="#107e8d" stroke-width="1.5"/>
+<rect x="1594" y="2543" width="5" height="159" fill="#107e8d"/>
+<text x="1612" y="2571" font-size="22" font-weight="700">R4 refinement answers</text>
+<text x="1612" y="2600" font-size="16">sol-APP4-r01:refinement-R4-answers</text>
+<text x="1612" y="2623" font-size="18" font-weight="700">Status: complete</text>
+<text x="1612" y="2648" font-size="16">Interval: 1.90 min · included</text>
+<text x="1612" y="2671" font-size="16">Estimate: $0.11404400</text>
+</g>
+<g id="sol-APP4-r01:refinement-R5" data-stage="refinement" data-status="complete">
+<title>R5 deliberate refinement; complete; measured-receipt</title>
+<rect x="1594" y="2746" width="438" height="159" rx="3" fill="#fff" stroke="#107e8d" stroke-width="1.5"/>
+<rect x="1594" y="2746" width="5" height="159" fill="#107e8d"/>
+<text x="1612" y="2774" font-size="22" font-weight="700">R5 deliberate refinement</text>
+<text x="1612" y="2803" font-size="16">sol-APP4-r01:refinement-R5</text>
+<text x="1612" y="2826" font-size="18" font-weight="700">Status: complete</text>
+<text x="1612" y="2851" font-size="16">Interval: 1.66 min · included</text>
+<text x="1612" y="2874" font-size="16">Estimate: $0.11266800</text>
+</g>
+<g id="sol-APP4-r01:refinement-R5-answers" data-stage="refinement" data-status="complete">
+<title>R5 refinement answers; complete; measured-receipt</title>
+<rect x="1594" y="2949" width="438" height="159" rx="3" fill="#fff" stroke="#107e8d" stroke-width="1.5"/>
+<rect x="1594" y="2949" width="5" height="159" fill="#107e8d"/>
+<text x="1612" y="2977" font-size="22" font-weight="700">R5 refinement answers</text>
+<text x="1612" y="3006" font-size="16">sol-APP4-r01:refinement-R5-answers</text>
+<text x="1612" y="3029" font-size="18" font-weight="700">Status: complete</text>
+<text x="1612" y="3054" font-size="16">Interval: 1.30 min · included</text>
+<text x="1612" y="3077" font-size="16">Estimate: $0.08809040</text>
+</g>
+<g id="sol-APP4-r01:segment17-actual-target-IDD-gate" data-stage="idd-intent" data-status="blocked">
+<title>IDD target / intent gate; blocked; non-additive</title>
+<rect x="1594" y="3152" width="438" height="159" rx="3" fill="#fff" stroke="#846316" stroke-width="1.5"/>
+<rect x="1594" y="3152" width="5" height="159" fill="#846316"/>
+<text x="1612" y="3180" font-size="22" font-weight="700">IDD target / intent gate</text>
+<text x="1612" y="3209" font-size="16">sol-APP4-r01:segment17-actual-target-IDD-gat</text>
+<text x="1612" y="3232" font-size="16">e</text>
+<text x="1612" y="3255" font-size="18" font-weight="700">Status: blocked</text>
+<text x="1612" y="3280" font-size="16">Non-additive · no usage charged here</text>
+</g>
+<g id="sol-APP4-r01:idd-intent-initial" data-stage="idd-intent" data-status="complete">
+<title>IDD initial intent work; complete; measured-receipt</title>
+<rect x="1594" y="3355" width="438" height="159" rx="3" fill="#fff" stroke="#107e8d" stroke-width="1.5"/>
+<rect x="1594" y="3355" width="5" height="159" fill="#107e8d"/>
+<text x="1612" y="3383" font-size="22" font-weight="700">IDD initial intent work</text>
+<text x="1612" y="3412" font-size="16">sol-APP4-r01:idd-intent-initial</text>
+<text x="1612" y="3435" font-size="18" font-weight="700">Status: complete</text>
+<text x="1612" y="3460" font-size="16">Interval: 3.87 min · included</text>
+<text x="1612" y="3483" font-size="16">Estimate: $0.47553680</text>
+</g>
+<g id="sol-APP4-r01:segment18-intent-freeze" data-stage="idd-intent" data-status="complete">
+<title>IDD intent frozen; complete; non-additive</title>
+<rect x="1594" y="3558" width="438" height="136" rx="3" fill="#fff" stroke="#107e8d" stroke-width="1.5"/>
+<rect x="1594" y="3558" width="5" height="136" fill="#107e8d"/>
+<text x="1612" y="3586" font-size="22" font-weight="700">IDD intent frozen</text>
+<text x="1612" y="3615" font-size="16">sol-APP4-r01:segment18-intent-freeze</text>
+<text x="1612" y="3638" font-size="18" font-weight="700">Status: complete</text>
+<text x="1612" y="3663" font-size="16">Non-additive · no usage charged here</text>
+</g>
+<g id="sol-APP4-r01:baseline-build" data-stage="build" data-status="interrupted">
+<title>First baseline build; interrupted; measured-receipt</title>
+<rect x="1594" y="3738" width="438" height="159" rx="3" fill="#fff" stroke="#846316" stroke-width="1.5"/>
+<rect x="1594" y="3738" width="5" height="159" fill="#846316"/>
+<text x="1612" y="3766" font-size="22" font-weight="700">First baseline build</text>
+<text x="1612" y="3795" font-size="16">sol-APP4-r01:baseline-build</text>
+<text x="1612" y="3818" font-size="18" font-weight="700">Status: interrupted</text>
+<text x="1612" y="3843" font-size="16">Interval: 10.00 min · excluded</text>
+<text x="1612" y="3866" font-size="16">Estimate: unknown</text>
+</g>
+<g id="sol-APP4-r01:baseline-operator-continuation-01" data-stage="build" data-status="complete">
+<title>Baseline build continuation; complete; measured-receipt</title>
+<rect x="1594" y="3941" width="438" height="182" rx="3" fill="#fff" stroke="#107e8d" stroke-width="1.5"/>
+<rect x="1594" y="3941" width="5" height="182" fill="#107e8d"/>
+<text x="1612" y="3969" font-size="22" font-weight="700">Baseline build continuation</text>
+<text x="1612" y="3998" font-size="16">sol-APP4-r01:baseline-operator-continuation-</text>
+<text x="1612" y="4021" font-size="16">01</text>
+<text x="1612" y="4044" font-size="18" font-weight="700">Status: complete</text>
+<text x="1612" y="4069" font-size="16">Interval: 2.67 min · included</text>
+<text x="1612" y="4092" font-size="16">Estimate: $0.43415440</text>
+</g>
+<g id="sol-APP4-r01:segment18-baseline-disposition" data-stage="baseline-freeze" data-status="blocked">
+<title>Baseline disposition / freeze; blocked; non-additive</title>
+<rect x="1594" y="4167" width="438" height="136" rx="3" fill="#fff" stroke="#846316" stroke-width="1.5"/>
+<rect x="1594" y="4167" width="5" height="136" fill="#846316"/>
+<text x="1612" y="4195" font-size="22" font-weight="700">Baseline disposition / freeze</text>
+<text x="1612" y="4224" font-size="16">sol-APP4-r01:segment18-baseline-disposition</text>
+<text x="1612" y="4247" font-size="18" font-weight="700">Status: blocked</text>
+<text x="1612" y="4272" font-size="16">Non-additive · no usage charged here</text>
+</g>
+<g id="sol-APP1-r01:feature-request" data-stage="feature-request" data-status="complete">
+<title>Feature implementation; complete; measured-receipt</title>
+<rect x="64" y="1528" width="438" height="159" rx="3" fill="#fff" stroke="#107e8d" stroke-width="1.5"/>
+<rect x="64" y="1528" width="5" height="159" fill="#107e8d"/>
+<text x="82" y="1556" font-size="22" font-weight="700">Feature implementation</text>
+<text x="82" y="1585" font-size="16">sol-APP1-r01:feature-request</text>
+<text x="82" y="1608" font-size="18" font-weight="700">Status: complete</text>
+<text x="82" y="1633" font-size="16">Interval: 8.73 min · included</text>
+<text x="82" y="1656" font-size="16">Estimate: $1.20420320</text>
+</g>
+<g id="sol-APP1-r01:segment18-feature-freeze-partial-UI" data-stage="feature-evaluation" data-status="blocked">
+<title>Feature evaluation; blocked; non-additive</title>
+<rect x="64" y="1731" width="438" height="159" rx="3" fill="#fff" stroke="#846316" stroke-width="1.5"/>
+<rect x="64" y="1731" width="5" height="159" fill="#846316"/>
+<text x="82" y="1759" font-size="22" font-weight="700">Feature evaluation</text>
+<text x="82" y="1788" font-size="16">sol-APP1-r01:segment18-feature-freeze-partia</text>
+<text x="82" y="1811" font-size="16">l-UI</text>
+<text x="82" y="1834" font-size="18" font-weight="700">Status: blocked</text>
+<text x="82" y="1859" font-size="16">Non-additive · no usage charged here</text>
+</g>
+<g id="sol-APP2-r01:segment19-feature-admission-blocked" data-stage="evaluation" data-status="blocked">
+<title>Baseline evaluation / admission; blocked; non-additive</title>
+<rect x="574" y="2294" width="438" height="159" rx="3" fill="#fff" stroke="#846316" stroke-width="1.5"/>
+<rect x="574" y="2294" width="5" height="159" fill="#846316"/>
+<text x="592" y="2322" font-size="22" font-weight="700">Baseline evaluation / admission</text>
+<text x="592" y="2351" font-size="16">sol-APP2-r01:segment19-feature-admission-blo</text>
+<text x="592" y="2374" font-size="16">cked</text>
+<text x="592" y="2397" font-size="18" font-weight="700">Status: blocked</text>
+<text x="592" y="2422" font-size="16">Non-additive · no usage charged here</text>
+</g>
+<g id="sol-APP3-r01:segment19-feature-admission-blocked" data-stage="evaluation" data-status="blocked">
+<title>Baseline evaluation / admission; blocked; non-additive</title>
+<rect x="1084" y="2926" width="438" height="159" rx="3" fill="#fff" stroke="#846316" stroke-width="1.5"/>
+<rect x="1084" y="2926" width="5" height="159" fill="#846316"/>
+<text x="1102" y="2954" font-size="22" font-weight="700">Baseline evaluation / admission</text>
+<text x="1102" y="2983" font-size="16">sol-APP3-r01:segment19-feature-admission-blo</text>
+<text x="1102" y="3006" font-size="16">cked</text>
+<text x="1102" y="3029" font-size="18" font-weight="700">Status: blocked</text>
+<text x="1102" y="3054" font-size="16">Non-additive · no usage charged here</text>
+</g>
+<g id="sol-APP4-r01:segment19-feature-admission-blocked" data-stage="evaluation" data-status="blocked">
+<title>Baseline evaluation / admission; blocked; non-additive</title>
+<rect x="1594" y="4347" width="438" height="159" rx="3" fill="#fff" stroke="#846316" stroke-width="1.5"/>
+<rect x="1594" y="4347" width="5" height="159" fill="#846316"/>
+<text x="1612" y="4375" font-size="22" font-weight="700">Baseline evaluation / admission</text>
+<text x="1612" y="4404" font-size="16">sol-APP4-r01:segment19-feature-admission-blo</text>
+<text x="1612" y="4427" font-size="16">cked</text>
+<text x="1612" y="4450" font-size="18" font-weight="700">Status: blocked</text>
+<text x="1612" y="4475" font-size="16">Non-additive · no usage charged here</text>
+</g>
+<g id="sol-APP2-r01:segment21-pre-feature-fixture" data-stage="evaluation" data-status="pass">
+<title>Baseline evaluation / admission; pass; non-additive</title>
+<rect x="574" y="2497" width="438" height="136" rx="3" fill="#fff" stroke="#107e8d" stroke-width="1.5"/>
+<rect x="574" y="2497" width="5" height="136" fill="#107e8d"/>
+<text x="592" y="2525" font-size="22" font-weight="700">Baseline evaluation / admission</text>
+<text x="592" y="2554" font-size="16">sol-APP2-r01:segment21-pre-feature-fixture</text>
+<text x="592" y="2577" font-size="18" font-weight="700">Status: pass</text>
+<text x="592" y="2602" font-size="16">Non-additive · no usage charged here</text>
+</g>
+<g id="sol-APP2-r01:feature-request" data-stage="feature-request" data-status="complete">
+<title>Feature implementation; complete; measured-receipt</title>
+<rect x="574" y="2677" width="438" height="159" rx="3" fill="#fff" stroke="#107e8d" stroke-width="1.5"/>
+<rect x="574" y="2677" width="5" height="159" fill="#107e8d"/>
+<text x="592" y="2705" font-size="22" font-weight="700">Feature implementation</text>
+<text x="592" y="2734" font-size="16">sol-APP2-r01:feature-request</text>
+<text x="592" y="2757" font-size="18" font-weight="700">Status: complete</text>
+<text x="592" y="2782" font-size="16">Interval: 8.24 min · included</text>
+<text x="592" y="2805" font-size="16">Estimate: $1.64748000</text>
+</g>
+<g id="sol-APP2-r01:safari-segment21-original-feature-migration" data-stage="feature-evaluation" data-status="pass">
+<title>Feature evaluation; pass; non-additive</title>
+<rect x="574" y="2880" width="438" height="159" rx="3" fill="#fff" stroke="#107e8d" stroke-width="1.5"/>
+<rect x="574" y="2880" width="5" height="159" fill="#107e8d"/>
+<text x="592" y="2908" font-size="22" font-weight="700">Feature evaluation</text>
+<text x="592" y="2937" font-size="16">sol-APP2-r01:safari-segment21-original-featu</text>
+<text x="592" y="2960" font-size="16">re-migration</text>
+<text x="592" y="2983" font-size="18" font-weight="700">Status: pass</text>
+<text x="592" y="3008" font-size="16">Non-additive · no usage charged here</text>
+</g>
+<g id="sol-APP2-r01:safari-segment21-feature-first-pass" data-stage="feature-evaluation" data-status="pass">
+<title>Feature evaluation; pass; non-additive</title>
+<rect x="574" y="3083" width="438" height="159" rx="3" fill="#fff" stroke="#107e8d" stroke-width="1.5"/>
+<rect x="574" y="3083" width="5" height="159" fill="#107e8d"/>
+<text x="592" y="3111" font-size="22" font-weight="700">Feature evaluation</text>
+<text x="592" y="3140" font-size="16">sol-APP2-r01:safari-segment21-feature-first-</text>
+<text x="592" y="3163" font-size="16">pass</text>
+<text x="592" y="3186" font-size="18" font-weight="700">Status: pass</text>
+<text x="592" y="3211" font-size="16">Non-additive · no usage charged here</text>
+</g>
+<g id="sol-APP3-r01:segment21-pre-feature-fixture" data-stage="evaluation" data-status="pass">
+<title>Baseline evaluation / admission; pass; non-additive</title>
+<rect x="1084" y="3129" width="438" height="136" rx="3" fill="#fff" stroke="#107e8d" stroke-width="1.5"/>
+<rect x="1084" y="3129" width="5" height="136" fill="#107e8d"/>
+<text x="1102" y="3157" font-size="22" font-weight="700">Baseline evaluation / admission</text>
+<text x="1102" y="3186" font-size="16">sol-APP3-r01:segment21-pre-feature-fixture</text>
+<text x="1102" y="3209" font-size="18" font-weight="700">Status: pass</text>
+<text x="1102" y="3234" font-size="16">Non-additive · no usage charged here</text>
+</g>
+<g id="sol-APP3-r01:feature-request" data-stage="feature-request" data-status="complete">
+<title>Feature implementation; complete; measured-receipt</title>
+<rect x="1084" y="3309" width="438" height="159" rx="3" fill="#fff" stroke="#107e8d" stroke-width="1.5"/>
+<rect x="1084" y="3309" width="5" height="159" fill="#107e8d"/>
+<text x="1102" y="3337" font-size="22" font-weight="700">Feature implementation</text>
+<text x="1102" y="3366" font-size="16">sol-APP3-r01:feature-request</text>
+<text x="1102" y="3389" font-size="18" font-weight="700">Status: complete</text>
+<text x="1102" y="3414" font-size="16">Interval: 6.04 min · included</text>
+<text x="1102" y="3437" font-size="16">Estimate: $1.13530800</text>
+</g>
+<g id="sol-APP3-r01:safari-segment21-original-feature-migration" data-stage="feature-evaluation" data-status="pass">
+<title>Feature evaluation; pass; non-additive</title>
+<rect x="1084" y="3512" width="438" height="159" rx="3" fill="#fff" stroke="#107e8d" stroke-width="1.5"/>
+<rect x="1084" y="3512" width="5" height="159" fill="#107e8d"/>
+<text x="1102" y="3540" font-size="22" font-weight="700">Feature evaluation</text>
+<text x="1102" y="3569" font-size="16">sol-APP3-r01:safari-segment21-original-featu</text>
+<text x="1102" y="3592" font-size="16">re-migration</text>
+<text x="1102" y="3615" font-size="18" font-weight="700">Status: pass</text>
+<text x="1102" y="3640" font-size="16">Non-additive · no usage charged here</text>
+</g>
+<g id="sol-APP3-r01:segment21-evaluator-C04-adjudication" data-stage="feature-evaluation" data-status="blocked">
+<title>Feature evaluation; blocked; non-additive</title>
+<rect x="1084" y="3715" width="438" height="159" rx="3" fill="#fff" stroke="#846316" stroke-width="1.5"/>
+<rect x="1084" y="3715" width="5" height="159" fill="#846316"/>
+<text x="1102" y="3743" font-size="22" font-weight="700">Feature evaluation</text>
+<text x="1102" y="3772" font-size="16">sol-APP3-r01:segment21-evaluator-C04-adjudic</text>
+<text x="1102" y="3795" font-size="16">ation</text>
+<text x="1102" y="3818" font-size="18" font-weight="700">Status: blocked</text>
+<text x="1102" y="3843" font-size="16">Non-additive · no usage charged here</text>
+</g>
+<g id="sol-APP3-r01:safari-segment21-feature-evaluator-retry1" data-stage="feature-evaluation" data-status="pass">
+<title>Feature evaluation; pass; non-additive</title>
+<rect x="1084" y="3918" width="438" height="159" rx="3" fill="#fff" stroke="#107e8d" stroke-width="1.5"/>
+<rect x="1084" y="3918" width="5" height="159" fill="#107e8d"/>
+<text x="1102" y="3946" font-size="22" font-weight="700">Feature evaluation</text>
+<text x="1102" y="3975" font-size="16">sol-APP3-r01:safari-segment21-feature-evalua</text>
+<text x="1102" y="3998" font-size="16">tor-retry1</text>
+<text x="1102" y="4021" font-size="18" font-weight="700">Status: pass</text>
+<text x="1102" y="4046" font-size="16">Non-additive · no usage charged here</text>
+</g>
+<g id="sol-APP4-r01:segment23-pre-feature-fixture" data-stage="evaluation" data-status="pass">
+<title>Baseline evaluation / admission; pass; non-additive</title>
+<rect x="1594" y="4550" width="438" height="136" rx="3" fill="#fff" stroke="#107e8d" stroke-width="1.5"/>
+<rect x="1594" y="4550" width="5" height="136" fill="#107e8d"/>
+<text x="1612" y="4578" font-size="22" font-weight="700">Baseline evaluation / admission</text>
+<text x="1612" y="4607" font-size="16">sol-APP4-r01:segment23-pre-feature-fixture</text>
+<text x="1612" y="4630" font-size="18" font-weight="700">Status: pass</text>
+<text x="1612" y="4655" font-size="16">Non-additive · no usage charged here</text>
+</g>
+<g id="sol-APP4-r01:feature-request" data-stage="feature-request" data-status="complete">
+<title>Feature implementation; complete; measured-receipt</title>
+<rect x="1594" y="4730" width="438" height="159" rx="3" fill="#fff" stroke="#107e8d" stroke-width="1.5"/>
+<rect x="1594" y="4730" width="5" height="159" fill="#107e8d"/>
+<text x="1612" y="4758" font-size="22" font-weight="700">Feature implementation</text>
+<text x="1612" y="4787" font-size="16">sol-APP4-r01:feature-request</text>
+<text x="1612" y="4810" font-size="18" font-weight="700">Status: complete</text>
+<text x="1612" y="4835" font-size="16">Interval: 10.62 min · included</text>
+<text x="1612" y="4858" font-size="16">Estimate: $3.12031280</text>
+</g>
+<g id="sol-APP4-r01:safari-segment23-original-migration-partial" data-stage="feature-evaluation" data-status="blocked">
+<title>Feature evaluation; blocked; non-additive</title>
+<rect x="1594" y="4933" width="438" height="159" rx="3" fill="#fff" stroke="#846316" stroke-width="1.5"/>
+<rect x="1594" y="4933" width="5" height="159" fill="#846316"/>
+<text x="1612" y="4961" font-size="22" font-weight="700">Feature evaluation</text>
+<text x="1612" y="4990" font-size="16">sol-APP4-r01:safari-segment23-original-migra</text>
+<text x="1612" y="5013" font-size="16">tion-partial</text>
+<text x="1612" y="5036" font-size="18" font-weight="700">Status: blocked</text>
+<text x="1612" y="5061" font-size="16">Non-additive · no usage charged here</text>
+</g>
+<g id="sol-APP4-r01:safari-segment23-feature-supplemental-retry1" data-stage="feature-evaluation" data-status="pass">
+<title>Feature evaluation; pass; non-additive</title>
+<rect x="1594" y="5136" width="438" height="159" rx="3" fill="#fff" stroke="#107e8d" stroke-width="1.5"/>
+<rect x="1594" y="5136" width="5" height="159" fill="#107e8d"/>
+<text x="1612" y="5164" font-size="22" font-weight="700">Feature evaluation</text>
+<text x="1612" y="5193" font-size="16">sol-APP4-r01:safari-segment23-feature-supple</text>
+<text x="1612" y="5216" font-size="16">mental-retry1</text>
+<text x="1612" y="5239" font-size="18" font-weight="700">Status: pass</text>
+<text x="1612" y="5264" font-size="16">Non-additive · no usage charged here</text>
+</g>
+<g id="sol-APP1-r01:segment24-independent-first" data-stage="feature-evaluation" data-status="blocked">
+<title>Feature evaluation; blocked; non-additive</title>
+<rect x="64" y="1934" width="438" height="136" rx="3" fill="#fff" stroke="#846316" stroke-width="1.5"/>
+<rect x="64" y="1934" width="5" height="136" fill="#846316"/>
+<text x="82" y="1962" font-size="22" font-weight="700">Feature evaluation</text>
+<text x="82" y="1991" font-size="16">sol-APP1-r01:segment24-independent-first</text>
+<text x="82" y="2014" font-size="18" font-weight="700">Status: blocked</text>
+<text x="82" y="2039" font-size="16">Non-additive · no usage charged here</text>
+</g>
+<g id="sol-APP1-r01:segment24-independent-retry1-complete" data-stage="feature-evaluation" data-status="pass">
+<title>Feature evaluation; pass; non-additive</title>
+<rect x="64" y="2114" width="438" height="159" rx="3" fill="#fff" stroke="#107e8d" stroke-width="1.5"/>
+<rect x="64" y="2114" width="5" height="159" fill="#107e8d"/>
+<text x="82" y="2142" font-size="22" font-weight="700">Feature evaluation</text>
+<text x="82" y="2171" font-size="16">sol-APP1-r01:segment24-independent-retry1-co</text>
+<text x="82" y="2194" font-size="16">mplete</text>
+<text x="82" y="2217" font-size="18" font-weight="700">Status: pass</text>
+<text x="82" y="2242" font-size="16">Non-additive · no usage charged here</text>
+</g>
+<g id="sol-APP4-r01:segment24-retrospective-first" data-stage="baseline-evaluation" data-status="blocked">
+<title>Retrospective baseline check; blocked; non-additive</title>
+<rect x="1594" y="5339" width="438" height="136" rx="3" fill="#fff" stroke="#846316" stroke-width="1.5"/>
+<rect x="1594" y="5339" width="5" height="136" fill="#846316"/>
+<text x="1612" y="5367" font-size="22" font-weight="700">Retrospective baseline check</text>
+<text x="1612" y="5396" font-size="16">sol-APP4-r01:segment24-retrospective-first</text>
+<text x="1612" y="5419" font-size="18" font-weight="700">Status: blocked</text>
+<text x="1612" y="5444" font-size="16">Non-additive · no usage charged here</text>
+</g>
+<g id="sol-APP4-r01:segment24-retrospective-retry1-complete" data-stage="baseline-evaluation" data-status="pass">
+<title>Retrospective baseline check; pass; non-additive</title>
+<rect x="1594" y="5519" width="438" height="159" rx="3" fill="#fff" stroke="#107e8d" stroke-width="1.5"/>
+<rect x="1594" y="5519" width="5" height="159" fill="#107e8d"/>
+<text x="1612" y="5547" font-size="22" font-weight="700">Retrospective baseline check</text>
+<text x="1612" y="5576" font-size="16">sol-APP4-r01:segment24-retrospective-retry1-</text>
+<text x="1612" y="5599" font-size="16">complete</text>
+<text x="1612" y="5622" font-size="18" font-weight="700">Status: pass</text>
+<text x="1612" y="5647" font-size="16">Non-additive · no usage charged here</text>
+</g>
+<g id="sol-APP1-r01:final-segment24" data-stage="final" data-status="blocked">
+<title>Final disposition · blocked; blocked; non-additive</title>
+<rect x="64" y="2317" width="438" height="136" rx="3" fill="#eef7f7" stroke="#846316" stroke-width="3"/>
+<rect x="64" y="2317" width="5" height="136" fill="#846316"/>
+<text x="82" y="2345" font-size="22" font-weight="700">Final disposition · blocked</text>
+<text x="82" y="2374" font-size="16">sol-APP1-r01:final-segment24</text>
+<text x="82" y="2397" font-size="18" font-weight="700">Status: blocked</text>
+<text x="82" y="2422" font-size="16">Non-additive · no usage charged here</text>
+</g>
+<g id="sol-APP2-r01:final-segment24" data-stage="final" data-status="pass">
+<title>Final disposition · qualified; pass; non-additive</title>
+<rect x="574" y="3286" width="438" height="136" rx="3" fill="#eef7f7" stroke="#107e8d" stroke-width="3"/>
+<rect x="574" y="3286" width="5" height="136" fill="#107e8d"/>
+<text x="592" y="3314" font-size="22" font-weight="700">Final disposition · qualified</text>
+<text x="592" y="3343" font-size="16">sol-APP2-r01:final-segment24</text>
+<text x="592" y="3366" font-size="18" font-weight="700">Status: pass</text>
+<text x="592" y="3391" font-size="16">Non-additive · no usage charged here</text>
+</g>
+<g id="sol-APP3-r01:final-segment24" data-stage="final" data-status="pass">
+<title>Final disposition · qualified; pass; non-additive</title>
+<rect x="1084" y="4121" width="438" height="136" rx="3" fill="#eef7f7" stroke="#107e8d" stroke-width="3"/>
+<rect x="1084" y="4121" width="5" height="136" fill="#107e8d"/>
+<text x="1102" y="4149" font-size="22" font-weight="700">Final disposition · qualified</text>
+<text x="1102" y="4178" font-size="16">sol-APP3-r01:final-segment24</text>
+<text x="1102" y="4201" font-size="18" font-weight="700">Status: pass</text>
+<text x="1102" y="4226" font-size="16">Non-additive · no usage charged here</text>
+</g>
+<g id="sol-APP4-r01:final-segment24" data-stage="final" data-status="blocked">
+<title>Final disposition · blocked; blocked; non-additive</title>
+<rect x="1594" y="5722" width="438" height="136" rx="3" fill="#eef7f7" stroke="#846316" stroke-width="3"/>
+<rect x="1594" y="5722" width="5" height="136" fill="#846316"/>
+<text x="1612" y="5750" font-size="22" font-weight="700">Final disposition · blocked</text>
+<text x="1612" y="5779" font-size="16">sol-APP4-r01:final-segment24</text>
+<text x="1612" y="5802" font-size="18" font-weight="700">Status: blocked</text>
+<text x="1612" y="5827" font-size="16">Non-additive · no usage charged here</text>
+</g>
+</svg>

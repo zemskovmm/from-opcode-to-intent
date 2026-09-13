@@ -1,0 +1,277 @@
+{
+  "description": "Source-bound390x844CSS mobile-layout web previews; not native-device or original migration proof. Sample input states differ across saved evaluations.",
+  "rows": [
+    {
+      "run_id": "astra-APP1-r01",
+      "model": "astra",
+      "arm": "APP1",
+      "phase": "feature",
+      "selection_label": "FINAL FEATURE",
+      "source_commit": "20924b5c811f9969745467541561427533538af0",
+      "sha256": "112876ec849dadae16251550119943b15b6cc5992e23b1dfbd36073ea5930df1",
+      "pixelwidth": 780,
+      "pixelheight": 1688,
+      "CSSviewport": {
+        "width": 390,
+        "height": 844
+      },
+      "engine": "Safari 26.6.2 W3C WebDriver (recovered evaluator screenshot)",
+      "existingvsfresh": "existing"
+    },
+    {
+      "run_id": "astra-APP2-r01",
+      "model": "astra",
+      "arm": "APP2",
+      "phase": "feature",
+      "selection_label": "FINAL FEATURE",
+      "source_commit": "ba370097b7b16ff450a586b632f5a651a1c9e4bf",
+      "sha256": "178dc611976c0d70050003416b37da43481ef6db90b982a9676a2708c93749d0",
+      "pixelwidth": 780,
+      "pixelheight": 1688,
+      "CSSviewport": {
+        "width": 390,
+        "height": 844
+      },
+      "engine": "Safari 26.6.2 W3C WebDriver (recovered evaluator screenshot)",
+      "existingvsfresh": "existing"
+    },
+    {
+      "run_id": "astra-APP3-r01",
+      "model": "astra",
+      "arm": "APP3",
+      "phase": "feature",
+      "selection_label": "FINAL FEATURE",
+      "source_commit": "9a124a381df388da922de5884a6dfa2895f20cf5",
+      "sha256": "f02e27b99cfe1a8736bb41f3181bb3522dc688b1515620b4d6856a726c0054d4",
+      "pixelwidth": 780,
+      "pixelheight": 1688,
+      "CSSviewport": {
+        "width": 390,
+        "height": 844
+      },
+      "engine": "Safari 26.6.2 W3C WebDriver (recovered evaluator screenshot)",
+      "existingvsfresh": "existing"
+    },
+    {
+      "run_id": "astra-APP4-r01",
+      "model": "astra",
+      "arm": "APP4",
+      "phase": "feature",
+      "selection_label": "FINAL FEATURE",
+      "source_commit": "54354151373d7f25d27a8a27b90051474112dcd5",
+      "sha256": "e1671f5cf4eefe9af3310c41505f238858081772ae4f664f636f81d3d8b6eafb",
+      "pixelwidth": 780,
+      "pixelheight": 1688,
+      "CSSviewport": {
+        "width": 390,
+        "height": 844
+      },
+      "engine": "Safari 26.6.2 W3C WebDriver (recovered evaluator screenshot)",
+      "existingvsfresh": "existing"
+    },
+    {
+      "run_id": "luna-APP1-r01",
+      "model": "luna",
+      "arm": "APP1",
+      "phase": "feature",
+      "selection_label": "FINAL FEATURE",
+      "source_commit": "b8b2c1f455fc3700c1b08124b28c4db27a5adef5",
+      "sha256": "749c9281add26da3e2263af401a404df1a847be43e6078c8a8780248fff34b36",
+      "pixelwidth": 780,
+      "pixelheight": 1688,
+      "CSSviewport": {
+        "width": 390,
+        "height": 844
+      },
+      "engine": "Safari 26.6.2 W3C WebDriver (recovered evaluator screenshot)",
+      "existingvsfresh": "existing"
+    },
+    {
+      "run_id": "luna-APP2-r01",
+      "model": "luna",
+      "arm": "APP2",
+      "phase": "feature",
+      "selection_label": "FINAL FEATURE",
+      "source_commit": "50d92ae842b03da0a5b8eb96bed8efbd690eec5c",
+      "sha256": "6f1a7dfcf44736fa3d77beb594acbb96010768ae44dab0cb792b39fad4d75061",
+      "pixelwidth": 780,
+      "pixelheight": 1688,
+      "CSSviewport": {
+        "width": 390,
+        "height": 844
+      },
+      "engine": "Safari 26.6.2 W3C WebDriver (recovered evaluator screenshot)",
+      "existingvsfresh": "existing"
+    },
+    {
+      "run_id": "luna-APP3-r01",
+      "model": "luna",
+      "arm": "APP3",
+      "phase": "feature",
+      "selection_label": "FINAL FEATURE",
+      "source_commit": "0a745cdcb3c2e34a215f0c772c844495e98e29e2",
+      "sha256": "8f0033579a0a06d44375f6e421df855cbe9601d2747ca254883a85f84e860429",
+      "pixelwidth": 780,
+      "pixelheight": 1688,
+      "CSSviewport": {
+        "width": 390,
+        "height": 844
+      },
+      "engine": "Safari 26.6.2 W3C WebDriver (recovered evaluator screenshot)",
+      "existingvsfresh": "existing"
+    },
+    {
+      "run_id": "luna-APP4-r01",
+      "model": "luna",
+      "arm": "APP4",
+      "phase": "feature",
+      "selection_label": "FINAL FEATURE",
+      "source_commit": "0dab21561f184accea5532a52c30b4d2191e9a9d",
+      "sha256": "c85490371863a46c97979b8dd5090c58f76fc94baceb2c7cb04c6d5c42724e71",
+      "pixelwidth": 780,
+      "pixelheight": 1688,
+      "CSSviewport": {
+        "width": 390,
+        "height": 844
+      },
+      "engine": "Safari 26.6.2 W3C WebDriver (recovered evaluator screenshot)",
+      "existingvsfresh": "existing"
+    },
+    {
+      "run_id": "sol-APP1-r01",
+      "model": "sol",
+      "arm": "APP1",
+      "phase": "feature",
+      "selection_label": "FINAL FEATURE",
+      "source_commit": "6ac2b21f5a1280912d62827c0a23d61e6229fea2",
+      "sha256": "f97d351fc069320215df498f4c437770a857f46c5bce916b4b88a42ffef9710d",
+      "pixelwidth": 780,
+      "pixelheight": 1688,
+      "CSSviewport": {
+        "width": 390,
+        "height": 844
+      },
+      "engine": "Safari 26.6.2 W3C WebDriver (recovered evaluator screenshot)",
+      "existingvsfresh": "existing"
+    },
+    {
+      "run_id": "sol-APP2-r01",
+      "model": "sol",
+      "arm": "APP2",
+      "phase": "feature",
+      "selection_label": "FINAL FEATURE",
+      "source_commit": "ffafb1bbdc3bbd652e548dfcd13dfcb8794a6c6c",
+      "sha256": "4338268e4a9d3c073230d21d19555e86e61da7f3a327e2fd95bdb4827d3f03ae",
+      "pixelwidth": 780,
+      "pixelheight": 1688,
+      "CSSviewport": {
+        "width": 390,
+        "height": 844
+      },
+      "engine": "Safari 26.6.2 W3C WebDriver (recovered evaluator screenshot)",
+      "existingvsfresh": "existing"
+    },
+    {
+      "run_id": "sol-APP3-r01",
+      "model": "sol",
+      "arm": "APP3",
+      "phase": "feature",
+      "selection_label": "FINAL FEATURE",
+      "source_commit": "1af417a95bb3909d033ce48f012307f7c9a7e4e9",
+      "sha256": "12fb08f50a58d00e51a2ca08d2888a2c433fe1e66f57beb17d452f9d76ed696c",
+      "pixelwidth": 780,
+      "pixelheight": 1688,
+      "CSSviewport": {
+        "width": 390,
+        "height": 844
+      },
+      "engine": "Safari 26.6.2 W3C WebDriver (recovered evaluator screenshot)",
+      "existingvsfresh": "existing"
+    },
+    {
+      "run_id": "sol-APP4-r01",
+      "model": "sol",
+      "arm": "APP4",
+      "phase": "feature",
+      "selection_label": "FINAL FEATURE",
+      "source_commit": "aa16ab404b1d9d9326a0bcfbff3167cdee4db542",
+      "sha256": "de18e88189bf11e34022759e59fcc08bf9eb6fe9ff95770ec4f9673a3845cb52",
+      "pixelwidth": 780,
+      "pixelheight": 1688,
+      "CSSviewport": {
+        "width": 390,
+        "height": 844
+      },
+      "engine": "Safari 26.6.2 W3C WebDriver (recovered evaluator screenshot)",
+      "existingvsfresh": "existing"
+    },
+    {
+      "run_id": "terra-APP1-r01",
+      "model": "terra",
+      "arm": "APP1",
+      "phase": "feature",
+      "selection_label": "FINAL FEATURE",
+      "source_commit": "c409463b6a49446e9f0bcac0c99811fdb771cfc1",
+      "sha256": "1c0b97c2cb0b5e152ba1b8ba44d65b67d683cde8dfe22b2cbd5473ed4ba821c4",
+      "pixelwidth": 780,
+      "pixelheight": 1688,
+      "CSSviewport": {
+        "width": 390,
+        "height": 844
+      },
+      "engine": "Safari 26.6.2 W3C WebDriver (recovered evaluator screenshot)",
+      "existingvsfresh": "existing"
+    },
+    {
+      "run_id": "terra-APP2-r01",
+      "model": "terra",
+      "arm": "APP2",
+      "phase": "feature",
+      "selection_label": "FINAL FEATURE",
+      "source_commit": "9dbc4402c0690799f1830a3c21b5f59406500e8b",
+      "sha256": "9d1f9029d51751cd4bcc326c813ea5c01131eaa8ba6da3e5759873821c40a797",
+      "pixelwidth": 780,
+      "pixelheight": 1688,
+      "CSSviewport": {
+        "width": 390,
+        "height": 844
+      },
+      "engine": "Safari 26.6.2 W3C WebDriver (recovered evaluator screenshot)",
+      "existingvsfresh": "existing"
+    },
+    {
+      "run_id": "terra-APP3-r01",
+      "model": "terra",
+      "arm": "APP3",
+      "phase": "feature",
+      "selection_label": "FINAL FEATURE",
+      "source_commit": "0625a24786f7f4aedadad303dab8fa73c7d68f34",
+      "sha256": "c1abb4f2b22b6b4f6363436866ec9e2a7afee64b87095d156453fbd70c369bc0",
+      "pixelwidth": 780,
+      "pixelheight": 1688,
+      "CSSviewport": {
+        "width": 390,
+        "height": 844
+      },
+      "engine": "Safari 26.6.2 W3C WebDriver",
+      "existingvsfresh": "fresh"
+    },
+    {
+      "run_id": "terra-APP4-r01",
+      "model": "terra",
+      "arm": "APP4",
+      "phase": "baseline",
+      "selection_label": "FINAL BASELINE ONLY \u2014 feature unsent",
+      "source_commit": "dcf95bd078f541007cc05915405c664d31ec3521",
+      "sha256": "fe9efc840de5010fac13aa73fea07aa5c28954d530228a8fe8639920011cf25b",
+      "pixelwidth": 780,
+      "pixelheight": 1688,
+      "CSSviewport": {
+        "width": 390,
+        "height": 844
+      },
+      "engine": "Safari 26.6.2 W3C WebDriver",
+      "existingvsfresh": "fresh"
+    }
+  ]
+}

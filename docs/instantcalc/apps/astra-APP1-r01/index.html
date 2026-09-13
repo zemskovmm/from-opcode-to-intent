@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f5f4ef">
+  <meta name="description" content="Ten lines for your everyday calculations. Type, connect, and get answers instantly.">
+  <title>Workpad — Instant calculator</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23233f35'/%3E%3Cpath d='M18 23h28M18 41h28M32 13v20' stroke='%23dcecac' stroke-width='5'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./src/app.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="app-header">
+      <a class="brand" href="./" aria-label="Workpad home"><span class="brand-mark" aria-hidden="true">＋<span>−</span></span>workpad<span class="brand-dot">.</span></a>
+      <button id="help-button" class="quiet-button">How it works <span aria-hidden="true">↗</span></button>
+    </header>
+    <main>
+      <section class="intro" aria-labelledby="page-title">
+        <div><p class="eyebrow">LESS TAPPING. MORE DOING.</p><h1 id="page-title">A little space to work things out.</h1><p class="subtitle">Everyday numbers. Instant answers.</p></div>
+        <span class="live-badge"><span></span> Calculates as you type</span>
+      </section>
+      <div class="workspace-layout">
+        <section class="workpad" aria-label="Ten-row calculator">
+          <div class="sheet-toolbar"><span class="sheet-title">Your workpad <span>01 — 10</span></span><div class="sheet-actions"><button id="variables-button" class="quiet-button" aria-haspopup="dialog">Variables <span id="variable-count">0</span></button><button id="clear-all" class="quiet-button">Clear all</button></div></div>
+          <div class="column-labels" aria-hidden="true"><span>#</span><span>EXPRESSION</span><span>RESULT / COPY</span></div>
+          <div id="rows" class="rows"></div>
+          <section class="total-row" aria-label="Calculation total">
+            <div class="total-heading"><span><strong>Total</strong><small>Includes subtotal lines</small></span><span aria-live="polite"><button id="total-value" class="row-result" aria-label="Total: 0. Click to copy.">0</button></span></div>
+            <details class="total-exclusions"><summary id="total-summary">0 included · 10 excluded</summary><p id="total-details">Blank: lines 1–10.</p></details>
+          </section>
+          <div class="sheet-footer"><span id="save-status">Saved on this device</span><span>10 lines. Plenty of possibilities.</span></div>
+        </section>
+        <aside class="controls" aria-label="Calculator keypad">
+          <div class="keypad">
+            <div class="keypad-heading"><span><span class="active-dot"></span> Editing line <strong id="active-number">01</strong></span><button id="advanced-toggle" aria-expanded="false" aria-controls="advanced-keys">More <span aria-hidden="true">＋</span></button></div>
+            <div id="feedback" class="feedback" role="status" aria-live="polite">Start with a number. We’ll do the math.</div>
+            <div id="advanced-keys" class="advanced-keys" hidden>
+              <button data-insert="^" aria-label="Power">xʸ</button><button data-insert="²" aria-label="Square">x²</button><button data-insert="√(" aria-label="Square root">√</button><button data-insert="%" aria-label="Percent">%</button>
+            </div>
+            <div class="key-grid">
+              <button data-action="reference" class="utility ref-key" aria-pressed="false" title="Insert a reference to an earlier line">Ref <span>↖</span></button><button data-insert="(" class="utility" aria-label="Open parenthesis">(</button><button data-insert=")" class="utility" aria-label="Close parenthesis">)</button><button data-action="backspace" class="utility" aria-label="Backspace">⌫</button>
+              <button data-insert="7">7</button><button data-insert="8">8</button><button data-insert="9">9</button><button data-insert="÷" class="operator" aria-label="Divide">÷</button>
+              <button data-insert="4">4</button><button data-insert="5">5</button><button data-insert="6">6</button><button data-insert="×" class="operator" aria-label="Multiply">×</button>
+              <button data-insert="1">1</button><button data-insert="2">2</button><button data-insert="3">3</button><button data-insert="−" class="operator" aria-label="Subtract">−</button>
+              <button data-insert="0">0</button><button data-insert=".">.</button><button data-action="next" class="next-key" aria-label="Next line">Next <span>↵</span></button><button data-insert="+" class="operator" aria-label="Add">＋</button>
+            </div>
+            <div class="edit-tools"><button data-action="left" aria-label="Move cursor left">← <span>Cursor</span></button><button data-action="right" aria-label="Move cursor right">→</button><button data-action="select">Select all</button><button data-action="clear">Clear line</button></div>
+          </div>
+          <div class="reference-note"><span class="note-icon" aria-hidden="true">↳</span><div><h2>Good numbers work together.</h2><p>Use <code>$1 + $2</code> to add two lines. Change a number, and the rest follows.</p></div></div>
+          <p class="privacy-note">Just your numbers. Right here on your device.</p>
+        </aside>
+      </div>
+    </main>
+    <footer class="page-footer"><span>BUILT FOR THE EVERYDAY</span><span>No equals. No extra steps.</span></footer>
+  </div>
+  <dialog id="help-dialog" aria-labelledby="help-title">
+    <div class="dialog-top"><span class="eyebrow">MEET YOUR WORKPAD</span><button data-close="help-dialog" class="quiet-button" aria-label="Close help">✕</button></div>
+    <h2 id="help-title">Type it. It’s calculated.</h2>
+    <p>Select any of the ten lines and type, or use the keypad. Answers appear immediately. Press Enter or Next to move down a line.</p>
+    <h3>Connect your calculations</h3><p>On line 3, enter <code>$1 + $2</code> to add lines 1 and 2. Or choose <strong>Ref</strong>, then select an earlier line. Only earlier lines can be referenced.</p>
+    <h3>Give reusable numbers a name</h3><p>Open <strong>Variables</strong> to edit a separate table of names and numeric values. Use a name directly, such as <code>hourly_rate × 3</code>, or choose Insert beside a variable. Names are case-sensitive. Editing a value updates its calculations and their dependent lines immediately.</p>
+    <h3>See the whole list’s total</h3><p>The bottom row adds every valid calculation result, including referenced and subtotal lines. Blank, unfinished and invalid lines are skipped; expand the exclusion count to see which ones. Variable-table values are not added directly. The total uses unrounded results and cannot be referenced as another calculation line.</p>
+    <h3>The everyday essentials</h3><p>Use +, −, ×, ÷ and parentheses. More opens powers, squares, square roots and percentages. For 15% of 200, enter <code>200 × 15%</code>. A percentage is always divided by 100.</p>
+    <h3>A quiet moment while you type</h3><p><strong>…</strong> means unfinished or waiting on another line. <strong>ⓘ</strong> means the expression needs attention. Select either for an explanation. Select a result to copy it.</p>
+    <h3>Ready when you come back</h3><p>Your expressions, variables, selected line and keypad preference save in this browser on this device. Clearing browser data removes them. Results show integers or two decimals; linked calculations use the unrounded value. Use a decimal point and enter numbers without currency symbols or units.</p>
+    <button data-close="help-dialog" class="primary-button">Let’s work it out</button>
+  </dialog>
+  <dialog id="variables-dialog" aria-labelledby="variables-title">
+    <div class="dialog-top"><h2 id="variables-title">Variables</h2><button data-close="variables-dialog" class="quiet-button" aria-label="Close variables">✕</button></div>
+    <p class="variable-guide">Reusable numbers, separate from your ten lines. Try <code>hourly_rate × 3</code>. Names are case-sensitive: start with a letter, then use letters, digits or underscores (up to 32 characters).</p>
+    <div class="variable-toolbar"><button id="add-variable" class="primary-button">＋ Add variable</button><span id="variable-destination"></span></div>
+    <p id="no-variables">No variables yet. Add one to reuse a number.</p>
+    <div class="variable-table-scroll"><table class="variable-table" aria-label="Named numeric variables"><thead><tr><th scope="col">Name</th><th scope="col">Numeric value</th><th scope="col">Actions</th></tr></thead><tbody id="variable-rows"></tbody></table></div>
+    <div id="variable-keypad" hidden>
+      <p id="variable-feedback" role="status" aria-live="polite">Select a numeric value to edit.</p>
+      <div class="variable-keys" aria-label="Variable numeric keypad">
+        <button data-value="7">7</button><button data-value="8">8</button><button data-value="9">9</button><button data-variable-action="backspace" aria-label="Backspace variable value">⌫</button>
+        <button data-value="4">4</button><button data-value="5">5</button><button data-value="6">6</button><button data-variable-action="clear">Clear</button>
+        <button data-value="1">1</button><button data-value="2">2</button><button data-value="3">3</button><button data-value="-" aria-label="Minus sign">−</button>
+        <button data-value="0">0</button><button data-value=".">.</button><button data-variable-action="select">Select all</button><button data-value="+" aria-label="Plus sign">＋</button>
+      </div>
+    </div>
+    <p class="variable-guide">Values are numbers, not expressions. Renaming or removing a variable leaves expression text as written; references to its old name need updating.</p>
+    <div class="dialog-actions"><span id="variable-save-status" role="status">Saved on this device</span><button data-close="variables-dialog" class="primary-button">Done</button></div>
+  </dialog>
+  <dialog id="clear-dialog" aria-labelledby="clear-title"><h2 id="clear-title">A clean workpad?</h2><p>This clears all ten lines, including any linked calculations. Your variable table is kept. This cannot be undone.</p><div class="dialog-actions"><button data-close="clear-dialog" class="quiet-button">Keep my numbers</button><button id="confirm-clear" class="primary-button">Clear all lines</button></div></dialog>
+  <dialog id="copy-dialog" aria-labelledby="copy-title"><h2 id="copy-title">Your result</h2><p>Automatic copying isn’t available. Select and copy this value.</p><input id="copy-value" readonly aria-label="Result to copy"><button data-close="copy-dialog" class="primary-button">Done</button></dialog>
+  <noscript>This calculator needs JavaScript enabled to calculate and save your workpad.</noscript>
+</body>
+</html>

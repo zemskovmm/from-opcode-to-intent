@@ -1,0 +1,44 @@
+{
+  "as_of": "2026-09-13T03:51:07.668753+00:00",
+  "source_package": "benchmark-final-verified",
+  "inputs": [
+    {
+      "name": "run-outcomes.json",
+      "sha256": "ff4425ff7f418d7b78a531d3eb927955df5edd26b50aad32e062255298b17dbc"
+    },
+    {
+      "name": "quality-matrix.json",
+      "sha256": "da81c828e66a9ed5a2bcaa38f388c45f2e74c011c0c6bd550f71e6a1ea19b26d"
+    },
+    {
+      "name": "events-derived-schema-v1.jsonl",
+      "sha256": "f5a4e79304c204ec5fd8012b16b2579acf3f0e49e7c35a3da9facde35bea32ed"
+    },
+    {
+      "name": "usage-and-time-by-phase.json",
+      "sha256": "54ce6897bfc2a7401bc55ecdd90ed3a3cdc1797424ee8d26f73ed6c81561e4ab"
+    },
+    {
+      "name": "phase-process-data.csv",
+      "sha256": "9987e0f68e495c57e31f54d29753c0a3545a2810f998bd0be357beb273e2a5f8"
+    },
+    {
+      "name": "accounting.json",
+      "sha256": "92c33e0f7d54e2bfdadf9b432133f9b1b7b9fe0d4bff93ee8d0d76e00064c631"
+    },
+    {
+      "name": "refinements.jsonl",
+      "sha256": "eaed11e25bbb62c2d5c845dbcfde22fa382a6c2185db52684d70476dca8ff88b"
+    },
+    {
+      "name": "ui-rubrics.json",
+      "sha256": "29cfe171fbd34e2f56077fa3830955ca239f7c930eafdaf42533b9be4fe329c9"
+    }
+  ],
+  "derivation": "Whitelist only. Exact Decimal receipt estimates reconcile to accounting. Time sums use unique complete receipt IDs bound to phase-process CSV. Canonical event parent links retained. No container totals added.",
+  "rate_source": "https://developers.openai.com/api/docs/pricing",
+  "rate_checked_at": [
+    "2026-09-12T10:25:36.734957+00:00",
+    "2026-09-12T11:17:52.017212+00:00"
+  ]
+}

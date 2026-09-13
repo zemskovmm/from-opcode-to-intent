@@ -123,6 +123,15 @@ test('checking deliberate regression clears stale success and renders the missin
   assert.equal(dom.result.dataset.result, 'fail');
   assert.match(dom.detail.textContent, /Missing \(1\):\nuntracked \| untracked \| untracked name\.txt/);
   assert.match(dom.detail.textContent, /Extra \(0\):\n\(none\)/);
+
+  dom.regression.checked = false;
+  dom.regression.emit('change');
+  assert.equal(dom.result.textContent, 'Not run');
+  dom.run.emit('click');
+  assert.equal(dom.result.textContent, 'PASS');
+  assert.equal(dom.result.dataset.result, 'pass');
+  assert.match(dom.observed.textContent, /untracked \| untracked \| untracked name\.txt/);
+  assert.match(dom.detail.textContent, /Matched 6 expected rows\./);
 });
 
 test('browser exercise displays a failed local fixture request and stays disabled', async () => {

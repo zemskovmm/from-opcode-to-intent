@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="A persistent ten-line calculator with named variables, live results, and totals."
+    />
+    <title>Instantcalc</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="masthead">
+        <div class="brand">
+          <div class="brand-mark" aria-hidden="true">=</div>
+          <div>
+            <p class="eyebrow">Live calculation sheet</p>
+            <h1>Instantcalc</h1>
+            <p class="tagline">Ten lines. Every answer stays connected.</p>
+          </div>
+        </div>
+        <p class="save-state" id="save-state">
+          <span aria-hidden="true"></span>
+          Saved locally
+        </p>
+      </header>
+
+      <main class="workspace">
+        <div class="left-stack">
+          <section class="sheet-card" aria-labelledby="sheet-title">
+            <div class="sheet-heading">
+              <h2 id="sheet-title">Calculation sheet</h2>
+              <div class="column-labels" aria-hidden="true">
+                <span>Expression</span>
+                <span>Result</span>
+              </div>
+            </div>
+            <div id="sheet" class="sheet"></div>
+            <div class="total-row" aria-live="polite">
+              <div>
+                <span class="total-label">Total</span>
+                <span id="total-meta" class="total-meta"></span>
+              </div>
+              <output id="total-result" class="total-result" aria-label="Total of valid calculation lines">0</output>
+            </div>
+          </section>
+
+          <section class="variables-card" aria-labelledby="variables-title">
+            <div class="variables-heading">
+              <div>
+                <p class="eyebrow">Reusable values</p>
+                <h2 id="variables-title">Variables</h2>
+              </div>
+              <button id="add-variable" class="add-variable" type="button">+ Add variable</button>
+            </div>
+            <div class="variable-table-wrap">
+              <table class="variable-table">
+                <thead>
+                  <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Numeric value</th>
+                    <th scope="col"><span class="visually-hidden">Status and actions</span></th>
+                  </tr>
+                </thead>
+                <tbody id="variables"></tbody>
+              </table>
+              <p id="variables-empty" class="variables-empty">No variables yet. Add one to reuse a value by name.</p>
+            </div>
+            <p class="variables-note">Use <code>@name</code> in any calculation. Names are case-sensitive.</p>
+          </section>
+        </div>
+
+        <aside class="keypad-card" aria-label="Calculator keypad">
+          <div class="keypad-heading">
+            <div>
+              <p class="eyebrow">Keypad</p>
+              <h2 id="active-line-label">Editing line 1</h2>
+            </div>
+            <button
+              class="reference-trigger"
+              type="button"
+              data-action="reference"
+              aria-expanded="false"
+              aria-controls="reference-panel"
+            >
+              Reference
+            </button>
+          </div>
+
+          <div id="reference-panel" class="reference-panel" hidden></div>
+
+          <div class="keypad">
+            <button type="button" data-token="(" aria-label="Open parenthesis">(</button>
+            <button type="button" data-token=")" aria-label="Close parenthesis">)</button>
+            <button type="button" data-token="%" aria-label="Percent">%</button>
+            <button type="button" data-action="backspace" aria-label="Backspace">⌫</button>
+
+            <button type="button" data-token="7">7</button>
+            <button type="button" data-token="8">8</button>
+            <button type="button" data-token="9">9</button>
+            <button class="operator" type="button" data-token="÷" aria-label="Divide">÷</button>
+
+            <button type="button" data-token="4">4</button>
+            <button type="button" data-token="5">5</button>
+            <button type="button" data-token="6">6</button>
+            <button class="operator" type="button" data-token="×" aria-label="Multiply">×</button>
+
+            <button type="button" data-token="1">1</button>
+            <button type="button" data-token="2">2</button>
+            <button type="button" data-token="3">3</button>
+            <button class="operator" type="button" data-token="−" aria-label="Subtract">−</button>
+
+            <button type="button" data-token="0">0</button>
+            <button type="button" data-token=".">.</button>
+            <button type="button" data-action="reference" aria-label="Insert a reference">$ / @</button>
+            <button class="operator" type="button" data-token="+" aria-label="Add">+</button>
+
+            <button id="clear-key" class="clear-key" type="button" data-action="clear">Clear line</button>
+          </div>
+          <p class="keypad-note">Results update as you type—no equals key needed.</p>
+        </aside>
+      </main>
+    </div>
+
+    <script type="module" src="./src/app.js"></script>
+  </body>
+</html>

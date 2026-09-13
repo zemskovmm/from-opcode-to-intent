@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
+  <meta name="theme-color" content="#f5f2eb">
+  <title>Instant — everyday calculator</title>
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./src/app.js"></script>
+</head>
+<body>
+  <main class="app">
+    <header>
+      <div class="brand"><span class="mark" aria-hidden="true">≋</span><h1>instant<span class="brand-dot">.</span></h1><span class="tagline">A little space to work things out.</span></div>
+      <div class="sheet-heading"><div><p class="eyebrow">EVERYDAY CALCULATOR</p><h2>Your worksheet</h2></div><button id="clear-sheet" class="quiet">Clear sheet</button></div>
+      <div class="sheet-meta"><span>10 lines. All connected.</span><span id="save-state">Saved on this device</span></div>
+    </header>
+
+    <div id="workspace">
+      <details id="variables-panel">
+        <summary>Variables <span id="variable-count">0</span></summary>
+        <p class="variable-help">Use a name like <code>rate</code> in <code>hours × rate + $1</code>. Names are case-sensitive; values are numbers.</p>
+        <table id="variable-table" aria-label="Named numeric variables">
+          <thead><tr><th scope="col">Name</th><th scope="col">Value</th><th scope="col">Actions</th></tr></thead>
+          <tbody id="variable-entries"></tbody>
+        </table>
+        <p id="variables-empty" class="variable-help">No variables yet. Your ten calculation lines stay below.</p>
+        <button id="add-variable" class="quiet">+ Add variable</button>
+      </details>
+      <section id="worksheet" aria-label="Ten calculation rows"></section>
+      <section class="total-row" aria-label="Worksheet total">
+        <div class="total-heading"><strong>Total</strong><output id="total-value" aria-label="Total of valid calculation lines">0</output></div>
+        <p id="total-exclusions"></p>
+        <p class="total-help">Includes every valid line, including subtotals. Variables are not added separately.</p>
+      </section>
+    </div>
+
+    <section class="controls" aria-label="Calculator controls">
+      <div class="editor-strip"><label id="active-label" for="active-input">Editing row 1</label><input id="active-input" aria-label="Active expression" inputmode="none" autocomplete="off" spellcheck="false"><button id="typing" class="quiet" aria-pressed="false">Type with keyboard</button></div>
+      <div class="toolbar">
+        <button id="use-row" class="reference-button">↗ Use row</button>
+        <div class="button-pair"><button data-action="left" aria-label="Move cursor left">←</button><button data-action="right" aria-label="Move cursor right">→</button></div>
+        <div class="button-pair"><button data-action="up" aria-label="Previous row">↑</button><button data-action="down" aria-label="Next row">↓</button></div>
+      </div>
+      <div id="reference-hint" hidden>Choose a numbered row to insert its value. <button id="cancel-reference" class="quiet">Cancel</button></div>
+      <div id="keypad" aria-label="Calculator keypad">
+        <button data-insert="(" class="function">(</button><button data-insert=")" class="function">)</button><button data-insert="%" class="function">%</button><button data-insert="÷" class="operator" aria-label="Divide">÷</button>
+        <button data-insert="7">7</button><button data-insert="8">8</button><button data-insert="9">9</button><button data-insert="×" class="operator" aria-label="Multiply">×</button>
+        <button data-insert="4">4</button><button data-insert="5">5</button><button data-insert="6">6</button><button data-insert="−" class="operator" aria-label="Subtract">−</button>
+        <button data-insert="1">1</button><button data-insert="2">2</button><button data-insert="3">3</button><button data-insert="+" class="operator" aria-label="Add">+</button>
+        <button data-action="backspace" class="function" aria-label="Backspace">⌫</button><button data-insert="0">0</button><button data-insert=".">.</button><button data-action="clear" class="function clear-key">Clear row</button>
+      </div>
+      <footer><span id="notice" role="status">Answers as you type. No equals needed.</span><span class="footer-hint">Tap an answer to copy</span></footer>
+    </section>
+    <dialog id="clear-dialog" aria-labelledby="clear-title"><h2 id="clear-title">Clear your worksheet?</h2><p>All ten expressions will be removed from this device. Your variables will be kept.</p><div class="dialog-actions"><button id="cancel-clear">Keep worksheet</button><button id="confirm-clear" class="confirm">Clear all ten rows</button></div></dialog>
+  </main>
+</body>
+</html>

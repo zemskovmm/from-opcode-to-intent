@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f4f1e8" />
+    <meta
+      name="description"
+      content="A ten-line calculator with instant results, named variables, and live references."
+    />
+    <title>Tenfold — Instant Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="app-header">
+        <div>
+          <p class="eyebrow">INSTANT WORKSHEET</p>
+          <h1>Tenfold<span aria-hidden="true">.</span></h1>
+        </div>
+        <button class="clear-all" id="clear-all" type="button">Clear all</button>
+      </header>
+
+      <section class="variables-card" aria-labelledby="variables-title">
+        <div class="variables-header">
+          <div>
+            <p class="section-kicker">Reusable values</p>
+            <h2 id="variables-title">Variables</h2>
+          </div>
+          <button class="add-variable" id="add-variable" type="button">+ Add variable</button>
+        </div>
+        <p class="variables-help">Use <code>@name</code> in any calculation line.</p>
+        <div class="variables-scroll">
+          <table class="variables-table">
+            <thead>
+              <tr><th scope="col">Name</th><th scope="col">Value</th><th scope="col"><span class="sr-only">Actions</span></th></tr>
+            </thead>
+            <tbody id="variable-rows"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="worksheet" aria-label="Calculation worksheet">
+        <div class="column-labels" aria-hidden="true">
+          <span>Line</span><span>Expression</span><span>Result</span>
+        </div>
+        <ol class="lines" id="lines"></ol>
+        <div class="total-row" aria-label="Worksheet total">
+          <div class="total-label">
+            <strong>Total</strong>
+            <button id="total-detail" type="button">0 included · 10 excluded</button>
+          </div>
+          <output class="total-result" id="total-result">0</output>
+        </div>
+      </section>
+
+      <p class="status-note" id="status-note" role="status" aria-live="polite">
+        Tap a line, then type or use the keypad.
+      </p>
+    </main>
+
+    <aside class="keypad" aria-label="Calculator keypad">
+      <div class="reference-panel" id="reference-panel" hidden>
+        <div class="reference-heading">
+          <strong>Insert a reference</strong>
+          <span>Use its live result</span>
+        </div>
+        <p class="reference-label">Lines</p>
+        <div class="reference-grid" id="reference-grid"></div>
+        <p class="reference-label variable-reference-label">Variables</p>
+        <div class="reference-grid variable-reference-grid" id="variable-reference-grid"></div>
+        <p class="no-variable-references" id="no-variable-references">
+          Add a valid variable to reference it here.
+        </p>
+      </div>
+
+      <div class="key-grid" id="key-grid">
+        <button type="button" data-insert="(" aria-label="Open parenthesis">(</button>
+        <button type="button" data-insert=")" aria-label="Close parenthesis">)</button>
+        <button type="button" data-action="sqrt" aria-label="Square root">√</button>
+        <button type="button" data-insert="^" aria-label="Power">x<sup>y</sup></button>
+        <button type="button" data-insert="%" aria-label="Percent">%</button>
+
+        <button type="button" data-insert="7">7</button>
+        <button type="button" data-insert="8">8</button>
+        <button type="button" data-insert="9">9</button>
+        <button class="operator" type="button" data-insert="÷" aria-label="Divide">÷</button>
+        <button class="utility" type="button" data-action="backspace" aria-label="Backspace">⌫</button>
+
+        <button type="button" data-insert="4">4</button>
+        <button type="button" data-insert="5">5</button>
+        <button type="button" data-insert="6">6</button>
+        <button class="operator" type="button" data-insert="×" aria-label="Multiply">×</button>
+        <button class="utility clear-line" type="button" data-action="clear">C</button>
+
+        <button type="button" data-insert="1">1</button>
+        <button type="button" data-insert="2">2</button>
+        <button type="button" data-insert="3">3</button>
+        <button class="operator" type="button" data-insert="−" aria-label="Subtract">−</button>
+        <button
+          class="reference-key"
+          id="reference-key"
+          type="button"
+          data-action="references"
+          aria-expanded="false"
+          aria-controls="reference-panel"
+        >
+          $ @<span class="key-caption">refs</span>
+        </button>
+
+        <button class="zero" type="button" data-insert="0">0</button>
+        <button type="button" data-insert=".">.</button>
+        <button class="operator plus" type="button" data-insert="+" aria-label="Add">+</button>
+      </div>
+    </aside>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

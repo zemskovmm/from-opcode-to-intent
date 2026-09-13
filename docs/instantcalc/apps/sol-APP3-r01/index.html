@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#173f38">
+    <title>Tenfold — Instant Calculator</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="workspace" aria-labelledby="app-title">
+        <header class="masthead">
+          <div>
+            <p class="eyebrow">Instant worksheet</p>
+            <h1 id="app-title">Tenfold<span>.</span></h1>
+          </div>
+          <button class="clear-all" id="clear-all" type="button">Clear all</button>
+        </header>
+
+        <div class="column-labels" aria-hidden="true">
+          <span>Expression</span>
+          <span>Result</span>
+        </div>
+        <section class="worksheet" id="worksheet" aria-label="Calculation worksheet"></section>
+
+        <section class="total-row" aria-label="Worksheet total">
+          <div class="total-heading">
+            <span>Total</span>
+            <small id="total-detail">0 included</small>
+          </div>
+          <output class="total-value" id="total-value" aria-live="polite">0</output>
+        </section>
+
+        <section class="variables-section" aria-labelledby="variables-title">
+          <header class="variables-header">
+            <div>
+              <p class="section-kicker">Reusable values</p>
+              <h2 id="variables-title">Named variables</h2>
+              <p>Reference them in calculations with <code>@name</code>.</p>
+            </div>
+            <button id="add-variable" type="button">+ Add variable</button>
+          </header>
+          <div class="variable-columns" aria-hidden="true">
+            <span>Name</span>
+            <span>Numeric value</span>
+          </div>
+          <div id="variable-rows" class="variable-rows"></div>
+          <p class="empty-variables" id="empty-variables">No variables yet.</p>
+        </section>
+
+        <p class="storage-note"><span aria-hidden="true">●</span> Saved on this device</p>
+      </section>
+
+      <aside class="keypad-shell" aria-label="Calculator keypad">
+        <div class="reference-panel" id="reference-panel" hidden>
+          <div class="reference-heading">
+            <strong>Use an earlier line</strong>
+            <button id="close-references" type="button" aria-label="Close reference picker">×</button>
+          </div>
+          <div class="reference-options" id="reference-options"></div>
+        </div>
+
+        <div class="active-line">
+          <span aria-live="polite">Editing <strong id="active-line-label">Line 1</strong></span>
+          <button id="show-variables" type="button"><strong>@</strong> Variables</button>
+        </div>
+        <div class="keypad" id="keypad">
+          <button type="button" data-insert="(" class="utility-key">(</button>
+          <button type="button" data-insert=")" class="utility-key">)</button>
+          <button type="button" data-insert="%" class="utility-key">%</button>
+          <button type="button" data-action="backspace" class="utility-key" aria-label="Backspace">⌫</button>
+
+          <button type="button" data-insert="7">7</button>
+          <button type="button" data-insert="8">8</button>
+          <button type="button" data-insert="9">9</button>
+          <button type="button" data-insert="÷" class="operator-key">÷</button>
+
+          <button type="button" data-insert="4">4</button>
+          <button type="button" data-insert="5">5</button>
+          <button type="button" data-insert="6">6</button>
+          <button type="button" data-insert="×" class="operator-key">×</button>
+
+          <button type="button" data-insert="1">1</button>
+          <button type="button" data-insert="2">2</button>
+          <button type="button" data-insert="3">3</button>
+          <button type="button" data-insert="−" class="operator-key">−</button>
+
+          <button type="button" data-action="reference" class="reference-key">$</button>
+          <button type="button" data-insert="0">0</button>
+          <button type="button" data-insert=".">.</button>
+          <button type="button" data-insert="+" class="operator-key">+</button>
+
+          <button type="button" data-action="clear" class="wide-key quiet-key">Clear line</button>
+          <button type="button" data-action="next" class="wide-key next-key">Next line <span aria-hidden="true">↓</span></button>
+        </div>
+      </aside>
+    </main>
+
+    <script type="module" src="./src/app.js"></script>
+  </body>
+</html>

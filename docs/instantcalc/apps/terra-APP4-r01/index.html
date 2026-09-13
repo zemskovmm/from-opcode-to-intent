@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f5f4ef">
+    <title>InstantCalc</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main>
+      <header>
+        <p class="eyebrow">LIVE CALCULATOR</p>
+        <h1>InstantCalc</h1>
+        <p class="intro">Ten lines, always up to date.</p>
+      </header>
+      <section class="calculator" aria-label="Instant calculator">
+        <div id="rows" class="rows"></div>
+        <section class="keypad" aria-label="Calculator keypad">
+          <div id="references" class="references" aria-label="Earlier row references"></div>
+          <div class="keys">
+            <button data-action="clear" class="key utility">Clear row</button>
+            <button data-action="backspace" class="key utility" aria-label="Backspace">⌫</button>
+            <button data-token="(" class="key">(</button>
+            <button data-token=")" class="key">)</button>
+            <button data-token="7" class="key">7</button>
+            <button data-token="8" class="key">8</button>
+            <button data-token="9" class="key">9</button>
+            <button data-token="÷" class="key operator">÷</button>
+            <button data-token="4" class="key">4</button>
+            <button data-token="5" class="key">5</button>
+            <button data-token="6" class="key">6</button>
+            <button data-token="×" class="key operator">×</button>
+            <button data-token="1" class="key">1</button>
+            <button data-token="2" class="key">2</button>
+            <button data-token="3" class="key">3</button>
+            <button data-token="−" class="key operator">−</button>
+            <button data-token="." class="key">.</button>
+            <button data-token="0" class="key">0</button>
+            <button data-token="^" class="key operator">^</button>
+            <button data-token="+" class="key operator">+</button>
+          </div>
+        </section>
+      </section>
+    </main>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

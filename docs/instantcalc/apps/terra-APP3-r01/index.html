@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#121a2a" />
+    <title>InstantCalc</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="app-header">
+        <div>
+          <p class="eyebrow">LIVE WORKSHEET</p>
+          <h1>InstantCalc</h1>
+        </div>
+        <p class="header-note">10 lines · saved locally</p>
+      </header>
+
+      <section class="worksheet" aria-labelledby="worksheet-title">
+        <div class="worksheet-heading">
+          <div>
+            <h2 id="worksheet-title">Calculations</h2>
+            <p>Type an expression. Results update immediately.</p>
+          </div>
+          <p class="reference-hint">Use <code>$1</code> to use line 1</p>
+        </div>
+        <div id="rows" class="rows" aria-label="Ten calculation lines"></div>
+        <div id="total" class="total-row" aria-live="polite">
+          <span class="total-label">Total</span>
+          <span class="total-note"></span>
+          <strong class="total-value">0</strong>
+        </div>
+      </section>
+
+      <section class="variables" aria-labelledby="variables-title">
+        <div class="variables-heading">
+          <div>
+            <h2 id="variables-title">Variables</h2>
+            <p>Set named numeric values for reuse in calculations.</p>
+          </div>
+          <p class="reference-hint">Use <code>@name</code></p>
+        </div>
+        <div class="variable-table-wrap">
+          <table class="variable-table">
+            <thead>
+              <tr><th scope="col">Name</th><th scope="col">Value</th><th scope="col"><span class="sr-only">Insert</span></th></tr>
+            </thead>
+            <tbody id="variables"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="keypad" aria-label="Calculator keypad">
+        <div class="keypad-grid">
+          <button type="button" class="key key-action" data-action="clear-line" aria-label="Clear current line">C</button>
+          <button type="button" class="key" data-key="(" aria-label="Open parenthesis">(</button>
+          <button type="button" class="key" data-key=")" aria-label="Close parenthesis">)</button>
+          <button type="button" class="key key-action" data-action="backspace" aria-label="Backspace">⌫</button>
+          <button type="button" class="key" data-key="7">7</button>
+          <button type="button" class="key" data-key="8">8</button>
+          <button type="button" class="key" data-key="9">9</button>
+          <button type="button" class="key key-operator" data-key="/" aria-label="Divide">÷</button>
+          <button type="button" class="key" data-key="4">4</button>
+          <button type="button" class="key" data-key="5">5</button>
+          <button type="button" class="key" data-key="6">6</button>
+          <button type="button" class="key key-operator" data-key="*" aria-label="Multiply">×</button>
+          <button type="button" class="key" data-key="1">1</button>
+          <button type="button" class="key" data-key="2">2</button>
+          <button type="button" class="key" data-key="3">3</button>
+          <button type="button" class="key key-operator" data-key="-" aria-label="Subtract">−</button>
+          <button type="button" class="key key-reference" data-key="$" aria-label="Line reference">$</button>
+          <button type="button" class="key" data-key="0">0</button>
+          <button type="button" class="key" data-key=".">.</button>
+          <button type="button" class="key key-operator" data-key="+" aria-label="Add">+</button>
+        </div>
+        <button type="button" id="clear-all" class="clear-all">Clear calculation lines</button>
+      </section>
+      <p id="announcer" class="sr-only" aria-live="polite"></p>
+    </main>
+    <script type="module" src="./src/app.js"></script>
+  </body>
+</html>

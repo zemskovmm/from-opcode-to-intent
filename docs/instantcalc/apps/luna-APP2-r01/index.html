@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f4f7fb" />
+    <title>Instant Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="app-header">
+        <div class="brand-lockup">
+          <div class="brand-mark" aria-hidden="true">∿</div>
+          <div>
+            <p class="eyebrow">CALCULATION WORKSPACE</p>
+            <h1>Instant Calculator</h1>
+          </div>
+        </div>
+        <div class="save-state" aria-live="polite">
+          <span class="save-dot" aria-hidden="true"></span>
+          <span id="save-label">Saved on this device</span>
+        </div>
+      </header>
+
+      <section class="intro" aria-labelledby="intro-title">
+        <p class="section-kicker">NO EQUALS NEEDED</p>
+        <h2 id="intro-title">Think out loud.</h2>
+        <p>Type an expression into any line. Your answer keeps up.</p>
+      </section>
+
+      <section class="worksheet-card" aria-label="Ten-line calculation workspace">
+        <div class="worksheet-heading">
+          <span>Lines</span>
+          <span class="heading-result">Result</span>
+        </div>
+        <div id="worksheet" class="worksheet"></div>
+        <div class="total-row">
+          <div class="total-copy">
+            <span class="total-label">Total</span>
+            <span id="total-note" class="total-note">0 included · 10 excluded</span>
+          </div>
+          <output id="total-value" class="total-value" aria-live="polite">—</output>
+        </div>
+      </section>
+
+      <section class="variables-card" aria-labelledby="variables-title">
+        <div class="variables-heading">
+          <div>
+            <p class="section-kicker">NAMED VALUES</p>
+            <h2 id="variables-title">Variables</h2>
+          </div>
+          <span class="keypad-hint">Use @name in an expression</span>
+        </div>
+        <table class="variables-table">
+          <thead>
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Numeric value</th>
+              <th scope="col"><span class="sr-only">Remove</span></th>
+            </tr>
+          </thead>
+          <tbody id="variables-body"></tbody>
+        </table>
+        <button type="button" id="add-variable" class="add-variable">+ Add variable</button>
+        <p class="variables-help">Names start with a letter and can include letters, numbers, or underscores.</p>
+      </section>
+
+      <section class="keypad-card" aria-labelledby="keypad-title">
+        <div class="keypad-heading">
+          <div>
+            <p class="section-kicker">TOUCH + MOUSE</p>
+            <h2 id="keypad-title">Keypad</h2>
+          </div>
+          <span class="keypad-hint">Tap a line to focus it</span>
+        </div>
+
+        <div class="keypad" aria-label="Calculator keypad">
+          <button type="button" class="key key-muted" data-action="clear" aria-label="Clear current line">Clear</button>
+          <button type="button" class="key key-muted" data-action="backspace" aria-label="Backspace">⌫</button>
+          <button type="button" class="key key-operator" data-insert="(">(</button>
+          <button type="button" class="key key-operator" data-insert=")">)</button>
+
+          <button type="button" class="key" data-insert="7">7</button>
+          <button type="button" class="key" data-insert="8">8</button>
+          <button type="button" class="key" data-insert="9">9</button>
+          <button type="button" class="key key-operator" data-insert="/">÷</button>
+
+          <button type="button" class="key" data-insert="4">4</button>
+          <button type="button" class="key" data-insert="5">5</button>
+          <button type="button" class="key" data-insert="6">6</button>
+          <button type="button" class="key key-operator" data-insert="*">×</button>
+
+          <button type="button" class="key" data-insert="1">1</button>
+          <button type="button" class="key" data-insert="2">2</button>
+          <button type="button" class="key" data-insert="3">3</button>
+          <button type="button" class="key key-operator" data-insert="-">−</button>
+
+          <button type="button" class="key key-zero" data-insert="0">0</button>
+          <button type="button" class="key" data-insert=".">.</button>
+          <button type="button" class="key key-operator" data-insert="%">%</button>
+          <button type="button" class="key key-operator key-plus" data-insert="+">+</button>
+        </div>
+
+        <div class="references-heading">
+          <span>Insert result from line</span>
+          <span class="reference-caption">References update live</span>
+        </div>
+        <div id="references" class="references" aria-label="Line reference buttons"></div>
+      </section>
+
+      <footer class="app-footer">
+        <span>Use <kbd>$1</kbd> through <kbd>$10</kbd> to connect calculations.</span>
+        <span>Stored privately in this browser.</span>
+      </footer>
+    </main>
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>

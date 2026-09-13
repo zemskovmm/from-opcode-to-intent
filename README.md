@@ -22,11 +22,10 @@ The native Graph view is force-directed; Canvas preserves the intended spatial r
 
 Local Obsidian settings, workspace state, OS files, and environment credentials are excluded from version control. No automatic Git synchronization is configured.
 
-## Web presentations
+## Web presentation
 
-- [Original edition](https://zemskovmm.github.io/from-opcode-to-intent/) — 24 slides preserving the original historical narrative, now with EPAM styling and title/authors/agenda pages.
-- [Practical edition](https://zemskovmm.github.io/from-opcode-to-intent/practical/) — a parallel 24-slide version with a fixture-based intent-and-acceptance exercise.
+[From Opcode to Intent](https://zemskovmm.github.io/from-opcode-to-intent/) is the single 26-slide presentation, including the InstantCalc experiment summary, all sixteen clickable mobile app previews and the fixture-based acceptance exercise. Each phone opens its frozen app demo; the [app directory](docs/instantcalc/apps/) lists all sixteen outcomes and retains full-size screenshots. These hosting copies isolate browser storage and preserve known failures; they are not new benchmark measurements.
 
-Both editions credit Michael Zemskov and Dima Dorogoi and end with Q&A and Thank you pages after the Red Queen narrative conclusion. They share EPAM styling, artwork and the vendored framework. The editable website sources are `docs/` and `docs/practical/`. See [practical edition documentation](docs/practical/README.md) for scope, brand provenance, timing and verification.
+Michael Zemskov and Dima Dorogoi present the talk. Q&A and Thank you follow the Red Queen narrative conclusion. The editable website source is `docs/index.html`; the former `/practical/` route redirects to the canonical presentation and preserves slide hashes. See [website documentation](docs/README.md) for navigation and verification, and [supporting assets](docs/practical/README.md) for scope and branding provenance.
 
 New research branches are attached to trunk beats 11 and 13 in Obsidian. They distinguish the IDD proposal, nearby specification workflows, empirical evidence and the narrow claims the demonstration can support.

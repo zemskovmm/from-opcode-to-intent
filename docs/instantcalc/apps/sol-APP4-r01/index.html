@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#f3f1eb" />
+    <meta name="description" content="A ten-row instant calculator worksheet." />
+    <title>Instant Calc</title>
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="app-header">
+        <a class="brand" href="./" aria-label="Instant Calc home">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 42 42" role="img">
+              <path d="M9 4h24a5 5 0 0 1 5 5v24a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V9a5 5 0 0 1 5-5Z" />
+              <path d="M11 12h20M11 21h5m5 0h10M11 29h12m5 0h3" />
+            </svg>
+          </span>
+          <span>
+            <strong>Instant Calc</strong>
+            <small>Ten lines. One train of thought.</small>
+          </span>
+        </a>
+
+        <div class="header-actions">
+          <button class="text-button" id="clear-all" type="button">Clear all</button>
+          <button class="mode-toggle" id="mode-toggle" type="button" aria-pressed="false">
+            <span class="mode-icon" aria-hidden="true">⌨</span>
+            <span id="mode-label">Use keyboard</span>
+          </button>
+        </div>
+      </header>
+
+      <main>
+        <section class="intro" aria-labelledby="worksheet-title">
+          <div>
+            <p class="eyebrow">Live worksheet</p>
+            <h1 id="worksheet-title">Calculate as you type.</h1>
+          </div>
+          <p>Build on earlier answers with <code>$1</code>, or reuse a named input like <code>$rate</code>.</p>
+        </section>
+
+        <section class="variables-panel" aria-labelledby="variables-title">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Reusable inputs</p>
+              <h2 id="variables-title">Named variables</h2>
+              <p class="section-note">Set a number once, then use its <code>$name</code> anywhere below.</p>
+            </div>
+            <button class="add-variable" id="add-variable" type="button">
+              <span aria-hidden="true">+</span> Add variable
+            </button>
+          </div>
+          <div class="variable-table">
+            <div class="variable-columns" aria-hidden="true">
+              <span>Name</span>
+              <span>Value</span>
+              <span>Status</span>
+              <span></span>
+            </div>
+            <div id="variable-rows"></div>
+          </div>
+        </section>
+
+        <section class="worksheet" aria-label="Calculation worksheet">
+          <div class="column-labels" aria-hidden="true">
+            <span>Line</span>
+            <span>Expression</span>
+            <span>Result</span>
+          </div>
+          <div id="rows"></div>
+          <div class="total-row" aria-label="Worksheet total">
+            <span class="total-mark" aria-hidden="true">∑</span>
+            <span class="total-copy">
+              <strong>Total</strong>
+              <small id="total-summary">0 included · 10 excluded</small>
+            </span>
+            <output id="total-result" class="total-result" aria-live="polite">0</output>
+          </div>
+        </section>
+
+        <p class="syntax-hint">
+          <span aria-hidden="true">↳</span>
+          Supports parentheses, powers, percentages, and <code>sqrt()</code>
+        </p>
+      </main>
+    </div>
+
+    <section class="keypad" id="keypad" aria-label="Calculator keypad">
+      <div class="keypad-inner">
+        <div class="keypad-toolbar">
+          <button class="nav-key" type="button" data-nav="-1" aria-label="Previous row">↑ <span>Previous</span></button>
+          <div class="reference-control">
+            <button id="reference-toggle" class="reference-toggle" type="button" aria-expanded="false" aria-controls="reference-picker">
+              <span aria-hidden="true">$</span> Reference
+            </button>
+            <div id="reference-picker" class="reference-picker" hidden></div>
+          </div>
+          <button class="nav-key" type="button" data-nav="1" aria-label="Next row"><span>Next</span> ↓</button>
+        </div>
+
+        <div class="key-grid">
+          <button type="button" data-insert="7">7</button>
+          <button type="button" data-insert="8">8</button>
+          <button type="button" data-insert="9">9</button>
+          <button class="operator" type="button" data-insert="/" aria-label="Divide">÷</button>
+          <button class="utility" type="button" data-action="backspace" aria-label="Backspace">⌫</button>
+
+          <button type="button" data-insert="4">4</button>
+          <button type="button" data-insert="5">5</button>
+          <button type="button" data-insert="6">6</button>
+          <button class="operator" type="button" data-insert="*" aria-label="Multiply">×</button>
+          <button class="operator" type="button" data-insert="(">(</button>
+
+          <button type="button" data-insert="1">1</button>
+          <button type="button" data-insert="2">2</button>
+          <button type="button" data-insert="3">3</button>
+          <button class="operator" type="button" data-insert="-" aria-label="Subtract">−</button>
+          <button class="operator" type="button" data-insert=")">)</button>
+
+          <button type="button" data-insert="0">0</button>
+          <button type="button" data-insert=".">.</button>
+          <button class="operator" type="button" data-insert="%">%</button>
+          <button class="operator" type="button" data-insert="+" aria-label="Add">+</button>
+          <button class="operator" type="button" data-insert="^" aria-label="Power">xʸ</button>
+
+          <button class="sqrt-key" type="button" data-action="sqrt" aria-label="Square root">√ <span>square root</span></button>
+          <button class="clear-row" type="button" data-action="clear">Clear line</button>
+        </div>
+      </div>
+    </section>
+
+    <dialog id="clear-dialog" aria-labelledby="clear-title">
+      <form method="dialog">
+        <div class="dialog-icon" aria-hidden="true">10</div>
+        <h2 id="clear-title">Clear the worksheet?</h2>
+        <p>Every expression will be removed. This can’t be undone.</p>
+        <div class="dialog-actions">
+          <button class="dialog-cancel" value="cancel">Keep worksheet</button>
+          <button class="dialog-confirm" id="confirm-clear" value="confirm">Clear all</button>
+        </div>
+      </form>
+    </dialog>
+
+    <script type="module" src="./src/app.js"></script>
+  </body>
+</html>

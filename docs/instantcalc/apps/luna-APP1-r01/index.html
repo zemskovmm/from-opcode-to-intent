@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f5f6fb" />
+    <title>Instant Calculator</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="app-header">
+        <div>
+          <p class="eyebrow">QUICK CALCULATIONS</p>
+          <h1>Instant<span>.</span></h1>
+        </div>
+        <p class="save-state" id="save-state" aria-live="polite">Saved locally</p>
+      </header>
+
+      <div class="app-grid">
+        <section class="workspace-card" aria-labelledby="workspace-title">
+          <div class="section-heading">
+            <div>
+              <h2 id="workspace-title">Your workspace</h2>
+              <p>Type into any line. Results follow instantly.</p>
+            </div>
+            <span class="line-count">10 lines</span>
+          </div>
+          <div class="rows" id="rows"></div>
+          <div class="total-row" aria-live="polite">
+            <span class="total-label">Total</span>
+            <span class="total-result" id="total-result">0</span>
+            <span class="total-meta" id="total-meta">10 excluded</span>
+          </div>
+          <p class="workspace-hint"><kbd>$1</kbd> references the result on line 1</p>
+        </section>
+
+        <aside class="keypad-card" aria-labelledby="keypad-title">
+          <div class="section-heading keypad-heading">
+            <div>
+              <h2 id="keypad-title">Keypad</h2>
+              <p id="active-line-label">Line 01 selected</p>
+            </div>
+            <span class="cursor-dot" aria-hidden="true"></span>
+          </div>
+          <div class="keypad" id="keypad">
+            <button class="key key-muted" data-action="clear" type="button">Clear</button>
+            <button class="key key-muted" data-action="backspace" type="button" aria-label="Backspace">⌫</button>
+            <button class="key key-operator" data-value="(" type="button">(</button>
+            <button class="key key-operator" data-value=")" type="button">)</button>
+
+            <button class="key" data-value="7" type="button">7</button>
+            <button class="key" data-value="8" type="button">8</button>
+            <button class="key" data-value="9" type="button">9</button>
+            <button class="key key-operator" data-value="/" type="button">÷</button>
+
+            <button class="key" data-value="4" type="button">4</button>
+            <button class="key" data-value="5" type="button">5</button>
+            <button class="key" data-value="6" type="button">6</button>
+            <button class="key key-operator" data-value="*" type="button">×</button>
+
+            <button class="key" data-value="1" type="button">1</button>
+            <button class="key" data-value="2" type="button">2</button>
+            <button class="key" data-value="3" type="button">3</button>
+            <button class="key key-operator" data-value="-" type="button">−</button>
+
+            <button class="key key-wide" data-value="0" type="button">0</button>
+            <button class="key" data-value="." type="button">.</button>
+            <button class="key key-operator" data-value="+" type="button">+</button>
+
+            <button class="key key-row" data-action="previous" type="button" aria-label="Previous line">↑</button>
+            <button class="key key-row" data-action="next" type="button" aria-label="Next line">↓</button>
+            <button class="key key-reference" data-value="$" type="button">$</button>
+            <button class="key key-reference" data-value="@" type="button">@</button>
+            <button class="key key-clear-all" data-action="clear-all" type="button">Clear all</button>
+          </div>
+          <p class="keypad-hint">Click a line, then use the keypad.</p>
+        </aside>
+      </div>
+
+      <section class="variables-card" aria-labelledby="variables-title">
+        <div class="section-heading variables-heading">
+          <div>
+            <h2 id="variables-title">Variables</h2>
+            <p>Save numbers once and use them in any line with <kbd>@name</kbd>.</p>
+          </div>
+          <button class="add-variable" id="add-variable" type="button">+ Add variable</button>
+        </div>
+        <div class="variable-table-wrap">
+          <table class="variables-table">
+            <thead>
+              <tr><th scope="col">Name</th><th scope="col">Value</th><th scope="col">Reference</th></tr>
+            </thead>
+            <tbody id="variables"></tbody>
+          </table>
+        </div>
+        <p class="variables-hint">Names are case-sensitive and may contain letters, numbers, and underscores.</p>
+      </section>
+    </main>
+    <script type="module" src="./src/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#16272d" />
+    <title>Instant — live calculator</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="hero">
+        <div class="eyebrow"><span class="pulse-dot"></span> Live math workspace</div>
+        <div class="hero-line">
+          <div>
+            <h1>Instant<span>.</span></h1>
+            <p>Type an expression. The answer keeps up.</p>
+          </div>
+          <div class="hero-mark" aria-hidden="true">∑</div>
+        </div>
+      </header>
+
+      <main>
+        <section class="calculator-card" aria-labelledby="workspace-title">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">Workspace</p>
+              <h2 id="workspace-title">Your calculations</h2>
+            </div>
+            <div class="save-state" id="save-state" aria-live="polite">Saved locally</div>
+          </div>
+
+          <section class="variables-panel" aria-labelledby="variables-title">
+            <div class="variables-heading">
+              <div>
+                <p class="section-kicker">Inputs</p>
+                <h3 id="variables-title">Named variables</h3>
+              </div>
+              <button class="add-variable" id="add-variable" type="button">+ Add variable</button>
+            </div>
+            <div class="variable-table" role="table" aria-label="Named numeric variables">
+              <div class="variable-table-head" role="row">
+                <span role="columnheader">Name</span>
+                <span role="columnheader">Value</span>
+              </div>
+              <div id="variables-list"></div>
+            </div>
+            <p class="variable-hint">Use <code>@name</code> in a calculation line. Names are case-sensitive.</p>
+          </section>
+
+          <div class="row-list" id="row-list" aria-label="Ten calculation rows"></div>
+
+          <div class="tip"><span aria-hidden="true">↳</span> Reference another answer with <code>$1</code> through <code>$10</code></div>
+
+          <section class="keypad" aria-label="Calculator keypad">
+            <div class="keypad-heading">
+              <span>Keypad</span>
+              <span class="keypad-note">Tap a row to begin</span>
+            </div>
+            <div class="key-grid">
+              <button class="key key-utility" type="button" data-action="clear">Clear</button>
+              <button class="key key-utility" type="button" data-action="backspace" aria-label="Backspace">⌫</button>
+              <button class="key key-operator" type="button" data-value="$">$</button>
+              <button class="key key-operator" type="button" data-value="^">^</button>
+              <button class="key" type="button" data-value="7">7</button>
+              <button class="key" type="button" data-value="8">8</button>
+              <button class="key" type="button" data-value="9">9</button>
+              <button class="key key-operator" type="button" data-value="÷">÷</button>
+              <button class="key" type="button" data-value="4">4</button>
+              <button class="key" type="button" data-value="5">5</button>
+              <button class="key" type="button" data-value="6">6</button>
+              <button class="key key-operator" type="button" data-value="×">×</button>
+              <button class="key" type="button" data-value="1">1</button>
+              <button class="key" type="button" data-value="2">2</button>
+              <button class="key" type="button" data-value="3">3</button>
+              <button class="key key-operator" type="button" data-value="-">−</button>
+              <button class="key key-zero" type="button" data-value="0">0</button>
+              <button class="key" type="button" data-value=".">.</button>
+              <button class="key key-operator" type="button" data-value="(">(</button>
+              <button class="key key-operator" type="button" data-value=")">)</button>
+              <button class="key key-operator key-plus" type="button" data-value="+">+</button>
+            </div>
+          </section>
+        </section>
+      </main>
+
+      <footer class="footer-note">Ten lines · always live · no equals required</footer>
+    </div>
+    <noscript>This calculator needs JavaScript enabled to calculate expressions.</noscript>
+    <script type="module" src="./src/app.js"></script>
+  </body>
+</html>

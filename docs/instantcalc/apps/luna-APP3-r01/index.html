@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f6f4ef" />
+    <title>Instant Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="app-header">
+        <div>
+          <p class="eyebrow">CALCULATION NOTEBOOK</p>
+          <h1>Instant Calculator</h1>
+        </div>
+        <span class="save-status" id="save-status" role="status">Saved locally</span>
+      </header>
+
+      <p class="intro">Type an expression. Results and dependent lines update as you go.</p>
+
+      <section class="workspace" aria-label="Ten calculation lines" id="workspace"></section>
+
+      <div class="total-row" id="total-row">
+        <div class="total-copy">
+          <span class="total-label">Total</span>
+          <span class="total-note" id="total-note">10 lines excluded</span>
+        </div>
+        <output class="total-result" id="total-result" aria-live="polite" aria-label="Total 0">0</output>
+      </div>
+
+      <section class="variables-section" aria-labelledby="variables-title">
+        <div class="section-header">
+          <div>
+            <p class="eyebrow">REUSABLE VALUES</p>
+            <h2 id="variables-title">Variables</h2>
+          </div>
+          <button type="button" class="add-variable" id="add-variable">+ Add variable</button>
+        </div>
+        <p class="section-help">Use <code>@name</code> in a calculation to reference a numeric value.</p>
+        <div class="variable-table-wrap">
+          <table class="variable-table">
+            <thead>
+              <tr><th scope="col">Name</th><th scope="col">Value</th><th scope="col">Status</th><th scope="col"><span class="sr-only">Actions</span></th></tr>
+            </thead>
+            <tbody id="variables-body"></tbody>
+          </table>
+          <p class="empty-variables" id="empty-variables">No variables yet. Add one to reuse a value.</p>
+        </div>
+      </section>
+
+      <section class="keypad-panel" aria-label="Calculator keypad">
+        <div class="reference-menu" id="reference-menu" hidden aria-label="Insert a line reference"></div>
+        <div class="reference-menu" id="variable-menu" hidden aria-label="Insert a variable reference"></div>
+        <div class="keypad">
+          <button type="button" class="key utility" data-action="clear">Clear</button>
+          <button type="button" class="key utility" data-action="backspace" aria-label="Backspace">⌫</button>
+          <button type="button" class="key operator" data-value="+">+</button>
+          <button type="button" class="key reference" data-action="references">Line ref</button>
+
+          <button type="button" class="key" data-value="7">7</button>
+          <button type="button" class="key" data-value="8">8</button>
+          <button type="button" class="key" data-value="9">9</button>
+          <button type="button" class="key operator" data-value="÷">÷</button>
+
+          <button type="button" class="key" data-value="4">4</button>
+          <button type="button" class="key" data-value="5">5</button>
+          <button type="button" class="key" data-value="6">6</button>
+          <button type="button" class="key operator" data-value="×">×</button>
+
+          <button type="button" class="key" data-value="1">1</button>
+          <button type="button" class="key" data-value="2">2</button>
+          <button type="button" class="key" data-value="3">3</button>
+          <button type="button" class="key operator" data-value="−">−</button>
+
+          <button type="button" class="key zero" data-value="0">0</button>
+          <button type="button" class="key" data-value=".">.</button>
+          <button type="button" class="key" data-value="(">(</button>
+          <button type="button" class="key" data-value=")">)</button>
+        </div>
+        <div class="keypad-tools">
+          <button type="button" class="key variable-key" data-action="variables">Variable</button>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>
