@@ -1,0 +1,30 @@
+/* Intent story: one thought per canvas, using the established deck palette. */
+.reveal .intent-story p{margin:0}
+.reveal .intent-story .chapter{margin-bottom:28px}
+.reveal .intent-story h1{font-size:76px;line-height:1.08}
+.reveal .intent-story .story-body{flex:1;display:flex;flex-direction:column;justify-content:center;min-height:0;padding-bottom:30px}
+.reveal .intent-story .story-question{font-size:40px;line-height:1.3;color:var(--muted);margin-bottom:44px}
+.reveal .intent-story .story-answer{font-size:84px;line-height:1.08;font-weight:600;letter-spacing:-.025em;max-width:1350px}
+.reveal .intent-story .story-rule{width:90px;border-top:5px solid var(--accent);margin-bottom:28px}
+.reveal .messenger-story .messenger-lead{position:absolute;top:236px;left:64px;right:64px;font-size:84px;line-height:1.1;margin:0;letter-spacing:-.03em}
+.reveal .messenger-story .messenger-audience{display:block;font-size:106px;margin-top:18px}
+.reveal .messenger-story .messenger-prompt{position:absolute;top:515px;left:64px;right:64px;font-size:46px;line-height:1.2;color:var(--muted)}
+.reveal .messenger-story .messenger-payoff{position:absolute;top:617px;left:64px;right:64px;font-size:42px;font-weight:600;line-height:1.2}
+.reveal .discovery-story h1{max-width:1300px}
+.reveal .discovery-story .request-copy{font-size:45px;line-height:1.2;color:var(--muted);margin:0 0 18px}
+.reveal .discovery-story .story-arrow{font-size:64px;line-height:1;color:var(--accent);margin:0 0 18px}
+.reveal .discovery-story .outcome-copy{font-size:72px;line-height:1.1;font-weight:600;letter-spacing:-.02em;margin:0}
+.reveal .intent-story .source-note{font-size:18px;line-height:1.3}
+.reveal .intent-checklist{list-style:none;counter-reset:question;margin:22px 0 0;padding:0;display:grid;gap:0;max-width:1390px}
+.reveal .intent-checklist li{counter-increment:question;font-size:40px;line-height:1.2;padding:18px 0;border-bottom:1px solid var(--line);display:flex;align-items:baseline;gap:28px}
+.intent-checklist li::before{content:'0' counter(question);color:var(--accent);font-size:24px;font-weight:600;min-width:34px}
+.reveal .intent-story .checklist-payoff{font-size:41px;font-weight:600;line-height:1.2;margin-top:36px}
+.reveal .calculator-story h1{font-size:68px;line-height:1.1;margin-bottom:40px}
+.calculator-requests{display:grid;grid-template-columns:1fr 70px 1fr;gap:24px;align-items:center}
+.calculator-requests article{padding:26px 30px;border-top:4px solid var(--accent);background:#f5f7fc;min-height:165px}
+.reveal .calculator-requests .eyebrow{display:block;font-size:18px;margin-bottom:18px}
+.reveal .calculator-requests .requirement{font-size:37px;line-height:1.2}
+.reveal .calculator-requests .plus{font-size:64px;color:var(--accent);text-align:center}
+.reveal .calculator-story .calculator-question{font-size:80px;line-height:1.1;font-weight:600;letter-spacing:-.025em;margin-top:46px}
+.reveal .calculator-story .calculator-payoff{font-size:35px;line-height:1.25;margin-top:25px}
+@media print{.intent-story .gradient-text{background:none;-webkit-text-fill-color:var(--accent)}}

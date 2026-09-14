@@ -1,10 +1,11 @@
 # From Opcode to Intent — web presentation
 
-`index.html` is the single canonical 26-slide deck, with Michael Zemskov and Dima Dorogoi, Q&A and Thank you. It retains the history, intent contract and interactive acceptance exercise. The experiment summary and sixteen mobile app previews follow the consecutive hierarchy/counterpoint pair.
+`index.html` is the single canonical 32-slide deck, with Michael Zemskov and Dima Dorogoi, Q&A and Thank you. It retains the history, intent contract and interactive acceptance exercise. The former slide 16 is now a six-slide intent story (16–21): direction, audience question, reveal, customer discovery, hierarchy and five questions. The counterpoint, experiment summary and sixteen mobile previews follow; an illustrative calculator conflict returns to the intent theme after the gallery (25).
 
 ## Source files
 
 - `index.html`: editable audience presentation; no build or PowerPoint export is needed.
+- `intent-sequence.css`: scoped typography and emphasis for the intent story and calculator callback.
 - `app.js`: Previous/Next, native browser fullscreen and stable saved slide position.
 - `styles.css`: common base, fixed canvas, image panels and control bar.
 - `practical/styles.css`: branding, typography, exercise, closing pages and experiment layouts.
@@ -26,23 +27,17 @@ Open the website root. Use Previous/Next or arrow keys; Full screen enters or le
 
 Explicit slide hashes take priority over saved position. The canonical key is `opcode-to-intent:canonical:last-slide-id`. When absent or invalid, valid stable IDs from `opcode-to-intent:practical:last-slide-id` migrate first, followed by the frozen 22-position `opcode-to-intent:practical:last-slide` mapping. Former original-deck storage is never interpreted as a position in this deck. Blocked storage does not prevent navigation.
 
-Useful deep links include `#/bottleneck`, `#/intent-hierarchy`, `#/intent-counterpoint`, `#/instantcalc-summary`, `#/instantcalc-mobile`, `#/verify`, `#/qa` and `#/thank-you`. Existing stable practical-route hashes survive the redirect.
+Useful deep links include `#/bottleneck`, `#/intent-direction`, `#/messenger-question`, `#/request-vs-intent`, `#/intent-questions`, `#/calculator-contradiction`, `#/intent-hierarchy`, `#/intent-counterpoint`, `#/instantcalc-summary`, `#/instantcalc-mobile`, `#/verify`, `#/qa` and `#/thank-you`. Existing stable practical-route hashes survive the redirect.
 
-## Local verification
+## Local preview
 
 From the repository root:
 
 ```sh
 python3 -m http.server 4173 --bind 127.0.0.1 --directory docs
-node --test tests/*.test.mjs
-REQUIRE_MOBILE_IMAGES=1 node --test tests/deck-structure.test.mjs
 ```
 
-Open `http://127.0.0.1:4173/`. The normal structural tests verify all sixteen exact screenshot URLs. Enable the image file gate only after all verified screenshots have been copied. File presence alone does not prove image provenance, decoding or visual fidelity.
-
-For frozen-data comparison, set `INSTANTCALC_FROZEN` to the externally retained frozen report directory when running `tests/instantcalc-companion.test.mjs`. The public site does not include private execution paths or traces.
-
-Inspect all slides at desktop, tablet and phone viewport sizes. Check text/footer clearance, gallery image decoding and app links, Previous/Next boundaries, keyboard controls, fullscreen, hash precedence, saved-position migration, blocked storage, local links and zero external runtime requests. Exercise pass → deliberate fail → restored pass, ensuring checkbox/button interaction does not navigate the deck. Check the redirect and local resources under the repository URL prefix as well as at `/`.
+Open `http://127.0.0.1:4173/` and rehearse the slides. This presentation project intentionally has no automated test suite. Review visual layout and interactions manually; do not add automated test gates. The fixture-based acceptance exercise is audience content and remains part of the talk.
 
 Navigation scripts, shared diagrams and the branding stylesheet use the first 12 characters of their SHA-256 digest as `?v=` cache keys. Update affected HTML references whenever those assets change.
 
@@ -61,7 +56,6 @@ The only hosting adaptations are explicit storage-key literal prefixes (`instant
 ```sh
 python3 scripts/export-instantcalc-apps.py --source-root "$INSTANTCALC_SOURCE_ROOT"
 python3 scripts/export-instantcalc-apps.py --source-root "$INSTANTCALC_SOURCE_ROOT" --check
-REQUIRE_MOBILE_IMAGES=1 INSTANTCALC_FROZEN="$FROZEN_REPORT_DIRECTORY" INSTANTCALC_SOURCE_ROOT="$INSTANTCALC_SOURCE_ROOT" node --test tests/*.test.mjs
 ```
 
 Run from the repository root. Export first verifies every repository HEAD against the selected `final_commit` in the frozen benchmark and screenshot manifest. It reads only pinned Git blobs, follows the entry HTML's local runtime dependency closure, and copies no worktree files, build tools, tests, packages, server code or internal evidence. It stops on unresolved storage or runtime URL forms and validates the entire cohort before writing. It never edits the source repositories or deletes unknown output files. `--check` without a source root verifies the public manifest, hashes, declared adaptations, dependency closure and isolated keys; with a source root it additionally regenerates in memory and compares exact bytes against pinned sources.

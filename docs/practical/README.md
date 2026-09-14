@@ -2,7 +2,7 @@
 
 The audience deck is now [`../index.html`](../index.html). This directory retains its shared styling, logo, research sources and fixture-based acceptance exercise. `index.html` only redirects to `../`, preserving the slide hash.
 
-The single presentation has 26 slides and credits Michael Zemskov and Dima Dorogoi. It includes the hierarchy/counterpoint pair, the InstantCalc summary and mobile gallery, the intent contract and the acceptance exercise, then the contract iceberg and Red Queen conclusion before Q&A and Thank you. The hierarchy and counterpoint are qualitative design lenses, not a universal ranking.
+The single presentation has 32 slides and credits Michael Zemskov and Dima Dorogoi. It includes the six-slide intent story and counterpoint, the InstantCalc summary and mobile gallery, the intent contract and the acceptance exercise, then the contract iceberg and Red Queen conclusion before Q&A and Thank you. The hierarchy and counterpoint are qualitative design lenses, not a universal ranking.
 
 ## Exercise scope
 
@@ -15,7 +15,7 @@ The full Git-viewer intent is a proposed contract. The interactive slide checks 
 - `assets/epam-logo.svg`: six filled vector paths exported from the supplied PowerPoint's slide master.
 - `sources.html`: research, artwork, trademark, font/framework credits and exercise limitations; backlinks target the canonical deck.
 
-The runtime is now `../app.js`. See the [website documentation](../README.md) for saved-position migration, canonical deep links and verification commands.
+The runtime is now `../app.js`. See the [website documentation](../README.md) for saved-position migration, canonical deep links and local preview instructions.
 
 ## Branding provenance
 
@@ -32,4 +32,4 @@ This is a light-slide application of that guide, not a claim of a formal corpora
 
 Open the website root. The exercise is at `#/verify`. Run the check, enable the deliberate regression, run again, then disable it and run once more. Results should be pass → fail → pass, identifying the omitted untracked row on failure. Changing the toggle must clear stale results.
 
-Browser verification must cover the 1600×900 canvas, smaller viewports, image decoding, text and footer clearance, keyboard focus, navigation, fullscreen and the redirect under a repository prefix. Proposed talk timing needs rehearsal after the experiment slides; discussion time is additional.
+Manual rehearsal should cover the 1600×900 canvas, smaller viewports, image decoding, text and footer clearance, keyboard focus, navigation, fullscreen and the redirect under a repository prefix. Proposed talk timing needs rehearsal after the experiment slides; discussion time is additional.

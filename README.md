@@ -24,7 +24,7 @@ Local Obsidian settings, workspace state, OS files, and environment credentials 
 
 ## Web presentation
 
-[From Opcode to Intent](https://zemskovmm.github.io/from-opcode-to-intent/) is the single 26-slide presentation, including the InstantCalc experiment summary, all sixteen clickable mobile app previews and the fixture-based acceptance exercise. Each phone opens its frozen app demo; the [app directory](docs/instantcalc/apps/) lists all sixteen outcomes and retains full-size screenshots. These hosting copies isolate browser storage and preserve known failures; they are not new benchmark measurements.
+[From Opcode to Intent](https://zemskovmm.github.io/from-opcode-to-intent/) is the single 32-slide presentation, including the expanded intent story, the InstantCalc experiment summary, all sixteen clickable mobile app previews and the fixture-based acceptance exercise. Each phone opens its frozen app demo; the [app directory](docs/instantcalc/apps/) lists all sixteen outcomes and retains full-size screenshots. These hosting copies isolate browser storage and preserve known failures; they are not new benchmark measurements.
 
 Michael Zemskov and Dima Dorogoi present the talk. Q&A and Thank you follow the Red Queen narrative conclusion. The editable website source is `docs/index.html`; the former `/practical/` route redirects to the canonical presentation and preserves slide hashes. See [website documentation](docs/README.md) for navigation and verification, and [supporting assets](docs/practical/README.md) for scope and branding provenance.
 
